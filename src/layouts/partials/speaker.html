@@ -1,0 +1,24 @@
+<div class="row">
+    <div class="col">
+        <div class="speaker-image"><img src="{{ .imageUrl }}" alt="{{ .name }}" /></div>
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+        <div class="speaker-name">{{ .name }}</div>
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+        <div class="speaker-title">{{ .title }}</div>
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+        <div class="speaker-socials">
+            {{ range .socials }}
+            {{ partial "social.html" . }}
+            {{ end }}
+        </div>
+    </div>
+</div>

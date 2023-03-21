@@ -125,7 +125,192 @@ p {
   margin-top: 4em;
 }
 
+.sessions-header {
+  width: 100%;
+
+}
+
 .sessions-title {
   font-family: Sans-Bold;
+  font-size: 2.4em;
+  margin-bottom: 0.8em;
+}
+
+.session-time {
+  text-align: center;
+  font-size: 1.8em;
+  font-family: Sans-Bold;
+}
+
+.session-date {
+  text-align: center;
+  font-family: Sans-Bold;
+  margin-bottom: 1em;
+}
+
+.session-timezone {
+  text-align: center;
+  font-size: 0.8em;
+}
+
+.session-title {
+  text-align: left;
+  font-family: Sans-Bold;
+  font-size: 1.8em;
+}
+
+.speaker-image {
+  width: 126px;
+  border-radius: 63px;
+  overflow: hidden;
+  margin: auto;
+}
+
+.speaker-image > img {
+  width: 126px;
+}
+
+.speaker-name {
+  text-align: center;
+  font-size: 1.4em;
+}
+
+.speaker-title {
+  text-align: center;
+  font-size: 0.9em;
+}
+
+.speaker-socials{
+  text-align: center;
+}
+
+.speaker-socials > a > i {
+  color: #FFF;
+  font-size: 1.2em;
+
+}
+
+.speaker-socials > a:not(:first-child) > i {
+  margin-left: 0.5em;
+}
+
+.session-description {
+  margin-top: 1.4em;
+  overflow: hidden;
+  height: 6em;
+}
+
+.session-description-text {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3; /* start showing ellipsis when 3rd line is reached */
+  
+  font-size: 1.2em;
+}
+
+.session-container {
+  padding-top: 2em;
+  border-top: solid 1px rgba(12,12,16,0.4) ;
+  margin-bottom: 2em;
+}
+
+.session-button {
+
+}
+
+.organizers {
+  background-color:  rgba(12,12,16,0.11);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+
+.organizers-title {
+  font-family: Sans-Bold;
+  font-size: 2.2em;
+  text-align: center;
+}
+
+.organizers-payoff {
+  font-size: 1.3em;
+  text-align: center;
+  padding-left: 6em;
+  padding-right: 6em;
+  margin-bottom: 3em;
+}
+
+.organizer-name {
+  text-align: center;
+  font-family: Sans-Bold;
+  font-size: 1.4em;
+}
+
+.organizer-title {
+  text-align: center;
+}
+
+.organizer-image {
+  width: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: auto;
+}
+
+.organizer-image > img {
+  width: 100%;
+}
+
+.organizer-socials{
+  text-align: center;
+}
+
+.organizer-socials > a > i {
+  color: #FFF;
+  font-size: 1.2em;
+}
+
+.organizer-socials > a:not(:first-child) > i {
+  margin-left: 0.5em;
+}
+
+.organizer-container {
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+.organizer-list {
+  padding-left: 5em;
+  padding-right: 5em;
+}
+
+.follow-title {
+  font-size: 1.4em;
+  text-align: center;
+}
+
+.follow-socials {
+  margin-top: 1em;
+  margin-bottom: 2em;
+  text-align: center;
+}
+
+.follow-socials > a > i {
+  color: #FFF;
   font-size: 2em;
+
+}
+
+.follow-socials > a:not(:first-child) > i {
+  margin-left: 0.5em;
+}
+
+.footer-menu {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2em;
+  font-size: 1.2em;
 }

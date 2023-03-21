@@ -1,0 +1,88 @@
+[
+    {
+        "name": "Roel van de Grint",
+        "title": "Senior Software Engineer @ Capgemini",
+        "imageUrl": "https://www.azurethursday.com/media/kdrl1vjl/roel.jpg",
+        "socials": [
+            {
+                "icon": "fa-linkedin",
+                "url": "https://www.linkedin.com/in/roel-van-de-grint-a845b6b/"
+            }
+        ]
+    },
+    {
+        "name": "Luuk Mager",
+        "title": "Cloud Solution Architect @ Heroes",
+        "imageUrl": "https://www.azurethursday.com/media/hdpmqczq/lzkbcud2_400x400.jpg",
+        "socials": [
+            {
+                "icon": "fa-twitter",
+                "url": "https://twitter.com/luuk_mager"
+            },
+            {
+                "icon": "fa-linkedin",
+                "url": "https://www.linkedin.com/in/luuk-mager/"
+            }
+        ]
+    },
+    {
+        "name": "Jorrit Meijer",
+        "title": "Cloud Solution Architect",
+        "imageUrl": "https://www.azurethursday.com/media/3v1lgoir/e8gjgevb_400x400.jpg",
+        "socials": [
+            {
+                "icon": "fa-twitter",
+                "url": "https://twitter.com/JorritMeijer"
+            },
+            {
+                "icon": "fa-linkedin",
+                "url": "https://www.linkedin.com/in/jorrit-meijer-66376b70/"
+            }
+        ]
+    },
+    {
+        "name": "Roelant Dieben",
+        "title": "Owner @ XPRTZ.cloud",
+        "imageUrl": "https://www.azurethursday.com/media/wzodx5r3/x1wbpab0_400x400.jpg",
+        "socials": [
+            {
+                "icon": "fa-twitter",
+                "url": "https://twitter.com/RoelantDieben"
+            },
+            {
+                "icon": "fa-linkedin",
+                "url": "https://www.linkedin.com/in/roelantdieben/"
+            }
+        ]
+    },
+    {
+        "name": "Esther Barthel",
+        "title": "Solutions Architect @ Cognition IT",
+        "imageUrl": "https://www.azurethursday.com/media/degppq4f/esther_barthel.jpg",
+        "socials": [
+            {
+                "icon": "fa-twitter",
+                "url": "https://twitter.com/virtuEs_IT"
+            },
+            {
+                "icon": "fa-linkedin",
+                "url": "https://www.linkedin.com/in/ebarthel/"
+            }
+        ]
+    },
+    {
+        "name": "Stefan Dingemanse",
+        "title": "Consultant at Brainpulse IT",
+        "imageUrl": "https://www.azurethursday.com/media/fsupp4ke/stefan-dingemanse.jpg?anchor=center&mode=crop&width=250&height=350&rnd=132665802494270000",
+        "socials": [
+            {
+                "icon": "fa-twitter",
+                "url": "https://twitter.com/SDingemanse"
+            },
+            {
+                "icon": "fa-linkedin",
+                "url": "https://www.linkedin.com/in/sdingemanse/"
+            }
+        ]
+    }
+]

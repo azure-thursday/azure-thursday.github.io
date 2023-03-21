@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <div class="organizer-image"><img src="{{ .imageUrl }}" alt="{{ .name }}" /></div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <div class="organizer-name">{{ .name }}</div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <div class="organizer-title">{{ .title }}</div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <div class="organizer-socials">
+                {{ range .socials }}
+                {{ partial "social.html" . }}
+                {{ end }}
+            </div>
+        </div>
+    </div>
+</div>

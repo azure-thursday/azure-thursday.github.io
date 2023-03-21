@@ -1,0 +1,20 @@
+<div class="container-fluid organizers">
+    <div class="row">
+        <div class="col">
+            <div class="organizers-title">Organizers</div>
+            <div class="organizers-payoff">Azure Thursday is a non-profit organization based in The Netherlands that organizes and empowers community events to share knowledge around the world. Striving to include everyone, by making our events inclusive and accessible.</div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid"></div>
+    <div class="row">
+        <div class="col organizer-container"></div>
+        {{ range $.Site.Data.organizers }}
+        <div class="col organizer-container">
+        {{ partial "organizer.html" . }}
+        </div>
+        {{ end }}
+        <div class="col organizer-container"></div>
+    </div>
+    <br/><br/><br/>
+</div>

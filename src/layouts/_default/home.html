@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+ <meta charset="utf-8">
+ <title>{{ .Page.Title }}</title>
+ {{ partial "head.html" . }}
+</head>
+
+<body>
+    {{ partial "header.html" . }}
+    
+    <div class="container-fluid">
+        <div class="main-header">
+            <div class="main-header-item">
+                <div class="main-header-item-title">Azure Thursday</div>
+                <div class="main-header-item-body">This is a group for all developers, consultants, architects and IT professionals who want to dive into for them unknown topics related to Azure. Azure Thursday are happening every first Thursday of the month and the format will be different every evening. From hand-on workshops to technical talks.</div>
+                <div class="main-header-item-button">
+                    <a href="https://www.meetup.com/azure-thursdays/events/292207246/" target="_blank" class="btn btn-primary strong mr-3 mb-3" title="Register for Azure Thursday" aria-label="Register for Azure Thursday">
+                        <i aria-hidden="true" class="fas fa-user-plus"></i>
+                        Register
+                    </a>
+            </div>
+            </div>
+            <div class="main-header-item">
+                <img src="/images/community-day-cropped.png" alt="Community day banner" />
+            </div>
+        </div>
+
+    </div>
+    
+    <!-- <div class="container">
+        {{ .Content }}
+    </div> -->
+
+    {{ partial "sponsors.html" . }}
+
+    <div class="container">
+        <div class="sessions">
+            <div class="sessions-title">Sessions</div>
+    
+        </div>
+    </div>
+
+    {{ partial "scripts.html" . }}
+</body>
+</html>

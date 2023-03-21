@@ -1,0 +1,10 @@
+﻿@font-face {
+    font-family: "Sans-Reg";
+    src: url("/fonts/NPOSans-Regular.woff2") format("woff2"),url("/fonts/NPOSans-Regular.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: "Sans-Bold";
+    src: url("/fonts/NPOSans-Bold.woff2") format("woff2"),url("/fonts/NPOSans-Bold.ttf") format('truetype');
+}
+

@@ -1,0 +1,10 @@
+{{ define "main" }}
+<div class="container">
+    <h2>{{ .Page.Title }}</h2>
+    <br/>
+{{ range where (where $.Site.Data.pastsessions.sessions "month" .Params.month) "year" .Params.year }}
+{{ partial "month-session.html" . }}
+{{ end }}
+
+</div>
+{{ end }}

@@ -417,3 +417,20 @@ h1 {
 .past-session-button > a > i {
   margin-right: 0.4em;
 }
+
+
+
+.month-session > .past-session-description {
+  margin-left: 1em;
+}
+
+
+.month-session-container {
+  border: solid 2px rgba(12,12,16,0.4);
+  margin-bottom: 2em;
+}
+
+.month-session-container .past-session-button {
+  text-align: left;
+  margin-left: 2em;
+}

@@ -1,0 +1,28 @@
+<div class="month-session-container">
+    <div class="row">
+        <div class="col-md-4">
+            <img class="past-session-image" src="/images/video-ph.jpg" alt="Past session placeholder" />
+        </div>
+        <div class="col-md-8">
+            <div class="past-session-content">
+                <div class="past-session-name">{{ .title }}</div>
+                <div class="past-session-description">{{ .description }}</div>
+    
+                
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4 month-session">
+            <div class="past-session-description">{{ partial "speaker-line.html" .speaker }}</div>
+        </div>
+        <div class="col-md-8">
+            <div class="past-session-button">
+                <a href="#" target="_blank" class="btn btn-primary strong mr-3 mb-3" title="Watch session" aria-label="Watch session">
+                    <i aria-hidden="true" class="fas fa-play"></i>
+                    Watch session
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

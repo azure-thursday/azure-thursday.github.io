@@ -1,0 +1,112 @@
+{
+    "sessions": [
+        {
+            "meetup": "Meetup April 2023",
+            "timeZone": "UTC+01:00 Europe/Amsterdam",
+            "date": "13 April 2023",
+            "startTime": "19:00",
+            "endTime": "19:50",
+            "title": "[Meta]Speak up! How to give great tech sessions",
+            "description": "Speaking at conferences is awesome! You’ll meet new people, share your knowledge, and inspire others. But there are a lot of challenges to face and overcome. In this session, Barbara will share her tips on how to get accepted at a conference, how to overcome imposter syndrome, and how to create great sessions. She will also tell you how to send a strong message into the world. To top it off, we will look at the difference between a good and a bad demo. Spoiler: you don’t have to depend on the demo gods!",
+            "speaker": {
+                "name": "Barbara Forbes",
+                "title": "",
+                "imageUrl": "https://www.azurethursday.com/media/2mpj4ts1/barbara.jpg",
+                "socials": [
+                    {
+                        "icon": "fa-twitter",
+                        "url": "https://twitter.com/Ba4bes"
+                    },
+                    {
+                        "icon": "fa-linkedin",
+                        "url": "https://www.linkedin.com/in/baforbes/"
+                    }
+                ]
+            }
+        },
+        {
+            "meetup": "Meetup April 2023",
+            "timeZone": "UTC+01:00 Europe/Amsterdam",
+            "date": "13 April 2023",
+            "startTime": "20:00",
+            "endTime": "20:50",
+            "title": "Event Driven Data Ingestion Using Azure Databricks Autoloader",
+            "description": "Databricks Auto Loader is designed to solve the problem of getting data into the Databricks platform for processing and analysis. The process of loading data into a data platform like Databricks can be time-consuming and complex, especially when working with large volumes of data or data from multiple sources. The Auto Loader feature simplifies this process by allowing users to specify a set of external data sources and a schedule for data loading, and then automatically loading the data from those sources at the specified intervals.<br/><br/>By automating the data loading process, the Auto Loader helps users to save time and effort, and enables them to focus on other tasks such as data processing and analysis. It also helps to ensure that data is loaded consistently and reliably, reducing the risk of errors or data loss.<br/><br/>Databricks Auto Loader helps to make it easier for users to work with large volumes of data and to get that data into the platform quickly and efficiently, enabling them to focus on using the data to drive insights and business value.",
+            "speaker": {
+                "name": "Zeeshan Ali",
+                "title": "Senior data and analytics consultant @ Microsoft",
+                "imageUrl": "https://www.azurethursday.com/media/xisgwpar/zeeshan.png",
+                "socials": []
+            }
+        },
+        {
+            "meetup": "Meetup April 2023",
+            "timeZone": "UTC+01:00 Europe/Amsterdam",
+            "date": "13 April 2023",
+            "startTime": "20:00",
+            "endTime": "20:50",
+            "title": "Event Driven Data Ingestion Using Azure Databricks Autoloader",
+            "description": "Databricks Auto Loader is designed to solve the problem of getting data into the Databricks platform for processing and analysis. The process of loading data into a data platform like Databricks can be time-consuming and complex, especially when working with large volumes of data or data from multiple sources. The Auto Loader feature simplifies this process by allowing users to specify a set of external data sources and a schedule for data loading, and then automatically loading the data from those sources at the specified intervals.<br/><br/>By automating the data loading process, the Auto Loader helps users to save time and effort, and enables them to focus on other tasks such as data processing and analysis. It also helps to ensure that data is loaded consistently and reliably, reducing the risk of errors or data loss.<br/><br/>Databricks Auto Loader helps to make it easier for users to work with large volumes of data and to get that data into the platform quickly and efficiently, enabling them to focus on using the data to drive insights and business value.",
+            "speaker": {
+                "name": "Zeeshan Ali",
+                "title": "Senior data and analytics consultant @ Microsoft",
+                "imageUrl": "https://www.azurethursday.com/media/xisgwpar/zeeshan.png",
+                "socials": []
+            }
+        },{
+            "meetup": "Meetup April 2023",
+            "timeZone": "UTC+01:00 Europe/Amsterdam",
+            "date": "13 April 2023",
+            "startTime": "19:00",
+            "endTime": "19:50",
+            "title": "[Meta]Speak up! How to give great tech sessions",
+            "description": "Speaking at conferences is awesome! You’ll meet new people, share your knowledge, and inspire others. But there are a lot of challenges to face and overcome. In this session, Barbara will share her tips on how to get accepted at a conference, how to overcome imposter syndrome, and how to create great sessions. She will also tell you how to send a strong message into the world. To top it off, we will look at the difference between a good and a bad demo. Spoiler: you don’t have to depend on the demo gods!",
+            "speaker": {
+                "name": "Barbara Forbes",
+                "title": "",
+                "imageUrl": "https://www.azurethursday.com/media/2mpj4ts1/barbara.jpg",
+                "socials": [
+                    {
+                        "icon": "fa-twitter",
+                        "url": "https://twitter.com/Ba4bes"
+                    },
+                    {
+                        "icon": "fa-linkedin",
+                        "url": "https://www.linkedin.com/in/baforbes/"
+                    }
+                ]
+            }
+        },
+        {
+            "meetup": "Meetup April 2023",
+            "timeZone": "UTC+01:00 Europe/Amsterdam",
+            "date": "13 April 2023",
+            "startTime": "20:00",
+            "endTime": "20:50",
+            "title": "Event Driven Data Ingestion Using Azure Databricks Autoloader",
+            "description": "Databricks Auto Loader is designed to solve the problem of getting data into the Databricks platform for processing and analysis. The process of loading data into a data platform like Databricks can be time-consuming and complex, especially when working with large volumes of data or data from multiple sources. The Auto Loader feature simplifies this process by allowing users to specify a set of external data sources and a schedule for data loading, and then automatically loading the data from those sources at the specified intervals.<br/><br/>By automating the data loading process, the Auto Loader helps users to save time and effort, and enables them to focus on other tasks such as data processing and analysis. It also helps to ensure that data is loaded consistently and reliably, reducing the risk of errors or data loss.<br/><br/>Databricks Auto Loader helps to make it easier for users to work with large volumes of data and to get that data into the platform quickly and efficiently, enabling them to focus on using the data to drive insights and business value.",
+            "speaker": {
+                "name": "Zeeshan Ali",
+                "title": "Senior data and analytics consultant @ Microsoft",
+                "imageUrl": "https://www.azurethursday.com/media/xisgwpar/zeeshan.png",
+                "socials": []
+            }
+        },
+        {
+            "meetup": "Meetup April 2023",
+            "timeZone": "UTC+01:00 Europe/Amsterdam",
+            "date": "13 April 2023",
+            "startTime": "20:00",
+            "endTime": "20:50",
+            "title": "Event Driven Data Ingestion Using Azure Databricks Autoloader",
+            "description": "Databricks Auto Loader is designed to solve the problem of getting data into the Databricks platform for processing and analysis. The process of loading data into a data platform like Databricks can be time-consuming and complex, especially when working with large volumes of data or data from multiple sources. The Auto Loader feature simplifies this process by allowing users to specify a set of external data sources and a schedule for data loading, and then automatically loading the data from those sources at the specified intervals.<br/><br/>By automating the data loading process, the Auto Loader helps users to save time and effort, and enables them to focus on other tasks such as data processing and analysis. It also helps to ensure that data is loaded consistently and reliably, reducing the risk of errors or data loss.<br/><br/>Databricks Auto Loader helps to make it easier for users to work with large volumes of data and to get that data into the platform quickly and efficiently, enabling them to focus on using the data to drive insights and business value.",
+            "speaker": {
+                "name": "Zeeshan Ali",
+                "title": "Senior data and analytics consultant @ Microsoft",
+                "imageUrl": "https://www.azurethursday.com/media/xisgwpar/zeeshan.png",
+                "socials": []
+            }
+        }
+    ]
+}
+

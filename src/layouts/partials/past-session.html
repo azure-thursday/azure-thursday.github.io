@@ -1,0 +1,27 @@
+<div class="past-session-container">
+    <div class="row">
+        <div class="past-session-image-container">
+            <img class="past-session-image" src="/images/video-ph.jpg" alt="Past session placeholder" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="past-session-content">
+            <div class="past-session-name">{{ .title }}</div>
+            <div class="past-session-description">{{ .description }}</div>
+
+            <div class="past-session-description"> {{ partial "speaker-line.html" .speaker }}</div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="past-session-button-container">
+            <div class="past-session-button-container-border">
+                <div class="past-session-button">
+                    <a href="#" target="_blank" class="btn btn-primary strong mr-3 mb-3" title="Watch session" aria-label="Watch session">
+                        <i aria-hidden="true" class="fas fa-play"></i>
+                        Watch session
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

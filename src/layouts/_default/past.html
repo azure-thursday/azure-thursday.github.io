@@ -1,0 +1,14 @@
+{{ define "main" }}
+<div class="container">
+    <h1>Sessions</h1>
+    <div class="session-payoff">Watch the sessions from past Azure Thursday!</div>
+</div>
+<br/><br/>
+<div class="container">
+    <div class="past-sessions">
+        {{ range $.Site.Data.pastsessions.sessions }}
+        {{ partial "past-session.html" . }}
+        {{ end }}
+    </div>
+</div>
+{{ end }}

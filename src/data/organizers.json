@@ -2,7 +2,7 @@
     {
         "name": "Roel van de Grint",
         "title": "Senior Software Engineer @ Capgemini",
-        "imageUrl": "https://www.azurethursday.com/media/kdrl1vjl/roel.jpg",
+        "imageUrl": "/images/roel-van-de-grint.jpg",
         "socials": [
             {
                 "icon": "fa-linkedin",
@@ -13,7 +13,7 @@
     {
         "name": "Luuk Mager",
         "title": "Cloud Solution Architect @ Heroes",
-        "imageUrl": "https://www.azurethursday.com/media/hdpmqczq/lzkbcud2_400x400.jpg",
+        "imageUrl": "/images/luuk-mager.jpg",
         "socials": [
             {
                 "icon": "fa-twitter",
@@ -28,7 +28,7 @@
     {
         "name": "Jorrit Meijer",
         "title": "Cloud Solution Architect",
-        "imageUrl": "https://www.azurethursday.com/media/3v1lgoir/e8gjgevb_400x400.jpg",
+        "imageUrl": "/images/jorrit-meijer.jpg",
         "socials": [
             {
                 "icon": "fa-twitter",
@@ -43,7 +43,7 @@
     {
         "name": "Roelant Dieben",
         "title": "Owner @ XPRTZ.cloud",
-        "imageUrl": "https://www.azurethursday.com/media/wzodx5r3/x1wbpab0_400x400.jpg",
+        "imageUrl": "/images/roelant-dieben.jpg",
         "socials": [
             {
                 "icon": "fa-twitter",
@@ -58,7 +58,7 @@
     {
         "name": "Esther Barthel",
         "title": "Solutions Architect @ Cognition IT",
-        "imageUrl": "https://www.azurethursday.com/media/degppq4f/esther_barthel.jpg",
+        "imageUrl": "/images/esther-barthel.jpg",
         "socials": [
             {
                 "icon": "fa-twitter",
@@ -73,7 +73,7 @@
     {
         "name": "Stefan Dingemanse",
         "title": "Consultant at Brainpulse IT",
-        "imageUrl": "https://www.azurethursday.com/media/fsupp4ke/stefan-dingemanse.jpg?anchor=center&mode=crop&width=250&height=350&rnd=132665802494270000",
+        "imageUrl": "/images/stefan-dingemanse.jpg",
         "socials": [
             {
                 "icon": "fa-twitter",

@@ -1,14 +1,4 @@
-<!doctype html>
-<html>
-<head>
- <meta charset="utf-8">
- <title>{{ .Page.Title }} - Next event {{ index .Site.Data.event "nextEventDate" }}</title>
- {{ partial "head.html" . }}
-</head>
-
-<body>
-    {{ partial "header.html" . }}
-    
+{{ define "main" }}
     <div class="container-fluid">
         <div class="main-header">
             <div class="main-header-item">
@@ -27,7 +17,7 @@
         </div>
 
     </div>
-    
+
     <!-- <div class="container">
         {{ .Content }}
     </div> -->
@@ -46,11 +36,4 @@
     </div>
 
     {{ partial "organizers.html" . }}
-    
-    {{ partial "follow-us.html" . }}
-
-    {{ partial "footer.html" . }}
-
-    {{ partial "scripts.html" . }}
-</body>
-</html>
+{{ end }}

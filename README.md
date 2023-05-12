@@ -15,3 +15,6 @@ hugo mod init github.com/azure-thursday/azure-thursday.github.io
 ```
 hugo
 ```
+
+### Live server
+- Use Live Server extension in Visual Studio Code to preview website

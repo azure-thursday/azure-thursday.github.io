@@ -22,6 +22,18 @@ h1 {
   font-size: 4em;
 }
 
+h2 {
+  font-family: "Sans-Bold";
+  font-weight: normal;
+  font-size: 2.4em;
+}
+
+h3 {
+  font-family: "Sans-Bold";
+  font-weight: normal;
+  font-size: 1.6em;
+}
+
 .strong {
     font-family: "Sans-Bold";
     font-weight: normal;
@@ -158,6 +170,23 @@ h1 {
   text-align: center;
   font-size: 0.8em;
 }
+
+@media only screen and (max-width: 767px) {
+  .session-date,
+  .session-timezone,
+  .session-time {
+    text-align: left;
+  }
+
+  .session-date {
+    margin-bottom: 0em;
+  }
+
+  .session-timezone {
+    margin-bottom: 1em;
+  }
+}
+
 
 .session-title {
   text-align: left;
@@ -409,7 +438,7 @@ h1 {
 
 .past-session-button > a {
   font-size: 1.1em;
-  font-family: "Sans-Reg";~
+  font-family: "Sans-Reg";
   font-weight: 400;
   padding: 12px 26px;
 }
@@ -433,4 +462,9 @@ h1 {
 .month-session-container .past-session-button {
   text-align: left;
   margin-left: 2em;
+}
+
+.indented {
+  margin-left: 2em;
+  margin-right: 4em;
 }

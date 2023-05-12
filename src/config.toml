@@ -1,3 +1,6 @@
-baseURL = 'https://azure-thursday.github.io'
+# baseURL = 'https://azure-thursday.github.io'
+baseURL = 'http://127.0.0.1:51320'
 languageCode = 'en-us'
 title = 'Azure Thursday'
+[markup.goldmark.renderer]
+  unsafe = true # Allow HTML in md files

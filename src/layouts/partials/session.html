@@ -9,9 +9,13 @@
         <div class="session-title">{{ .title }}</div>
         <div class="session-meetup">{{ .meetup }}</div>
         <div class="session-description"><div class="session-description-text">{{ .description }}</div></div>
-        <div class="session-button"><a href="#" class="btn btn-primary strong mr-3 mb-3" title="Register for Azure Thursday" aria-label="Register for Azure Thursday">
-            Read more >
-        </a></div>
+        {{ with .hideReadMore }}
+
+        {{ else }}
+            <div class="session-button"><a href="#" class="btn btn-primary strong mr-3 mb-3" title="Register for Azure Thursday" aria-label="Register for Azure Thursday">
+                Read more >
+            </a></div>
+        {{ end }}
     </div>
     <div class="col-md-1">&nbsp;</div>
     <div class="col-md-2">

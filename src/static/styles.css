@@ -225,7 +225,8 @@ h3 {
 
 .speaker-name {
   text-align: center;
-  font-size: 1.4em;
+  font-size: 1.3em;
+  font-weight: bold;
 }
 
 .speaker-name-small {
@@ -236,10 +237,11 @@ h3 {
 
 .speaker-title {
   text-align: center;
-  font-size: 0.9em;
+  font-size: 0.85em;
 }
 
-.speaker-socials{
+.speaker-socials {
+  margin-top: 0.5em;
   text-align: center;
 }
 

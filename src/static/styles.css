@@ -1,3 +1,7 @@
+/* * {
+  outline: 1px solid #f00 !important;
+} */
+
 body {
   background: var(--az-darkblue-light);
   background: linear-gradient(180deg, var(--az-darkblue-light) 0%, var(--az-darkblue-dark) 100%);
@@ -307,6 +311,9 @@ h3 {
   text-align: center;
   font-family: Sans-Bold;
   font-size: 1.4em;
+  line-height: 1.2em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
 }
 
 .organizer-title {
@@ -338,13 +345,13 @@ h3 {
 }
 
 .organizer-container {
-  margin-left: 1em;
-  margin-right: 1em;
+  margin-left: 0.4em;
+  margin-right: 0.4em;
 }
 
 .organizer-list {
-  padding-left: 5em;
-  padding-right: 5em;
+  padding-left: 3em;
+  padding-right: 3em;
 }
 
 .follow-title {

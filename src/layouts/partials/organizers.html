@@ -6,15 +6,15 @@
         </div>
     </div>
 </div>
-<div class="container-fluid"></div>
+<div class="container-fluid">
     <div class="row">
-        <div class="col organizer-container"></div>
+        <div class="col"></div>
         {{ range $.Site.Data.organizers }}
         <div class="col organizer-container">
         {{ partial "organizer.html" . }}
         </div>
         {{ end }}
-        <div class="col organizer-container"></div>
+        <div class="col"></div>
     </div>
     <br/><br/><br/>
 </div>

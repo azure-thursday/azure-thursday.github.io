@@ -12,7 +12,7 @@
         {{ with .hideReadMore }}
 
         {{ else }}
-            <div class="session-button"><button class="btn btn-primary strong mr-3 mb-3" data-toggle="modal" data-target="#exampleModalLong" >
+            <div class="session-button"><button class="btn btn-primary strong mr-3 mb-3" data-bs-toggle="modal" data-bs-target="#modal-{{ .slug }}" >
                 Read more >
             </button></div>
         {{ end }}
@@ -23,21 +23,32 @@
     </div>
 </div>
 
-<div class="modal" id="speaker-modal" tabindex="-1" role="dialog">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
+<div class="modal" id="modal-{{ .slug }}" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content session">
         <div class="modal-header">
-          <h5 class="modal-title">Modal title</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
+          <h5 class="modal-title">{{ .title }}</h5>
         </div>
         <div class="modal-body">
-          <p>Modal body text goes here.</p>
+            <div class="container">
+                <div class="row">
+                    <div class="col col-md-9">
+                        <div><i class="fas fa-calendar-alt"></i>&nbsp;&nbsp;{{ .date }}</div>
+                            <div><i class="fas fa-clock"></i>&nbsp;&nbsp;<span class="session-modal-time">{{ .startTime }}</span> till <span class="session-modal-time">{{ .endTime }}</span> <span class="session-modal-timezone">{{ .timeZone }}</span></div>
+                            <div class="modal-session-description">
+                                {{ .description }}
+                            </div>
+                        </div>
+                    <div class="col col-md-3">
+                        {{ partial "speaker.html" .speaker }}
+                    </div>
+                </div>
+            </div>
+
+            
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-primary">Save changes</button>
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <a href="/sessions/next.ics" type="button" class="btn btn-primary strong"><i class="fas fa-calendar-plus"></i>&nbsp;&nbsp;Add to agenda</a>
         </div>
       </div>
     </div>

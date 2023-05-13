@@ -477,3 +477,41 @@ h3 {
   margin-left: 2em;
   margin-right: 4em;
 }
+
+.session.modal-content {
+  background-color: var(--az-darkblue-light);
+}
+
+.session.modal-content > .modal-footer, .modal-header {
+  border-width: 0px;
+}
+
+.session.modal-content > .modal-header {
+  padding-bottom: 0;
+}
+
+.session.modal-content > .modal-header > .modal-title {
+  font-size: 1.6em;
+  font-weight: bold;
+}
+
+.session-modal-timezone {
+  font-size: 0.8em;
+}
+
+.session-modal-time {
+  font-weight: bold;
+}
+
+.modal-session-description {
+
+}
+
+.modal-session-description {
+  white-space: pre-line;
+  line-height: 1.4em;
+}
+
+.session.modal-content > .modal-footer {
+  justify-content: left;
+}

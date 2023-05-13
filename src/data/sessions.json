@@ -1,13 +1,14 @@
 {
     "sessions": [
         {
+            "slug": "keep-it-safe",
             "meetup": "Meetup June 2023",
             "timeZone": "UTC+02:00 Europe/Amsterdam",
             "date": "1 June 2023",
             "startTime": "18:45",
             "endTime": "19:30",
             "title": "Keep it secret, keep it safe with .NET!",
-            "description": "App configuration. Settings. Secrets. We have all dealt with these things in our code without thinking much about it. But how does this actually work in .NET and how do you make the most of it? And more importantly, how do you store them correctly and prevent leaking secrets?<br/><br/>This talk will teach you how configuration works in .NET, what you should and shouldn't do, and how you can use the power of the cloud to keep your secrets safe!",
+            "description": "App configuration. Settings. Secrets. We have all dealt with these things in our code without thinking much about it.\r\n\r\nBut how does this actually work in .NET and how do you make the most of it? And more importantly, how do you store them correctly and prevent leaking secrets?\r\n\r\nThis talk will teach you how configuration works in .NET, what you should and shouldn't do, and how you can use the power of the cloud to keep your secrets safe!",
             "speaker": {
                 "name": "Sander ten Brinke",
                 "title": "Lead Software Engineer @ Arcady | Microsoft MVP (Developer Technologies)",
@@ -25,6 +26,7 @@
             }
         },
         {
+            "slug": "tbd",
             "meetup": "Meetup June 2023",
             "timeZone": "UTC+02:00 Europe/Amsterdam",
             "date": "1 June 2023",

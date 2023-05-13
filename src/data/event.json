@@ -1,5 +1,9 @@
 {
     "nextEventDate": "1 June 2023",
+    "nextEventUTCStartTime": "2023-06-01T15:30:00.000Z",
+    "nextEventUTCEndTime": "2023-06-01T19:00:00.000Z",
+    "eventLocation": "Beyond Blue",
     "meetupRegisterUrl": "https://www.meetup.com/azure-thursdays/events/293485987/",
-    "headerImageUrl": "/images/header/06-2023.png"
+    "headerImageUrl": "/images/header/06-2023.png",
+    "headerImageAlt": "Azure Thursday May 2023 banner"
 }

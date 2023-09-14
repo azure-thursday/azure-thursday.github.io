@@ -306,11 +306,15 @@ h3 {
 .organizer-name {
   text-align: center;
   font-family: Sans-Bold;
-  font-size: 1.4em;
+  font-size: 1.3em;
+  line-height: 1em;
+  padding-top: 0.4em;
 }
 
 .organizer-title {
   text-align: center;
+  font-size: 0.8em;
+  padding-top: 0.4em;
 }
 
 .organizer-image {
@@ -318,6 +322,7 @@ h3 {
   border-radius: 50%;
   overflow: hidden;
   margin: auto;
+  max-width: 75px;
 }
 
 .organizer-image > img {
@@ -326,11 +331,12 @@ h3 {
 
 .organizer-socials{
   text-align: center;
+  padding-top: 0.4em;
 }
 
 .organizer-socials > a > i {
   color: #FFF;
-  font-size: 1.2em;
+  font-size: 1.1em;
 }
 
 .organizer-socials > a:not(:first-child) > i {

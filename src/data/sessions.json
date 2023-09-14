@@ -1,42 +1,47 @@
 {
     "sessions": [
         {
-            "meetup": "Meetup June 2023",
+            "meetup": "Meetup October 2023",
             "timeZone": "UTC+02:00 Europe/Amsterdam",
-            "date": "1 June 2023",
+            "date": "5 October 2023",
             "startTime": "18:45",
             "endTime": "19:30",
-            "title": "Keep it secret, keep it safe with .NET!",
-            "description": "App configuration. Settings. Secrets. We have all dealt with these things in our code without thinking much about it. But how does this actually work in .NET and how do you make the most of it? And more importantly, how do you store them correctly and prevent leaking secrets?<br/><br/>This talk will teach you how configuration works in .NET, what you should and shouldn't do, and how you can use the power of the cloud to keep your secrets safe!",
+            "title": " Azure Networking - A love story between a Hub and a Spoke",
+            "description": "Join my session on Azure Networking as we explore the creation of virtual networks, VPN connections, and network peering. This hands-on session will guide you through the process of building virtual networks and establishing secure connections. Learn how to configure VPN gateways, for seamless connectivity between on-premises networks and Azure virtual networks. Discover the power of network peering to connect virtual networks within Azure and enable secure communication across different network boundaries. Gain practical skills and knowledge to enhance your Azure Networking projects and unlock the true potential of cloud networking.",
             "speaker": {
-                "name": "Sander ten Brinke",
-                "title": "Lead Software Engineer @ Arcady | Microsoft MVP (Developer Technologies)",
-                "imageUrl": "/images/speaker/sander-ten-brinke.jpg",
+                "name": "Eduard Keilholz",
+                "title": "Team Lead & Solution Architect at 4DotNet | Azure MVP",
+                "imageUrl": "/images/speaker/eduard-keilholz.jpg",
                 "socials": [
                     {
                         "icon": "fa-twitter",
-                        "url": "https://twitter.com/sandertenbrinke"
+                        "url": "https://twitter.com/ed_dotnet"
                     },
                     {
                         "icon": "fa-linkedin",
-                        "url": "https://www.linkedin.com/in/sander-ten-brinke-295811a8/"
+                        "url": "https://www.linkedin.com/in/eduard-keilholz/"
                     }
                 ]
             }
         },
         {
-            "meetup": "Meetup June 2023",
+            "meetup": "Meetup October 2023",
             "timeZone": "UTC+02:00 Europe/Amsterdam",
-            "date": "1 June 2023",
+            "date": "1 October 2023",
             "startTime": "19:45",
             "endTime": "20:30",
             "title": "To be announced",
             "description": "To be announced",
             "speaker": {
-                "name": "To be announced",
-                "title": "",
-                "imageUrl": "/images/speaker/tbd.png",
-                "socials": []
+                "name": "Twan Koot",
+                "title": "Principal expert Azure & Codesmith @ Ordina | Speaker | Trainer",
+                "imageUrl": "/images/speaker/twan-koot.jpg",
+                "socials": [
+                    {
+                        "icon": "fa-linkedin",
+                        "url": "https://www.linkedin.com/in/twan-koot-a813a8b7/"
+                    }
+                ]
             },
             "hideReadMore": true
         }

@@ -1,0 +1,44 @@
+{
+    "speakers": [
+        {
+            "slug": "barbara-forbes",
+            "name": "Barbara Forbes",
+            "title": "",
+            "imageUrl": "https://www.azurethursday.com/media/2mpj4ts1/barbara.jpg",
+            "socials": [
+                {
+                    "icon": "fa-twitter",
+                    "url": "https://twitter.com/Ba4bes"
+                },
+                {
+                    "icon": "fa-linkedin",
+                    "url": "https://www.linkedin.com/in/baforbes/"
+                }
+            ]
+        },
+        {
+            "slug": "zeeshan-ali",
+            "name": "Zeeshan Ali",
+            "title": "Senior data and analytics consultant @ Microsoft",
+            "imageUrl": "https://www.azurethursday.com/media/xisgwpar/zeeshan.png",
+            "socials": []
+        },
+        {
+            "slug": "sander-ten-brinke",
+            "name": "Sander ten Brinke",
+            "title": "Lead Software Engineer @ Arcady | Microsoft MVP (Developer Technologies)",
+            "imageUrl": "/images/speaker/sander-ten-brinke.jpg",
+            "socials": [
+                {
+                    "icon": "fa-twitter",
+                    "url": "https://twitter.com/sandertenbrinke"
+                },
+                {
+                    "icon": "fa-linkedin",
+                    "url": "https://www.linkedin.com/in/sander-ten-brinke-295811a8/"
+                }
+            ]
+        }
+    ]
+}
+

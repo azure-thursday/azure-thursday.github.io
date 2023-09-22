@@ -19,7 +19,9 @@
     </div>
     <div class="col-md-1">&nbsp;</div>
     <div class="col-md-2">
-        {{ partial "speaker.html" .speaker }}
+        {{ range .speakers }}
+        {{ partial "speaker.html" . }}
+        {{ end }}
     </div>
 </div>
 
@@ -40,7 +42,9 @@
                             </div>
                         </div>
                     <div class="col col-md-3">
-                        {{ partial "speaker.html" .speaker }}
+                        {{ range .speakers }}
+                        {{ partial "speaker.html" . }}
+                        {{ end }}
                     </div>
                 </div>
             </div>

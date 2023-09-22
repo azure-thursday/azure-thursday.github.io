@@ -25,19 +25,21 @@
             }
         },
         {
-            "slug": "tbd",
-            "meetup": "Meetup June 2023",
+            "meetup": "Meetup October 2023",
             "timeZone": "UTC+02:00 Europe/Amsterdam",
-            "date": "1 June 2023",
+            "date": "5 October 2023",
             "startTime": "19:45",
             "endTime": "20:30",
             "title": "Dynamic Cost Modeling in the Cloud: Adaptive Strategies for Optimal Cloud Management and Financial Success",
             "description": "We'll explore the ever-changing landscape of cloud costs and present adaptive techniques to model these costs effectively. Learn how to marry technical requirements with financial goals to achieve a balanced, optimized cloud environment",
             "speaker": {
-                "name": "To be announced",
-                "title": "",
-                "imageUrl": "/images/speaker/tbd.png",
-                "socials": []
+                "name": "Twan Koot",
+                "title": "Principal expert Azure & Codesmith @ Ordina | Speaker | Trainer",
+                "imageUrl": "/images/speaker/twan-koot.png",
+                "socials": [{
+                    "icon": "fa-linkedin",
+                    "url": "https://www.linkedin.com/in/twan-koot-a813a8b7/"
+                }]
             },
             "hideReadMore": true
         }

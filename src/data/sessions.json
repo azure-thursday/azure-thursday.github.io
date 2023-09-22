@@ -1,6 +1,7 @@
 {
     "sessions": [
         {
+            "slug": "azure-networking",
             "meetup": "Meetup October 2023",
             "timeZone": "UTC+02:00 Europe/Amsterdam",
             "date": "5 October 2023",
@@ -25,6 +26,7 @@
             }]
         },
         {
+            "slug": "dynamic-cost",
             "meetup": "Meetup October 2023",
             "timeZone": "UTC+02:00 Europe/Amsterdam",
             "date": "5 October 2023",

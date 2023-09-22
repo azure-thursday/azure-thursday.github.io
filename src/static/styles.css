@@ -203,6 +203,7 @@ h3 {
   text-align: left;
   font-family: Sans-Bold;
   font-size: 1.8em;
+  line-height: 1.2em;
 }
 
 .speaker-image {
@@ -238,6 +239,7 @@ h3 {
   text-align: center;
   font-size: 1.3em;
   font-weight: bold;
+  line-height: 1.2em;
 }
 
 .speaker-name-small {

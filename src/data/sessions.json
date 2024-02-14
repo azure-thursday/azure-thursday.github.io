@@ -19,6 +19,16 @@
                         "url": "https://www.linkedin.com/in/smorenburg"
                     }
                 ]
+            }, {
+                "name": "Afira Begum Mujeeb",
+                "title": "Senior IaC Engineer | Architect | Azure",
+                "imageUrl": "/images/speaker/afira-begum-mujeeb.png",
+                "socials": [
+                    {
+                        "icon": "fa-linkedin",
+                        "url": "https://www.linkedin.com/in/afira-mujeeb"
+                    }
+                ]
             }]
         },
         {

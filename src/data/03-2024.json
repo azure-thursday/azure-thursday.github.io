@@ -1,0 +1,62 @@
+{
+    "sessions": [
+        {
+            "slug": "terraform-gitops-way",
+            "meetup": "Meetup March 2024",
+            "timeZone": "UTC+01:00 Europe/Amsterdam",
+            "date": "7 March 2024",
+            "startTime": "18:45",
+            "endTime": "19:30",
+            "title": "Using Terraform the GitOps way",
+            "description": "GitOps shifted how we manage software and infrastructure, with Git as the central location for automating the entire lifecycle of applications and their infrastructure. Combining the Azure Kubernetes Service (AKS) with Flux and the Terraform controller enables using one of the most popular infrastructure-as-code tools, the GitOps way.",
+            "speakers": [{
+                "name": "Robin Smorenburg",
+                "title": "Lead Cloud Architect - Azure MVP & CNCF Ambassador",
+                "imageUrl": "/images/speaker/robin-smorenburg.jpg",
+                "socials": [
+                    {
+                        "icon": "fa-linkedin",
+                        "url": "https://www.linkedin.com/in/smorenburg"
+                    }
+                ]
+            }, {
+                "name": "Afira Begum Mujeeb",
+                "title": "Senior IaC Engineer | Architect | Azure",
+                "imageUrl": "/images/speaker/afira-begum-mujeeb.png",
+                "socials": [
+                    {
+                        "icon": "fa-linkedin",
+                        "url": "https://www.linkedin.com/in/afira-mujeeb"
+                    }
+                ]
+            }]
+        },
+        {
+            "slug": "functions-zero-to-hero",
+            "meetup": "Meetup March 2024",
+            "timeZone": "UTC+01:00 Europe/Amsterdam",
+            "date": "7 March 2024",
+            "startTime": "19:45",
+            "endTime": "20:30",
+            "title": "Azure Functions: From Zero to Hero",
+            "description": "Imagine a world where your applications effortlessly respond to user demands, scaling up or down in real-time, without having to worry about the architecture. Meet Azure Functions – the solutions to working serverless so that your applications work even better. In this session, we’ll explore the core of Azure Functions, covering all you need to know. From the basics to the newest features, This talk will guide you through the setup and show you the true power of this Azure feature. You will get to learn the core concepts through hands-on demonstrations, we'll delve into the key features that make Azure Functions a game-changer. Learn how to leverage function triggers like HTTP and Queue so that you’re ready to start using Azure Functions for your applications immediately. Whether you're an experienced Azure developer looking to embrace serverless computing or a beginner eager to stay ahead, this session is for you. Join me on this hands-on journey to unlock the potential of Azure Functions.",
+            "speakers": [{
+                "name": "Louëlla Creemers",
+                "title": "Software Developer @ 4DotNet & Microsoft MVP",
+                "imageUrl": "/images/speaker/louella-creemers.jpg",
+                "socials": [
+                    {
+                        "icon": "fa-twitter",
+                        "url": "https://twitter.com/lovelacecoding"
+                        },
+                    {
+                    "icon": "fa-linkedin",
+                    "url": "https://www.linkedin.com/in/louelladev"
+                    }
+                ]
+            }],
+            "hideReadMore": false
+        }
+    ]
+}
+

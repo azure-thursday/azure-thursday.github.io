@@ -1,57 +1,43 @@
 {
     "sessions": [
         {
-            "slug": "terraform-gitops-way",
-            "meetup": "Meetup March 2024",
+            "slug": "managed-identity",
+            "meetup": "Meetup June 2024",
             "timeZone": "UTC+01:00 Europe/Amsterdam",
-            "date": "7 March 2024",
+            "date": "6 June 2024",
             "startTime": "18:45",
             "endTime": "19:30",
-            "title": "Using Terraform the GitOps way",
-            "description": "GitOps shifted how we manage software and infrastructure, with Git as the central location for automating the entire lifecycle of applications and their infrastructure. Combining the Azure Kubernetes Service (AKS) with Flux and the Terraform controller enables using one of the most popular infrastructure-as-code tools, the GitOps way.",
+            "title": "Leveraging the power of Managed Identity in Azure",
+            "description": "The authentication landscape in Azure has changed a lot. Traditionally applications used certificates, keys, passwords and many other things to be able to connect to external resources. Sometimes these methods still apply and are valid to use, but most of the time they can be insecure and are very annoying to maintain. These days authentication through identity is very popular and makes maintenance a joke.\r\n\r\nIn this session I will show you what managed identities are, we will have a look into what the difference is between system-assigned and user-assigned identities and we will dive into an example application which leverages managed identities. We will also dive into using managed identities with Azure SQL Server and the quirks you need to think about.",
             "speakers": [{
-                "name": "Robin Smorenburg",
-                "title": "Lead Cloud Architect - Azure MVP & CNCF Ambassador",
-                "imageUrl": "/images/speaker/robin-smorenburg.jpg",
+                "name": "Wesley Noordam",
+                "title": "Azure developer, Consultant at XPRTZ.cloud",
+                "imageUrl": "/images/speaker/wesley-noordam.jpg",
                 "socials": [
                     {
                         "icon": "fa-linkedin",
-                        "url": "https://www.linkedin.com/in/smorenburg"
-                    }
-                ]
-            }, {
-                "name": "Afira Begum Mujeeb",
-                "title": "Senior IaC Engineer | Architect | Azure",
-                "imageUrl": "/images/speaker/afira-begum-mujeeb.png",
-                "socials": [
-                    {
-                        "icon": "fa-linkedin",
-                        "url": "https://www.linkedin.com/in/afira-mujeeb"
+                        "url": "https://www.linkedin.com/in/wesley-noordam-70183ab9"
                     }
                 ]
             }]
         },
         {
-            "slug": "functions-zero-to-hero",
-            "meetup": "Meetup March 2024",
+            "slug": "euc-hexagrid",
+            "meetup": "Meetup June 2024",
             "timeZone": "UTC+01:00 Europe/Amsterdam",
-            "date": "7 March 2024",
+            "date": "6 June 2024",
             "startTime": "19:45",
             "endTime": "20:30",
-            "title": "Azure Functions: From Zero to Hero",
-            "description": "Imagine a world where your applications effortlessly respond to user demands, scaling up or down in real-time, without having to worry about the architecture. Meet Azure Functions – the solutions to working serverless so that your applications work even better. In this session, we’ll explore the core of Azure Functions, covering all you need to know. From the basics to the newest features, This talk will guide you through the setup and show you the true power of this Azure feature. You will get to learn the core concepts through hands-on demonstrations, we'll delve into the key features that make Azure Functions a game-changer. Learn how to leverage function triggers like HTTP and Queue so that you’re ready to start using Azure Functions for your applications immediately. Whether you're an experienced Azure developer looking to embrace serverless computing or a beginner eager to stay ahead, this session is for you. Join me on this hands-on journey to unlock the potential of Azure Functions.",
+            "title": "Decoding EUC Hexagrid",
+            "description": "What the HEX is EUC?! In this 'decoding EUC Hexagrid' session, we will explore the beauty and the complexities of the End User Computing landscape. As the creator of the EUC Hexagrid, I look forward to sharing my insights on the latest trends and developments across the EUC landscape, vendor, and solution spectrum.\r\n\r\nThis session will clarify the Hexagrid framework, help you understand how it can impact your IT strategies, and teach you about the latest developments in EUC. What you can expect",
             "speakers": [{
-                "name": "Louëlla Creemers",
-                "title": "Software Developer @ 4DotNet & Microsoft MVP",
-                "imageUrl": "/images/speaker/louella-creemers.jpg",
+                "name": "Ruben Spruijt",
+                "title": "Field CTO, EUC strategy & alliances at Dizzion",
+                "imageUrl": "/images/speaker/ruben-spruijt.jpg",
                 "socials": [
                     {
-                        "icon": "fa-twitter",
-                        "url": "https://twitter.com/lovelacecoding"
-                        },
-                    {
                     "icon": "fa-linkedin",
-                    "url": "https://www.linkedin.com/in/louelladev"
+                    "url": "https://www.linkedin.com/in/rspruijt"
                     }
                 ]
             }],

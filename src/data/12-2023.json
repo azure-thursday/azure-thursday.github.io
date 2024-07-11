@@ -11,7 +11,7 @@
             "description": "Features get added to applications all the time, as developers we try our best to make an educated guess on how users will react to the changes. Sometimes this doesn’t work out and we receive angry emails about the made changes.             Join us in this session to learn how feature flags can be used to ship features without angry emails. We will cover implementing and fine-tuning feature flags, discuss various approaches, and take a deep dive into the tools that Azure offers.",
             "speakers": [{
                 "name": "Maarten Grootoonk",
-                "title": "Senior Software Engineer @ Ordina",
+                "title": "Senior Software Engineer @ Sopra Steria",
                 "imageUrl": "/images/speaker/maarten-grootoonk.jpg",
                 "socials": [
                     {

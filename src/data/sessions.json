@@ -8,7 +8,7 @@
             "startTime": "18:45",
             "endTime": "19:30",
             "title": "Leveraging the power of Managed Identity in Azure",
-            "description": "The authentication landscape in Azure has changed a lot. Traditionally applications used certificates, keys, passwords and many other things to be able to connect to external resources. Sometimes these methods still apply and are valid to use, but most of the time they can be insecure and are very annoying to maintain. These days authentication through identity is very popular and makes maintenance a joke. In this session I will show you what managed identities are, we will have a look into what the difference is between system-assigned and user-assigned identities and we will dive into an example application which leverages managed identities. We will also dive into using managed identities with Azure SQL Server and the quirks you need to think about.",
+            "description": "The authentication landscape in Azure has changed a lot. Traditionally applications used certificates, keys, passwords and many other things to be able to connect to external resources. Sometimes these methods still apply and are valid to use, but most of the time they can be insecure and are very annoying to maintain. These days authentication through identity is very popular and makes maintenance a joke.\r\n\r\nIn this session I will show you what managed identities are, we will have a look into what the difference is between system-assigned and user-assigned identities and we will dive into an example application which leverages managed identities. We will also dive into using managed identities with Azure SQL Server and the quirks you need to think about.",
             "speakers": [{
                 "name": "Wesley Noordam",
                 "title": "Azure developer, Consultant at XPRTZ.cloud",
@@ -28,8 +28,8 @@
             "date": "6 June 2024",
             "startTime": "19:45",
             "endTime": "20:30",
-            "title": "Decoding the EUC Hexagrid",
-            "description": "What the HEX is EUC?! In this decoding EUC Hexagrid session, we will explore the beauty and the complexities of the End User Computing landscape. As the creator of the EUC Hexagrid, I look forward to sharing my insights on the latest trends and developments across the EUC landscape, vendor, and solution spectrum. This session will clarify the Hexagrid framework, help you understand how it can impact your IT strategies, and teach you about the latest developments in EUC. What you can expect are a detailed walkthrough of the EUC Hexagri and an analysis of current trends in enterprise IT.",
+            "title": "Decoding EUC Hexagrid",
+            "description": "What the HEX is EUC?! In this 'decoding EUC Hexagrid' session, we will explore the beauty and the complexities of the End User Computing landscape. As the creator of the EUC Hexagrid, I look forward to sharing my insights on the latest trends and developments across the EUC landscape, vendor, and solution spectrum.\r\n\r\nThis session will clarify the Hexagrid framework, help you understand how it can impact your IT strategies, and teach you about the latest developments in EUC. What you can expect",
             "speakers": [{
                 "name": "Ruben Spruijt",
                 "title": "Field CTO, EUC strategy & alliances at Dizzion",

@@ -7,8 +7,8 @@
             "date": "12 September 2024",
             "startTime": "18:45",
             "endTime": "19:30",
-            "title": "Infrastructure as code (Bicep)",
-            "description": "TBD",
+            "title": "A Service-Oriented approach to Infrastructure as Code",
+            "description": "Many engineers spend their precious time writing Bicep templates that have already exist within their company. What if you had Bicep files that everyone in your company could find and use?<br/><br/>In this talk, I'll cover the considerations to take when writing bicep files to make sure they're usable for other engineers. You'll discover why you might want to treat your IaC files as a product and what it means to see your fellow engineers as customers. I'll talk about how you can help others deliver value more quickly and efficiently by utilizing tools like:<br/>- Modular Bicep modules<br/>- Parameter files<br/>- User-defined types<br/><br/>So join me on this journey to discover how you can safely deploy the same Bicep files to multiple environments, allowing us to save time and effort. You won't need a complete overhaul of your code base, with these steps you can start improving your code and processes tomorrow!",
             "speakers": [{
                 "name": "Evert Bleijendaal",
                 "title": "Cloud- Infra specialist @ OGD",

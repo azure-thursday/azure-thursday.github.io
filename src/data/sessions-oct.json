@@ -1,0 +1,52 @@
+{
+  "sessions": [
+    {
+      "slug": "azure-ai-studio",
+      "meetup": "Meetup October 2024",
+      "timeZone": "UTC+01:00 Europe/Amsterdam",
+      "date": "3 October 2024",
+      "startTime": "18:45",
+      "endTime": "19:30",
+      "title": "Automating report generation with Databricks and Azure AI Studio",
+      "description": "In an era where data drives the energy sector, the challenge lies in translating complex business needs into actionable insights. This talk explores how Azure tools—AI Studio, Data Factory, and Databricks (among others)—can automate and enhance reporting processes. We’ll examine how to convert business logic into code, harness AI for intelligent decision support, and build a scalable, end-to-end solution within Azure’s ecosystem. By focusing on practical applications and strategic outcomes, this session will provoke thought on how AI and automation can reshape the way we approach data and decision-making in the energy industry.",
+      "speakers": [
+        {
+          "name": "Javier Eguíluz",
+          "title": "Data Scientist | Engineer @ Heroes",
+          "imageUrl": "/images/speaker/javier-eguiluz.png",
+          "socials": [
+            {
+              "icon": "fa-linkedin",
+              "url": "https://www.linkedin.com/in/javier-eguiluz/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "azure-static-web-apps",
+      "meetup": "Meetup October 2024",
+      "timeZone": "UTC+01:00 Europe/Amsterdam",
+      "date": "3 October 2024",
+      "startTime": "19:45",
+      "endTime": "20:30",
+      "title": "Azure Static Web Apps for the Enterprise",
+      "description": "Azure Static Web Apps. An easy way to get a hobby site into the world for very little cost. But that's not all they can do! With a few changes to the out of the box experience, and using the standard, paid, tier we can use these Azure Resources in our enterprise architecture! We will touch upon infrastructure as code, to make reliable deployments to a known environment. We'll look into how to change the default pipeline to allow unit tests etc for the code, and deploying the same build applications into multiple environments. Finally, we'll take a look at Custom Authentication - using Auth0 to authenticate and a custom Azure Function to provide the roles for our users.",
+      "speakers": [
+        {
+          "name": "Stacy Cashmore",
+          "title": "Speaker, Author, and Tech Explorer DevOps.",
+          "imageUrl": "/images/speaker/stacy-cashmore.png",
+          "socials": [
+            {
+              "icon": "fa-linkedin",
+              "url": "https://www.linkedin.com/in/stacycash/"
+            }
+          ]
+        }
+      ],
+      "hideReadMore": false
+    }
+  ]
+}
+

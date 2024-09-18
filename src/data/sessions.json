@@ -1,48 +1,52 @@
 {
-    "sessions": [
+  "sessions": [
+    {
+      "slug": "azure-ai-studio",
+      "meetup": "Meetup October 2024",
+      "timeZone": "UTC+01:00 Europe/Amsterdam",
+      "date": "3 October 2024",
+      "startTime": "18:45",
+      "endTime": "19:30",
+      "title": "Automating report generation with Databricks and Azure AI Studio",
+      "description": "In an era where data drives the energy sector, the challenge lies in translating complex business needs into actionable insights. This talk explores how Azure tools—AI Studio, Data Factory, and Databricks (among others)—can automate and enhance reporting processes. We’ll examine how to convert business logic into code, harness AI for intelligent decision support, and build a scalable, end-to-end solution within Azure’s ecosystem. By focusing on practical applications and strategic outcomes, this session will provoke thought on how AI and automation can reshape the way we approach data and decision-making in the energy industry.",
+      "speakers": [
         {
-            "slug": "iac-bicep",
-            "meetup": "Meetup September 2024",
-            "timeZone": "UTC+01:00 Europe/Amsterdam",
-            "date": "12 September 2024",
-            "startTime": "18:45",
-            "endTime": "19:30",
-            "title": "A Service-Oriented approach to Infrastructure as Code",
-            "description": "Many engineers spend their precious time writing Bicep templates that have already exist within their company. What if you had Bicep files that everyone in your company could find and use?<br/><br/>In this talk, I'll cover the considerations to take when writing bicep files to make sure they're usable for other engineers. You'll discover why you might want to treat your IaC files as a product and what it means to see your fellow engineers as customers. I'll talk about how you can help others deliver value more quickly and efficiently by utilizing tools like:<br/>- Modular Bicep modules<br/>- Parameter files<br/>- User-defined types<br/><br/>So join me on this journey to discover how you can safely deploy the same Bicep files to multiple environments, allowing us to save time and effort. You won't need a complete overhaul of your code base, with these steps you can start improving your code and processes tomorrow!",
-            "speakers": [{
-                "name": "Evert Bleijendaal",
-                "title": "Cloud- Infra specialist @ OGD",
-                "imageUrl": "/images/speaker/evert-bleijendaal.jpg",
-                "socials": [
-                    {
-                        "icon": "fa-linkedin",
-                        "url": "https://www.linkedin.com/in/evertbleijendaal"
-                    }
-                ]
-            }]
-        },
-        {
-            "slug": "azure-verified-modules",
-            "meetup": "Meetup September 2024",
-            "timeZone": "UTC+01:00 Europe/Amsterdam",
-            "date": "12 September 2024",
-            "startTime": "19:45",
-            "endTime": "20:30",
-            "title": "Accelerate building infrastructure with Azure Verified Modules",
-            "description": "In this session, we will explore everything around Azure Verified Modules, a powerful set of Azure Bicep or Terraform templates. These sets of templates are built and maintained by Microsoft to set a standardisation for infrastructure as code templates and to elevate the quality of deployments.<br/>Azure Verified Modules are pre-built, tested, and WAF-aligned IaC templates that facilitate the deployment and management of Azure resources. These modules aim to streamline the development process by providing reusable and secure templates, reducing the need for custom coding, and minimising errors.",
-            "speakers": [{
-                "name": "John Lokerse",
-                "title": "DevOps Consultant, Azure Bicep enthusiast and Azure MVP on DevOps and Azure Infrastructure-as-Code",
-                "imageUrl": "/images/speaker/john-lokerse.jpg",
-                "socials": [
-                    {
-                    "icon": "fa-linkedin",
-                    "url": "https://www.linkedin.com/in/johnlokerse/"
-                    }
-                ]
-            }],
-            "hideReadMore": false
+          "name": "Javier Eguíluz",
+          "title": "Data Scientist | Engineer @ Heroes",
+          "imageUrl": "/images/speaker/javier-eguiluz.png",
+          "socials": [
+            {
+              "icon": "fa-linkedin",
+              "url": "https://www.linkedin.com/in/javier-eguiluz/"
+            }
+          ]
         }
-    ]
+      ]
+    },
+    {
+      "slug": "azure-static-web-apps",
+      "meetup": "Meetup October 2024",
+      "timeZone": "UTC+01:00 Europe/Amsterdam",
+      "date": "3 October 2024",
+      "startTime": "19:45",
+      "endTime": "20:30",
+      "title": "Azure Static Web Apps for the Enterprise",
+      "description": "Azure Static Web Apps. An easy way to get a hobby site into the world for very little cost. But that's not all they can do! With a few changes to the out of the box experience, and using the standard, paid, tier we can use these Azure Resources in our enterprise architecture! We will touch upon infrastructure as code, to make reliable deployments to a known environment. We'll look into how to change the default pipeline to allow unit tests etc for the code, and deploying the same build applications into multiple environments. Finally, we'll take a look at Custom Authentication - using Auth0 to authenticate and a custom Azure Function to provide the roles for our users.",
+      "speakers": [
+        {
+          "name": "Stacy Cashmore",
+          "title": "Speaker, Author, and Tech Explorer DevOps.",
+          "imageUrl": "/images/speaker/stacy-cashmore.png",
+          "socials": [
+            {
+              "icon": "fa-linkedin",
+              "url": "https://www.linkedin.com/in/stacycash/"
+            }
+          ]
+        }
+      ],
+      "hideReadMore": false
+    }
+  ]
 }
 

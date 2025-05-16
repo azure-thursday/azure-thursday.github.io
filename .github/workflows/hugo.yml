@@ -43,6 +43,11 @@ jobs:
         uses: actions/checkout@v3
         with:
           submodules: recursive
+      - name: Copy Event JSON to static outputs
+        run: |
+            mkdir -p src/static/json
+            cp src/data/event.json src/static/json/event.json
+            cp src/data/sessions.json src/static/json/sessions.json
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v3

@@ -1,19 +1,19 @@
 {
   "sessions": [
     {
-      "slug": "network-security-perimeter",
+      "slug": "azure-network-security",
       "meetup": "Meetup June 2025",
       "timeZone": "UTC+01:00 Europe/Amsterdam",
-      "date": "05 June 2025",
+      "date": "5 June 2025",
       "startTime": "18:45",
       "endTime": "19:30",
       "title": "Fortresses in Azure simplified: using Network Security Perimeter",
-      "description": "In the past, we only needed knowledge about running applications on Windows servers. Networking tasks were handled by 'the networking guys,' and in-depth knowledge was rarely required. Nowadays, running that same application in Azure demands much more. Even though the network gurus are still around, you'll most likely be responsible for at least part of the network. Another option is to opt-out of using Virtual Networks, but that would make your application less secure.\r\n\r\nUsing Virtual Networks adds complexity, which impacts the required knowledge of engineers. Setting up a well-functioning Virtual Network also requires multiple components. These components most likely include Network Security Groups and Private Endpoints. Simplifying your own virtual network 'fortress' helps teams maintain control. The newly released resource, Network Security Perimeter, is here to help. In this session, we will explore what features NSP offers and how it can help you simplify your Azure network.",
+      "description": "In the past, we only needed knowledge about running applications on Windows servers. Networking tasks were handled by 'the networking guys,' and in-depth knowledge was rarely required. Nowadays, running that same application in Azure demands much more. Even though the network gurus are still around, you'll most likely be responsible for at least part of the network. Another option is to opt-out of using Virtual Networks, but that would make your application less secure. Using Virtual Networks adds complexity, which impacts the required knowledge of engineers. Setting up a well-functioning Virtual Network also requires multiple components. These components most likely include Network Security Groups and Private Endpoints. Simplifying your own virtual network 'fortress' helps teams maintain control. The newly released resource, Network Security Perimeter, is here to help. In this session, we will explore what features NSP offers and how it can help you simplify your Azure network.",
       "speakers": [
         {
           "name": "Wesley Noordam",
-          "title": "Consultant, Azure developer and Azure architect at XPRTZ.cloud",
-          "imageUrl": "https://cache.sessionize.com/image/5ac1-400o400o2-nQbuqkUyYHfNsTZnz8ps1S.jpg",
+          "title": "Azure developer, Consultant at XPRTZ.cloud",
+          "imageUrl": "/images/speaker/wesley-noordam.jpg",
           "socials": [
             {
               "icon": "fa-linkedin",
@@ -27,7 +27,7 @@
       "slug": "azure-naming-convention",
       "meetup": "Meetup June 2025",
       "timeZone": "UTC+01:00 Europe/Amsterdam",
-      "date": "05 June 2024",
+      "date": "5 June 2025",
       "startTime": "19:45",
       "endTime": "20:30",
       "title": "The Perfect Azure Naming Convention: Designing for Scalability and Automation",
@@ -35,12 +35,12 @@
       "speakers": [
         {
           "name": "Jev Suchoi",
-          "title": "Let's automate the boring!",
-          "imageUrl": "https://cache.sessionize.com/image/b67f-400o400o2-YNMfdxN4uthVEX6FSjMV9Z.png",
+          "title": "Microsoft MVP | Cloud Architecture, Engineering Excellence and Cloud Security Specialist | #TheCloudExplorers",
+          "imageUrl": "/images/speaker/jev-suchoi.jpeg",
           "socials": [
             {
               "icon": "fa-linkedin",
-              "url": "https://nl.linkedin.com/in/jev-suchoi"
+              "url": "https://www.linkedin.com/in/jev-suchoi/"
             }
           ]
         }

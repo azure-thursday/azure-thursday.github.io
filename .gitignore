@@ -1,3 +1,5 @@
 src/public
 public
 .hugo_build.lock
+.vs
+.vscode

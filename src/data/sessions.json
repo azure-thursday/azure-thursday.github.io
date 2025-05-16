@@ -13,7 +13,7 @@
         {
           "name": "Wesley Noordam",
           "title": "Azure developer, Consultant at XPRTZ.cloud",
-          "imageUrl": "/images/speaker/wesley-noordam.jpg",
+          "imageUrl": "https://www.azurethursday.com/images/speaker/wesley-noordam.jpg",
           "socials": [
             {
               "icon": "fa-linkedin",
@@ -36,7 +36,7 @@
         {
           "name": "Jev Suchoi",
           "title": "Microsoft MVP | Cloud Architecture, Engineering Excellence and Cloud Security Specialist | #TheCloudExplorers",
-          "imageUrl": "/images/speaker/jev-suchoi.jpeg",
+          "imageUrl": "https://www.azurethursday.com/images/speaker/jev-suchoi.jpeg",
           "socials": [
             {
               "icon": "fa-linkedin",

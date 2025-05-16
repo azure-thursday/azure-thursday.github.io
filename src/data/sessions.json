@@ -1,67 +1,48 @@
 {
   "sessions": [
     {
-      "slug": "public-dns-zone",
-      "meetup": "Meetup December 2024",
+      "slug": "network-security-perimeter",
+      "meetup": "Meetup June 2025",
       "timeZone": "UTC+01:00 Europe/Amsterdam",
-      "date": "12 December 2024",
-      "startTime": "18:30",
+      "date": "05 June 2025",
+      "startTime": "18:45",
       "endTime": "19:30",
-      "title": "Automating Azure Public DNS Zone Management with Bicep and Deployment Stacks",
-      "description": "In this session, we will explore how to efficiently manage Azure Public DNS zones using Infrastructure as Code (IaC) principles. By leveraging Azure Bicep and Deployment Stacks, we’ll demonstrate how to automate the addition and removal of DNS records, ensuring a streamlined and error-free process. Attendees will gain insights into the benefits of using Bicep for declarative resource management and how Deployment Stacks can simplify complex deployments.\r\n\r\nWhether you’re new to IaC or looking to enhance your existing Azure management practices, this session will provide practical knowledge and hands-on examples to elevate your DNS management strategy.",
+      "title": "Fortresses in Azure simplified: using Network Security Perimeter",
+      "description": "In the past, we only needed knowledge about running applications on Windows servers. Networking tasks were handled by 'the networking guys,' and in-depth knowledge was rarely required. Nowadays, running that same application in Azure demands much more. Even though the network gurus are still around, you'll most likely be responsible for at least part of the network. Another option is to opt-out of using Virtual Networks, but that would make your application less secure.\r\n\r\nUsing Virtual Networks adds complexity, which impacts the required knowledge of engineers. Setting up a well-functioning Virtual Network also requires multiple components. These components most likely include Network Security Groups and Private Endpoints. Simplifying your own virtual network 'fortress' helps teams maintain control. The newly released resource, Network Security Perimeter, is here to help. In this session, we will explore what features NSP offers and how it can help you simplify your Azure network.",
       "speakers": [
         {
-          "name": "André van den Berg",
-          "title": "Consultant at Rubicon Cloud Advisor | MVP | The Cloud Admin EU",
-          "imageUrl": "/images/speaker/andre-van-der-berg.jpeg",
+          "name": "Wesley Noordam",
+          "title": "Consultant, Azure developer and Azure architect at XPRTZ.cloud",
+          "imageUrl": "https://cache.sessionize.com/image/5ac1-400o400o2-nQbuqkUyYHfNsTZnz8ps1S.jpg",
           "socials": [
             {
               "icon": "fa-linkedin",
-              "url": "https://www.linkedin.com/in/aavdberg/"
+              "url": "https://www.linkedin.com/in/wesley-noordam-70183ab9/"
             }
           ]
         }
       ]
     },
     {
-      "slug": "power-devops",
-      "meetup": "Meetup December 2024",
+      "slug": "azure-naming-convention",
+      "meetup": "Meetup June 2025",
       "timeZone": "UTC+01:00 Europe/Amsterdam",
-      "date": "12 December 2024",
-      "startTime": "19:15",
-      "endTime": "20:00",
-      "title": "You’ve got the Power (Platform)! Controlling developers in Azure DevOps",
-      "description": "Developers have it all figured out with their code flows, everything is quickly pushed to production and it’s up to the processes to make sure nothing breaks down. But does this always work?\r\n\r\nDuring this talk I will show you how to create extra controls on Pull Requests in Azure DevOps, which need to be passed before a piece of code is accepted. This is achieved by connecting to the Power Platform with Logic Apps and Power Apps. To make sure this process stays very user friendly, Power Apps are used to create a front-end to manage these extra steps.\r\n\r\nDo you want to make sure your developers follow your processes without giving them extra work or more tools to learn? I bet you do! So join this talk and learn how to do this.",
+      "date": "05 June 2024",
+      "startTime": "19:45",
+      "endTime": "20:30",
+      "title": "The Perfect Azure Naming Convention: Designing for Scalability and Automation",
+      "description": "This session will guide you through designing the perfect Azure naming convention to optimize scalability, automation, and long-term management of resources. You’ll learn how to create a logical structure that simplifies resource discovery, maintenance, and automation using a Matroska-style hierarchical naming approach. We'll cover best practices for integrating naming conventions with Azure tagging, and explore real-world examples to ensure your naming strategy evolves with your cloud environment’s growth.",
       "speakers": [
         {
-          "name": "Leo Visser",
-          "title": "MVP, Cloud Consultant, Conference Speaker and Tech Blogger",
-          "imageUrl": "/images/speaker/leo-visser.jpeg",
+          "name": "Jev Suchoi",
+          "title": "Let's automate the boring!",
+          "imageUrl": "https://cache.sessionize.com/image/b67f-400o400o2-YNMfdxN4uthVEX6FSjMV9Z.png",
           "socials": [
             {
               "icon": "fa-linkedin",
-              "url": "https://www.linkedin.com/in/leo-visser-4894a8227/"
+              "url": "https://nl.linkedin.com/in/jev-suchoi"
             }
           ]
-        }
-      ],
-      "hideReadMore": false
-    },
-    {
-      "slug": "festive-pubquiz",
-      "meetup": "Meetup December 2024",
-      "timeZone": "UTC+01:00 Europe/Amsterdam",
-      "date": "12 December 2024",
-      "startTime": "20:15",
-      "endTime": "21:00",
-      "title": "Pubquiz",
-      "description": "Are you ready for a festive pubquiz? Join us for a fun and interactive session where you can test your knowledge on all things Azure mixed with general knowledge, music and more.  This pubquiz is a great opportunity to learn, connect, and have some fun. Grab a drink, get your thinking cap on, and let’s get quizzing!",
-      "speakers": [
-        {
-          "name": "The Quizmaster",
-          "title": "Azure architect by day, quizmaster by night",
-          "imageUrl": "/images/speaker/pubquiz.png"
-         
         }
       ],
       "hideReadMore": false

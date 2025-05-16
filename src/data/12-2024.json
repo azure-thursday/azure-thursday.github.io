@@ -1,5 +1,71 @@
 {
-  "nextEventDate": "12/12/2024",
-  "meetupRegisterUrl": "https://www.meetup.com/azure-thursdays/events/304586816",
-  "headerImageUrl": "/images/header/12-2024.png"
+  "sessions": [
+    {
+      "slug": "public-dns-zone",
+      "meetup": "Meetup December 2024",
+      "timeZone": "UTC+01:00 Europe/Amsterdam",
+      "date": "12 December 2024",
+      "startTime": "18:30",
+      "endTime": "19:30",
+      "title": "Automating Azure Public DNS Zone Management with Bicep and Deployment Stacks",
+      "description": "In this session, we will explore how to efficiently manage Azure Public DNS zones using Infrastructure as Code (IaC) principles. By leveraging Azure Bicep and Deployment Stacks, we’ll demonstrate how to automate the addition and removal of DNS records, ensuring a streamlined and error-free process. Attendees will gain insights into the benefits of using Bicep for declarative resource management and how Deployment Stacks can simplify complex deployments.\r\n\r\nWhether you’re new to IaC or looking to enhance your existing Azure management practices, this session will provide practical knowledge and hands-on examples to elevate your DNS management strategy.",
+      "speakers": [
+        {
+          "name": "André van den Berg",
+          "title": "Consultant at Rubicon Cloud Advisor | MVP | The Cloud Admin EU",
+          "imageUrl": "/images/speaker/andre-van-der-berg.jpeg",
+          "socials": [
+            {
+              "icon": "fa-linkedin",
+              "url": "https://www.linkedin.com/in/aavdberg/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "power-devops",
+      "meetup": "Meetup December 2024",
+      "timeZone": "UTC+01:00 Europe/Amsterdam",
+      "date": "12 December 2024",
+      "startTime": "19:15",
+      "endTime": "20:00",
+      "title": "You’ve got the Power (Platform)! Controlling developers in Azure DevOps",
+      "description": "Developers have it all figured out with their code flows, everything is quickly pushed to production and it’s up to the processes to make sure nothing breaks down. But does this always work?\r\n\r\nDuring this talk I will show you how to create extra controls on Pull Requests in Azure DevOps, which need to be passed before a piece of code is accepted. This is achieved by connecting to the Power Platform with Logic Apps and Power Apps. To make sure this process stays very user friendly, Power Apps are used to create a front-end to manage these extra steps.\r\n\r\nDo you want to make sure your developers follow your processes without giving them extra work or more tools to learn? I bet you do! So join this talk and learn how to do this.",
+      "speakers": [
+        {
+          "name": "Leo Visser",
+          "title": "MVP, Cloud Consultant, Conference Speaker and Tech Blogger",
+          "imageUrl": "/images/speaker/leo-visser.jpeg",
+          "socials": [
+            {
+              "icon": "fa-linkedin",
+              "url": "https://www.linkedin.com/in/leo-visser-4894a8227/"
+            }
+          ]
+        }
+      ],
+      "hideReadMore": false
+    },
+    {
+      "slug": "festive-pubquiz",
+      "meetup": "Meetup December 2024",
+      "timeZone": "UTC+01:00 Europe/Amsterdam",
+      "date": "12 December 2024",
+      "startTime": "20:15",
+      "endTime": "21:00",
+      "title": "Pubquiz",
+      "description": "Are you ready for a festive pubquiz? Join us for a fun and interactive session where you can test your knowledge on all things Azure mixed with general knowledge, music and more.  This pubquiz is a great opportunity to learn, connect, and have some fun. Grab a drink, get your thinking cap on, and let’s get quizzing!",
+      "speakers": [
+        {
+          "name": "The Quizmaster",
+          "title": "Azure architect by day, quizmaster by night",
+          "imageUrl": "/images/speaker/pubquiz.png"
+         
+        }
+      ],
+      "hideReadMore": false
+    }
+  ]
 }
+

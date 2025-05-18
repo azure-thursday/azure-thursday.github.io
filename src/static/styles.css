@@ -506,6 +506,26 @@ h3 {
   justify-content: left;
 }
 
+
+.past-event-payoff {
+  font-size: 1.4em;
+}
+
+.past-event {
+  margin-top: 4em;
+}
+
+.past-event-header {
+  width: 100%;
+
+}
+
+.past-event-title {
+  font-family: Sans-Bold;
+  font-size: 2.4em;
+  margin-bottom: 0.8em;
+}
+
 @media all and (min-width: 0px) and (max-width: 767px) {
   .main-header  {
     flex-direction: column;

@@ -1,0 +1,18 @@
+{{ define "main" }}
+<div class="container-fluid">
+    <br/>
+    <h1>Past events</h1>
+    <div class="past-event-payoff">These are past events from Azure Thursday events!</div>
+</div>
+<br/><br/>
+<div class="container-fluid">
+        <div class="past-event">
+            <div class="past-event-header">
+                <div class="past-event-title">Events</div>
+            </div>
+            {{ range $.Site.Data.pastevents.events }}
+            {{ partial "past-event.html" . }}
+            {{ end }}
+        </div>
+    </div>
+{{ end }}

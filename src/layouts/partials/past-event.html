@@ -1,0 +1,59 @@
+<div class="session-title">{{ .title }}</div>
+<div class="row session-container">
+    <div class="col-md-2">
+        <div class="session-time">{{ .startTime }}</div>
+        <div class="session-date">{{ .date }}</div>
+        <div class="session-timezone">{{ .timeZone }}</div>
+    </div>
+    <div class="col">
+        <div class="session-title">{{ .title }}</div>
+        <div class="session-meetup">{{ .meetup }}</div>
+        <div class="session-description"><div class="session-description-text">{{ .description }}</div></div>
+        {{ with .hideReadMore }}
+
+        {{ else }}
+            <div class="session-button"><button class="btn btn-primary strong mr-3 mb-3" data-bs-toggle="modal" data-bs-target="#modal-{{ .slug }}" >
+                Read more >
+            </button></div>
+        {{ end }}
+    </div>
+    <div class="col-md-1">&nbsp;</div>
+    <div class="col-md-2">
+        {{ range .speakers }}
+        {{ partial "speaker.html" . }}
+        {{ end }}
+    </div>
+</div>
+
+<div class="modal" id="modal-{{ .slug }}" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content session">
+        <div class="modal-header">
+          <h5 class="modal-title">{{ .title }}</h5>
+        </div>
+        <div class="modal-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col col-md-9">
+                        <div><i class="fas fa-calendar-alt"></i>&nbsp;&nbsp;{{ .date }}</div>
+                            <div><i class="fas fa-clock"></i>&nbsp;&nbsp;<span class="session-modal-time">{{ .startTime }}</span> till <span class="session-modal-time">{{ .endTime }}</span> <span class="session-modal-timezone">{{ .timeZone }}</span></div>
+                            <div class="modal-session-description">
+                                {{ .description }}
+                            </div>
+                        </div>
+                    <div class="col col-md-3">
+                        {{ range .speakers }}
+                        {{ partial "speaker.html" . }}
+                        {{ end }}
+                    </div>
+                </div>
+            </div>
+
+            
+        </div>
+        <div class="modal-footer">
+          <a href="/sessions/next.ics" type="button" class="btn btn-primary strong"><i class="fas fa-calendar-plus"></i>&nbsp;&nbsp;Add to agenda</a>
+        </div>
+      </div>
+    </div>
+  </div>

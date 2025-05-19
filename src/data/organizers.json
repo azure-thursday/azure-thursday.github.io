@@ -1,16 +1,5 @@
 [
     {
-        "name": "Roel van de Grint",
-        "title": "Senior Software Engineer @ Capgemini",
-        "imageUrl": "/images/roel-van-de-grint.jpg",
-        "socials": [
-            {
-                "icon": "fa-linkedin",
-                "url": "https://www.linkedin.com/in/roel-van-de-grint-a845b6b/"
-            }
-        ]
-    },
-    {
         "name": "Luuk Mager",
         "title": "Cloud Solution Architect @ Heroes",
         "imageUrl": "/images/luuk-mager.jpg",
@@ -42,7 +31,7 @@
     },
     {
         "name": "Roelant Dieben",
-        "title": "Owner @ XPRTZ.cloud",
+        "title": "Cloud & AI architect @ Sopra Steria",
         "imageUrl": "/images/roelant-dieben.jpg",
         "socials": [
             {
@@ -71,17 +60,32 @@
         ]
     },
     {
-        "name": "Stefan Dingemanse",
-        "title": "Consultant at Brainpulse IT",
-        "imageUrl": "/images/stefan-dingemanse.jpg",
+        "name": "Stuart van der Lee",
+        "title": "Cloud & DevOps Expert",
+        "imageUrl": "/images/stuart-van-der-lee.jpg",
         "socials": [
             {
                 "icon": "fa-twitter",
-                "url": "https://twitter.com/SDingemanse"
+                "url": "https://twitter.com/StuartvdLee"
             },
             {
                 "icon": "fa-linkedin",
-                "url": "https://www.linkedin.com/in/sdingemanse/"
+                "url": "https://www.linkedin.com/in/stuartvdlee/"
+            }
+        ]
+    },
+    {
+        "name": "André van den Berg",
+        "title": "Consultant @ Rubicon Cloud Advisor",
+        "imageUrl": "/images/andre-van-den-berg.jpg",
+        "socials": [
+            {
+                "icon": "fa-linkedin",
+                "url": "https://www.linkedin.com/in/aavdberg/"
+            },
+            {
+                "icon": "fa-twitter",
+                "url": "https://x.com/aavdberg"
             }
         ]
     }

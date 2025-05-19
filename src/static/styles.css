@@ -106,27 +106,6 @@ h3 {
   flex-direction: row;
 }
 
-@media all and (min-width: 0px) and (max-width: 767px) {
-  .main-header  {
-    flex-direction: column;
-  }
-
-  .sponsors {
-    flex-direction: column;
-  }
-
-  .sponsor {
-    margin: 5px;
-    line-height: 50px;
-    padding: 20px 20px;
-  }
-  
-  .sponsor > img {
-    height: 65px;
-    max-width: 200px;
-  }
-}
-
 .main-header-item {
   flex: 1;
 }
@@ -197,23 +176,6 @@ h3 {
   text-align: center;
   font-size: 0.8em;
 }
-
-@media only screen and (max-width: 767px) {
-  .session-date,
-  .session-timezone,
-  .session-time {
-    text-align: left;
-  }
-
-  .session-date {
-    margin-bottom: 0em;
-  }
-
-  .session-timezone {
-    margin-bottom: 1em;
-  }
-}
-
 
 .session-title {
   text-align: left;
@@ -542,4 +504,64 @@ h3 {
 
 .session.modal-content > .modal-footer {
   justify-content: left;
+}
+
+
+.past-event-payoff {
+  font-size: 1.4em;
+}
+
+.past-event {
+  margin-top: 4em;
+}
+
+.past-event-header {
+  width: 100%;
+
+}
+
+.past-event-title {
+  font-family: Sans-Bold;
+  font-size: 2.4em;
+  margin-bottom: 0.8em;
+}
+
+@media all and (min-width: 0px) and (max-width: 767px) {
+  .main-header  {
+    flex-direction: column;
+  }
+
+  .sponsors {
+    flex-direction: column;
+  }
+
+  .sponsor {
+    margin: 5px;
+    line-height: 50px;
+    padding: 20px 20px;
+  }
+  
+  .sponsor > img {
+    height: 65px;
+    max-width: 200px;
+  }
+
+  .session-date,
+  .session-timezone,
+  .session-time {
+    text-align: left;
+  }
+
+  .session-date {
+    margin-bottom: 0em;
+  }
+
+  .session-timezone {
+    margin-bottom: 1em;
+  }
+
+  .organizers-payoff {
+    padding-left: 0em;
+    padding-right: 0em;
+  }
 }

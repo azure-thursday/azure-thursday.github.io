@@ -1,1 +1,22 @@
+name: Update documentation on pull request
+
+on:
+  # Runs on pushes targeting the default branch
+  pull_request:
+        types: [closed]
+        branches: ["main"]
+
+jobs:
+ update-docs:
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+    steps:
+        - name: Install OpenAI Python package
+          run: pip install openai
+
+        - name: Call LLM
+          env:
+            OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          run: python ./scripts/call_llm.py
+    
 

@@ -16,10 +16,13 @@ response = client.chat.completions.create(
         {"role": "system", "content": "You are a helpful assistant."},
         {
             "role": "user",
-            "content": f"Here is the documentation content:\n{doc_content}\n\nSummarize the latest documentation changes."
-        },
-        {"role": "user", "content": "Summarize the latest code changes in this PR and if needed, update the documentation to reflect those changes. Respond with the completely updated documentation, but restrict your response to that."}
+            "content": f"Here is the documentation content:\n{doc_content}\n\nSummarize the latest documentation changes. If needed, update the documentation to reflect the latest code changes in this PR. Respond with the completely updated documentation, and nothing else."
+        }
     ]
 )
 
-print(response.choices[0].message.content)
+# Write the LLM's response to docs/documentation.md
+with open("docs/documentation.md", "w", encoding="utf-8") as f:
+    f.write(response.choices[0].message.content)
+
+print("Documentation updated.")

@@ -18,11 +18,32 @@ jobs:
         - name: Install OpenAI Python package
           run: pip install openai
 
-        - name: Call LLM
+        - name: Call LLM and update documentation
           env:
             AZURE_OPENAI_ENDPOINT: ${{ secrets.AZURE_OPENAI_ENDPOINT }}
             AZURE_OPENAI_KEY: ${{ secrets.AZURE_OPENAI_KEY }}
             AZURE_OPENAI_DEPLOYMENT: ${{ secrets.AZURE_OPENAI_DEPLOYMENT }}
           run: python .github/workflows/scripts/call_llm.py
     
+        - name: Set up Git
+          run: |
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
 
+        - name: Create branch, commit, and push
+          run: |
+            branch="update-docs-$(date +'%Y%m%d%H%M%S')"
+            git checkout -b $branch
+            git add docs/documentation.md
+            git commit -m "Update documentation with LLM"
+            git push origin $branch
+
+        - name: Create Pull Request
+          uses: peter-evans/create-pull-request@v6
+          with:
+            token: ${{ secrets.GITHUB_TOKEN }}
+            commit-message: "Update documentation with LLM"
+            branch: ${{ steps.create_branch.outputs.branch }}
+            title: "Update documentation with LLM"
+            body: "This PR updates the documentation using the latest LLM output."
+            base: main

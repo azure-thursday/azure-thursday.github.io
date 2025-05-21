@@ -1,5 +1,5 @@
 # azure-thursday.github.io
-Azure Thursday Website
+Azure Thursday Website change
 
 ## Getting started
 ### Prerequisites

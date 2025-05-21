@@ -16,7 +16,7 @@ jobs:
           uses: actions/checkout@v2
       
         - name: Install OpenAI Python package
-          run: pip install azure-ai-generative
+          run: pip install openai
 
         - name: Call LLM
           env:

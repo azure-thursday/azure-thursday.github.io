@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
         - name: Install OpenAI Python package
-          run: pip install openai
+          run: pip install azure-ai-generative
 
         - name: Call LLM
           env:

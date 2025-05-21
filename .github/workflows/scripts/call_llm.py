@@ -1,16 +1,18 @@
-import openai
 import os
+import openai
 
-openai.api_type = "azure"
-openai.api_base = os.environ["AZURE_OPENAI_ENDPOINT"]  # e.g., "https://<your-resource-name>.openai.azure.com/"
-openai.api_version = "2024-02-15-preview"  # Use the API version your deployment supports
-openai.api_key = os.environ["AZURE_OPENAI_KEY"]
+client = openai.AzureOpenAI(
+    api_key=os.environ["AZURE_OPENAI_KEY"],
+    api_version="2024-02-15-preview",
+    azure_endpoint=os.environ["AZURE_OPENAI_ENDPOINT"]
+)
 
-response = openai.ChatCompletion.create(
-    engine=os.environ["AZURE_OPENAI_DEPLOYMENT"],  # The deployment name you created in Azure
+response = client.chat.completions.create(
+    model=os.environ["AZURE_OPENAI_DEPLOYMENT"],
     messages=[
         {"role": "system", "content": "You are a helpful assistant."},
         {"role": "user", "content": "Summarize the latest documentation changes."}
     ]
 )
-print(response.choices[0].message["content"])
+
+print(response.choices[0].message.content)

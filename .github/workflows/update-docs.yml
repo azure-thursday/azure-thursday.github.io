@@ -5,12 +5,16 @@ on:
   pull_request:
         types: [closed]
         branches: ["main"]
+  workflow_dispatch:
 
 jobs:
  update-docs:
-    if: github.event.pull_request.merged == true
+    if: (github.event_name == 'workflow_dispatch') || (github.event.pull_request.merged == true)
     runs-on: ubuntu-latest
     steps:
+        - name: Check-out devops repository
+          uses: actions/checkout@v2
+      
         - name: Install OpenAI Python package
           run: pip install azure-ai-generative
 

@@ -18,7 +18,7 @@ response = client.chat.completions.create(
             "role": "user",
             "content": f"Here is the documentation content:\n{doc_content}\n\nSummarize the latest documentation changes."
         },
-        {"role": "user", "content": "Summarize the latest documentation changes. Respond in such a way we can completely update the contents from the documentation document with your response."}
+        {"role": "user", "content": "Summarize the latest code changes in this PR and if needed, update the documentation to reflect those changes. Respond with the completely updated documentation, but restrict your response to that."}
     ]
 )
 

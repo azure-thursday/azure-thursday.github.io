@@ -523,7 +523,25 @@ h3 {
 .past-event-title {
   font-family: Sans-Bold;
   font-size: 2.4em;
-  margin-bottom: 0.8em;
+}
+
+.past-event-date {
+  font-family: Sans-Bold;
+  font-size: 1.2em;
+}
+
+.past-event-sponsor-logo {
+  width: 80%;
+}
+
+.past-event-sponsor-logo a img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.event-session-container {
+  margin-bottom: 2em;
 }
 
 @media all and (min-width: 0px) and (max-width: 767px) {

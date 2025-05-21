@@ -1,30 +1,18 @@
-<div class="session-title">{{ .title }}</div>
-<div class="row session-container">
+<div class="past-event-title">{{ .title }}</div>
+<div class="row past-event-container">
     <div class="col-md-2">
-        <div class="session-time">{{ .startTime }}</div>
-        <div class="session-date">{{ .date }}</div>
-        <div class="session-timezone">{{ .timeZone }}</div>
+        <div class="past-event-date">{{ .date }}</div>
+        <div class="past-event-sponsor-logo"><a href="{{.sponsor.websiteUrl}}" target="_blank"><img src="{{ .sponsor.logoUrl }}" alt="{{ .sponsor.name }}" /></a></div>
+        <div class="past-event-meetup"><a href="{{ .meetupUrl }}" target="_blank"><i class="fab fa-meetup"></i> Meetup page</a></div>
     </div>
     <div class="col">
-        <div class="session-title">{{ .title }}</div>
-        <div class="session-meetup">{{ .meetup }}</div>
-        <div class="session-description"><div class="session-description-text">{{ .description }}</div></div>
-        {{ with .hideReadMore }}
-
-        {{ else }}
-            <div class="session-button"><button class="btn btn-primary strong mr-3 mb-3" data-bs-toggle="modal" data-bs-target="#modal-{{ .slug }}" >
-                Read more >
-            </button></div>
-        {{ end }}
-    </div>
-    <div class="col-md-1">&nbsp;</div>
-    <div class="col-md-2">
-        {{ range .speakers }}
-        {{ partial "speaker.html" . }}
+        <div class="past-event-description"><div class="past-event-description-text">{{ .description }}</div></div>
+        {{ range $.sessions }}
+        {{ partial "event-session.html" . }}
         {{ end }}
     </div>
 </div>
-
+    
 <div class="modal" id="modal-{{ .slug }}" tabindex="-1" role="dialog">
     <div class="modal-dialog modal-lg" role="document">
       <div class="modal-content session">
@@ -36,8 +24,8 @@
                 <div class="row">
                     <div class="col col-md-9">
                         <div><i class="fas fa-calendar-alt"></i>&nbsp;&nbsp;{{ .date }}</div>
-                            <div><i class="fas fa-clock"></i>&nbsp;&nbsp;<span class="session-modal-time">{{ .startTime }}</span> till <span class="session-modal-time">{{ .endTime }}</span> <span class="session-modal-timezone">{{ .timeZone }}</span></div>
-                            <div class="modal-session-description">
+                            <div><i class="fas fa-clock"></i>&nbsp;&nbsp;<span class="past-event-modal-time">{{ .startTime }}</span> till <span class="past-event-modal-time">{{ .endTime }}</span> <span class="past-event-modal-timezone">{{ .timeZone }}</span></div>
+                            <div class="modal-past-event-description">
                                 {{ .description }}
                             </div>
                         </div>

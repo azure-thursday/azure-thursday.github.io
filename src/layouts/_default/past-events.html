@@ -7,9 +7,6 @@
 <br/><br/>
 <div class="container-fluid">
         <div class="past-event">
-            <div class="past-event-header">
-                <div class="past-event-title">Events</div>
-            </div>
             {{ range $.Site.Data.pastevents.events }}
             {{ partial "past-event.html" . }}
             {{ end }}

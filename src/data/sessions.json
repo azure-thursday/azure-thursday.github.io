@@ -1,54 +1,78 @@
 {
   "sessions": [
     {
-      "slug": "azure-network-security",
-      "meetup": "Meetup June 2025",
+      "slug": "effective-platform-engineering",
+      "meetup": "Meetup July 2025",
       "timeZone": "UTC+01:00 Europe/Amsterdam",
-      "date": "5 June 2025",
+      "date": "3 July 2025",
       "startTime": "18:45",
-      "endTime": "19:30",
-      "title": "Fortresses in Azure simplified: using Network Security Perimeter",
-      "description": "In the past, we only needed knowledge about running applications on Windows servers. Networking tasks were handled by 'the networking guys,' and in-depth knowledge was rarely required. Nowadays, running that same application in Azure demands much more. Even though the network gurus are still around, you'll most likely be responsible for at least part of the network. Another option is to opt-out of using Virtual Networks, but that would make your application less secure. Using Virtual Networks adds complexity, which impacts the required knowledge of engineers. Setting up a well-functioning Virtual Network also requires multiple components. These components most likely include Network Security Groups and Private Endpoints. Simplifying your own virtual network 'fortress' helps teams maintain control. The newly released resource, Network Security Perimeter, is here to help. In this session, we will explore what features NSP offers and how it can help you simplify your Azure network.",
+      "endTime": "19:15",
+      "title": "Maximizing development team success with effective platform engineering techniques",
+      "description": "Are your development teams tired of requesting resources through tickets that take max 5 business days to complete? Imagine empowering them to provision resources instantly, boosting productivity and focus while maintaining architectural integrity, compliance, and security.<br/><br/>By implementing strategic methods and Microsoft Architecture patterns using Terraform and GO, development teams can deploy application infrastructure on-demand with minimal configuration on Azure. This allows your development teams with any level of skill to set up well designed infrastructure 70% faster themselves.<br/><br/>Join this session as we go on an adventure transforming platform engineering into a powerful tool for empowering development teams.<br/>",
       "speakers": [
         {
-          "name": "Wesley Noordam",
-          "title": "Azure developer, Consultant at XPRTZ.cloud",
-          "imageUrl": "https://www.azurethursday.com/images/speaker/wesley-noordam.jpg",
+          "name": "Floris van den Hoogen",
+          "title": "Platform engineer at Sopra Steria",
+          "imageUrl": "https://www.azurethursday.com/images/speaker/floris-van-den-hoogen.png",
           "socials": [
             {
               "icon": "fa-linkedin",
-              "url": "https://www.linkedin.com/in/wesley-noordam-70183ab9/"
-            },
-            {
-              "icon": "fa-twitter",
-              "url": "https://x.com/NoordamWesley"
+              "url": "https://www.linkedin.com/in/floris-van-den-hoogen/"
             }
           ]
         }
       ]
     },
     {
-      "slug": "azure-naming-convention",
-      "meetup": "Meetup June 2025",
+      "slug": "tbd",
+      "meetup": "Meetup July 2025",
       "timeZone": "UTC+01:00 Europe/Amsterdam",
       "date": "5 June 2025",
-      "startTime": "19:45",
-      "endTime": "20:30",
-      "title": "The Perfect Azure Naming Convention: Designing for Scalability and Automation",
-      "description": "This session will guide you through designing the perfect Azure naming convention to optimize scalability, automation, and long-term management of resources. You’ll learn how to create a logical structure that simplifies resource discovery, maintenance, and automation using a Matroska-style hierarchical naming approach. We'll cover best practices for integrating naming conventions with Azure tagging, and explore real-world examples to ensure your naming strategy evolves with your cloud environment’s growth.",
+      "startTime": "19:20",
+      "endTime": "19:40",
+      "title": "TBD",
+      "description": "TBD",
       "speakers": [
         {
-          "name": "Jev Suchoi",
-          "title": "Microsoft MVP | Cloud Architecture, Engineering Excellence and Cloud Security Specialist | #TheCloudExplorers",
-          "imageUrl": "https://www.azurethursday.com/images/speaker/jev-suchoi.jpeg",
+          "name": "TBD",
+          "title": "",
+          "imageUrl": "https://www.azurethursday.com/images/speaker/tbd.png",
           "socials": [
             {
               "icon": "fa-linkedin",
-              "url": "https://www.linkedin.com/in/jev-suchoi/"
+              "url": "https://www.linkedin.com/company/azure-thursday"
             },
             {
               "icon": "fa-twitter",
-              "url": "https://x.com/DevJevNL"
+              "url": "https://x.com/AzureThursday"
+            }
+          ]
+        }
+      ],
+      "hideReadMore": false
+    },
+    {
+      "slug": "tbd",
+      "meetup": "Meetup July 2025",
+      "timeZone": "UTC+01:00 Europe/Amsterdam",
+      "date": "5 June 2025",
+      "startTime": "20:00",
+      "endTime": "20:45",
+      "title": "TBD",
+      "description": "TBD",
+      "speakers": [
+        {
+          "name": "TBD",
+          "title": "",
+          "imageUrl": "https://www.azurethursday.com/images/speaker/tbd.png",
+          "socials": [
+            {
+              "icon": "fa-linkedin",
+              "url": "https://www.linkedin.com/company/azure-thursday"
+            },
+            {
+              "icon": "fa-twitter",
+              "url": "https://x.com/AzureThursday"
             }
           ]
         }

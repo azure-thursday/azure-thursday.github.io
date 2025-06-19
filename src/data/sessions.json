@@ -1,4 +1,4 @@
-{
+x{
   "sessions": [
     {
       "slug": "effective-platform-engineering",
@@ -52,27 +52,27 @@
       "hideReadMore": false
     },
     {
-      "slug": "tbd",
+      "slug": "Exploiting Azure",
       "meetup": "Meetup July 2025",
       "timeZone": "UTC+01:00 Europe/Amsterdam",
       "date": "5 June 2025",
       "startTime": "20:00",
       "endTime": "20:45",
-      "title": "TBD",
+      "title": "",
       "description": "TBD",
       "speakers": [
         {
-          "name": "TBD",
-          "title": "",
+          "name": "Rogier Dijkman",
+          "title": "Exploiting Azure: from anonymous user to Global admin in 30 minutes.",
           "imageUrl": "https://www.azurethursday.com/images/speaker/tbd.png",
           "socials": [
             {
               "icon": "fa-linkedin",
-              "url": "https://www.linkedin.com/company/azure-thursday"
+              "url": "https://www.linkedin.com/in/rogierdijkman/"
             },
             {
               "icon": "fa-twitter",
-              "url": "https://x.com/AzureThursday"
+              "url": "https://x.com/DijkmanRogier"
             }
           ]
         }

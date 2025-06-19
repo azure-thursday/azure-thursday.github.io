@@ -58,13 +58,13 @@
       "date": "5 June 2025",
       "startTime": "20:00",
       "endTime": "20:45",
-      "title": "",
+      "title": "Exploiting Azure: from anonymous user to Global admin in 45 minutes.",
       "description": "TBD",
       "speakers": [
         {
           "name": "Rogier Dijkman",
-          "title": "Exploiting Azure: from anonymous user to Global admin in 30 minutes.",
-          "imageUrl": "https://www.azurethursday.com/images/speaker/tbd.png",
+          "title": "Microsoft Security MVP | Azure | Sentinel | GitHub",
+          "imageUrl": "https://www.azurethursday.com/images/speaker/Rogier.Dijkman.jpg",
           "socials": [
             {
               "icon": "fa-linkedin",

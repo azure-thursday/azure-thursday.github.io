@@ -80,12 +80,12 @@
         "imageUrl": "/images/andre-van-den-berg.jpg",
         "socials": [
             {
-                "icon": "fa-linkedin",
-                "url": "https://www.linkedin.com/in/aavdberg/"
-            },
-            {
                 "icon": "fa-twitter",
                 "url": "https://x.com/aavdberg"
+            },
+            {
+                "icon": "fa-linkedin",
+                "url": "https://www.linkedin.com/in/aavdberg/"
             }
         ]
     }

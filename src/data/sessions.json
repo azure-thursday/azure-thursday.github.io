@@ -24,34 +24,34 @@
       ]
     },
     {
-      "slug": "tbd",
+      "slug": "how-not-to-build-a-data-platform",
       "meetup": "Meetup July 2025",
       "timeZone": "UTC+01:00 Europe/Amsterdam",
       "date": "3 July 2025",
       "startTime": "19:20",
       "endTime": "19:40",
-      "title": "TBD",
-      "description": "TBD",
+      "title": "How not to build a data platform",
+      "description": "Building a data platform is not just about technology; it’s about adoption. In this session, I’ll share the hard-learned lessons from a failed data platform initiative, where the lack of engagement with business end-users led to its downfall. You’ll learn why selling the value of the platform to stakeholders is critical and how aligning with business needs can transform failure into success. Walk away with actionable insights and strategies to ensure your data platform becomes a cornerstone of business decision-making, not a forgotten project.",
       "speakers": [
         {
           "name": "Danny Kruge",
-          "title": "How not to build a data platform",
-          "imageUrl": "https://www.azurethursday.com/images/speaker/tbd.png",
+          "title": "Mission Critical Engineer at Schuberg Philis 🦸‍♂️ Azure Heroes and ☁️AZug NL Organizer",
+          "imageUrl": "https://www.azurethursday.com/images/speaker/Danny_Kruge.jpg",
           "socials": [
             {
               "icon": "fa-linkedin",
-              "url": "https://www.linkedin.com/company/azure-thursday"
+              "url": "https://www.linkedin.com/in/danny-kruge/"
             },
             {
               "icon": "fa-twitter",
-              "url": "https://x.com/AzureThursday"
+              "url": "https://x.com/DannyKruge"
             }
           ]
         }
       ]
     },
     {
-      "slug": "Exploiting Azure",
+      "slug": "exploiting-azure",
       "meetup": "Meetup July 2025",
       "timeZone": "UTC+01:00 Europe/Amsterdam",
       "date": "3 July 2025",

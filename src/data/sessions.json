@@ -59,7 +59,7 @@
       "startTime": "20:00",
       "endTime": "20:45",
       "title": "Exploiting Azure: from anonymous user to Global admin in 45 minutes.",
-      "description": "TBD",
+      "description": "During this live demo session we will explore a new PowerShell pentesting tool known as Project Blackcat. Using this tool we can use various attack vectors to compromise resource access and gain access to both Microsoft Azure and Entra. We will end the session on how detect these attack vectors using Microsoft Sentinel.",
       "speakers": [
         {
           "name": "Rogier Dijkman",

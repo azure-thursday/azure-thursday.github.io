@@ -37,21 +37,21 @@
       "title": "TBA",
       "description": "TBA",
       "speakers": [
-        {
-          "name": "Danny Kruge",
-          "title": "Mission Critical Engineer at Schuberg Philis 🦸‍♂️ Azure Heroes and ☁️AZug NL Organizer",
-          "imageUrl": "https://www.azurethursday.com/images/speaker/Danny_Kruge.jpg",
-          "socials": [
-            {
-              "icon": "fa-linkedin",
-              "url": "https://www.linkedin.com/in/danny-kruge/"
-            },
-            {
-              "icon": "fa-twitter",
-              "url": "https://x.com/DannyKruge"
-            }
-          ]
-        }
+        //{
+        //  "name": "Danny Kruge",
+        //  "title": "Mission Critical Engineer at Schuberg Philis 🦸‍♂️ Azure Heroes and ☁️AZug NL Organizer",
+        //  "imageUrl": "https://www.azurethursday.com/images/speaker/Danny_Kruge.jpg",
+        //  "socials": [
+        //    {
+        //      "icon": "fa-linkedin",
+        //      "url": "https://www.linkedin.com/in/danny-kruge/"
+        //    },
+        //    {
+        //      "icon": "fa-twitter",
+        //      "url": "https://x.com/DannyKruge"
+        //    }
+        //  ]
+        //}
       ]
     }
   ]

@@ -40,17 +40,13 @@
         {
           "name": "TBA",
           "title": "TBA",
-          "imageUrl": "https://www.azurethursday.com/images/speaker/tbd.png"//,
-          //"socials": [
-          //  //{
-          //  //  "icon": "fa-linkedin",
-          //  //  "url": "https://www.linkedin.com/in/danny-kruge/"
-          //  //},
-          //  //{
-          //  //  "icon": "fa-twitter",
-          //  //  "url": "https://x.com/DannyKruge"
-          //  //}
-          //]
+          "imageUrl": "https://www.azurethursday.com/images/speaker/tbd.png",
+          "socials": [
+            {
+              "icon": "fa-linkedin",
+              "url": "https://www.linkedin.com/company/azure-thursday/"
+            }
+          ]
         }
       ]
     }

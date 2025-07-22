@@ -1,5 +1,82 @@
 {
-  "nextEventDate": "03/07/2025",
-  "meetupRegisterUrl": "https://www.meetup.com/azure-thursdays/events/307174510",
-  "headerImageUrl": "/images/header/07-2025.png"
+  "sessions": [
+    {
+      "slug": "effective-platform-engineering",
+      "meetup": "Meetup July 2025",
+      "timeZone": "UTC+01:00 Europe/Amsterdam",
+      "date": "3 July 2025",
+      "startTime": "18:45",
+      "endTime": "19:15",
+      "title": "Maximizing development team success with effective platform engineering techniques",
+      "description": "Are your development teams tired of requesting resources through tickets that take max 5 business days to complete? Imagine empowering them to provision resources instantly, boosting productivity and focus while maintaining architectural integrity, compliance, and security.<br/><br/>By implementing strategic methods and Microsoft Architecture patterns using Terraform and GO, development teams can deploy application infrastructure on-demand with minimal configuration on Azure. This allows your development teams with any level of skill to set up well designed infrastructure 70% faster themselves.<br/><br/>Join this session as we go on an adventure transforming platform engineering into a powerful tool for empowering development teams.<br/>",
+      "speakers": [
+        {
+          "name": "Floris van den Hoogen",
+          "title": "Platform engineer at Sopra Steria",
+          "imageUrl": "https://www.azurethursday.com/images/speaker/floris-van-den-hoogen.png",
+          "socials": [
+            {
+              "icon": "fa-linkedin",
+              "url": "https://www.linkedin.com/in/floris-van-den-hoogen/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "tbd",
+      "meetup": "Meetup July 2025",
+      "timeZone": "UTC+01:00 Europe/Amsterdam",
+      "date": "3 July 2025",
+      "startTime": "19:20",
+      "endTime": "19:40",
+      "title": "TBD",
+      "description": "TBD",
+      "speakers": [
+        {
+          "name": "Danny Kruge",
+          "title": "How not to build a data platform",
+          "imageUrl": "https://www.azurethursday.com/images/speaker/tbd.png",
+          "socials": [
+            {
+              "icon": "fa-linkedin",
+              "url": "https://www.linkedin.com/company/azure-thursday"
+            },
+            {
+              "icon": "fa-twitter",
+              "url": "https://x.com/AzureThursday"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "Exploiting Azure",
+      "meetup": "Meetup July 2025",
+      "timeZone": "UTC+01:00 Europe/Amsterdam",
+      "date": "3 July 2025",
+      "startTime": "20:00",
+      "endTime": "20:45",
+      "title": "Exploiting Azure: from anonymous user to Global admin in 45 minutes",
+      "description": "During this live demo session we will explore a new PowerShell pentesting tool known as Project Blackcat. Using this tool we can use various attack vectors to compromise resource access and gain access to both Microsoft Azure and Entra. We will end the session on how detect these attack vectors using Microsoft Sentinel.",
+      "speakers": [
+        {
+          "name": "Rogier Dijkman",
+          "title": "Microsoft Security MVP | Azure | Sentinel | GitHub",
+          "imageUrl": "https://www.azurethursday.com/images/speaker/Rogier.Dijkman.jpg",
+          "socials": [
+            {
+              "icon": "fa-linkedin",
+              "url": "https://www.linkedin.com/in/rogierdijkman/"
+            },
+            {
+              "icon": "fa-twitter",
+              "url": "https://x.com/DijkmanRogier"
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }
+

@@ -12,7 +12,7 @@
       "speakers": [
         {
           "name": "Leo Visser",
-          "title": "Microsoft MVP | Consultant & Product Lead Automation @ OGD",
+          "title": "Consultant & Product Lead Automation @ OGD",
           "imageUrl": "https://www.azurethursday.com/images/speaker/leo-visser.jpeg",
           "socials": [
             {
@@ -28,23 +28,23 @@
       ]
     },
     {
-      "slug": "tba",
+      "slug": "azure-vs-local-ai",
       "meetup": "Meetup September 2025",
       "timeZone": "UTC+01:00 Europe/Amsterdam",
       "date": "11 September 2025",
       "startTime": "19:45",
       "endTime": "20:30",
-      "title": "TBA",
-      "description": "TBA",
+      "title": "Azure vs. local AI: A developer's playbook for privacy, performance & models",
+      "description": "For many developers, the cloud is the default for AI, but for rapid prototyping, offline work, data privacy, and using open-source models, running things locally offers a huge advantage. This session is a technical comparison of Azure AI Foundry and Foundry Local, focusing on the real-world trade-offs in cost, privacy, performance, and model selection. Through live demos showing environment switching and the use of AI agents, you'll learn how to structure your code to move between cloud and local, helping you make better-informed decisions for your Azure projects.",
       "speakers": [
         {
-          "name": "TBA",
-          "title": "TBA",
-          "imageUrl": "https://www.azurethursday.com/images/speaker/tbd.png",
+          "name": "Paul Stolk",
+          "title": "Microsoft (Azure) Senior Software Developer | Microsoft Certified Trainer | AI Enthusiast",
+          "imageUrl": "https://www.azurethursday.com/images/speaker/paul-stolk.jpg",
           "socials": [
             {
               "icon": "fa-linkedin",
-              "url": "https://www.linkedin.com/company/azure-thursday/"
+              "url": "https://www.linkedin.com/in/paul-stolk-62ab442b/"
             }
           ]
         }

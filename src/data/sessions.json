@@ -30,12 +30,12 @@
       "date": "2 October 2025",
       "startTime": "19:45",
       "endTime": "20:30",
-      "title": "TBA",
-      "description": "TBA",
+      "title": "Architecting for Sovereignty: Microsoft’s Latest Developments, Capabilities, and Hybrid Scenarios with Azure Local",
+      "description": "In this session, Microsoft will share its latest vision and developments around digital sovereignty. Learn how Azure Local and sovereign cloud capabilities empower organizations to maintain control over their data, meet compliance requirements, and design hybrid architectures that align with national and organizational autonomy goals.",
       "speakers": [
         {
           "name": "Giorgio Joziasse",
-          "title": "Technology Strategist - Cities and Regions @ Microsoft | Azure Platform | Cloud Architect",
+          "title": "Account Technology Strategist",
           "imageUrl": "https://www.azurethursday.com/images/speaker/giorgio-joziasse.jpg",
           "socials": [
             {
@@ -46,7 +46,7 @@
         },
         {
           "name": "Yannick de Koeijer",
-          "title": "Enterprise Cloud Solutions Architect",
+          "title": "Cloud Solutions Architect",
           "imageUrl": "https://www.azurethursday.com/images/speaker/yannick-de-koeijer.jpg",
           "socials": [
             {

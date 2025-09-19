@@ -1,0 +1,55 @@
+{
+  "sessions": [
+    {
+      "slug": "controlling-azuredevops-powerplatform",
+      "meetup": "Meetup September 2025",
+      "timeZone": "UTC+01:00 Europe/Amsterdam",
+      "date": "11 September 2025",
+      "startTime": "18:45",
+      "endTime": "19:30",
+      "title": "You’ve got the Power (Platform)! Controlling developers in Azure DevOps",
+      "description": "Developers have it all figured out with their code flows, everything is quickly pushed to production and it’s up to the processes to make sure nothing breaks down. But does this always work?<br/>During this talk I will show you how to create extra controls on Pull Requests in Azure DevOps, which need to be passed before a piece of code is accepted. This is achieved by connecting to the Power Platform with Logic Apps and Power Apps. To make sure this process stays very user friendly, Power Apps are used to create a front-end to manage these extra steps.<br/>Do you want to make sure your developers follow your processes without giving them extra work or more tools to learn? I bet you do! So join this talk and learn how to do this.",
+      "speakers": [
+        {
+          "name": "Leo Visser",
+          "title": "Consultant & Product Lead Automation @ OGD",
+          "imageUrl": "https://www.azurethursday.com/images/speaker/leo-visser.jpeg",
+          "socials": [
+            {
+              "icon": "fa-linkedin",
+              "url": "https://www.linkedin.com/in/leo-visser-4894a8227/"
+            },
+            {
+              "icon": "fa-twitter",
+              "url": "https://x.com/autosysops"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "azure-vs-local-ai",
+      "meetup": "Meetup September 2025",
+      "timeZone": "UTC+01:00 Europe/Amsterdam",
+      "date": "11 September 2025",
+      "startTime": "19:45",
+      "endTime": "20:30",
+      "title": "Azure vs. local AI: A developer's playbook for privacy, performance & models",
+      "description": "For many developers, the cloud is the default for AI, but for rapid prototyping, offline work, data privacy, and using open-source models, running things locally offers a huge advantage. This session is a technical comparison of Azure AI Foundry and Foundry Local, focusing on the real-world trade-offs in cost, privacy, performance, and model selection. Through live demos showing environment switching and the use of AI agents, you'll learn how to structure your code to move between cloud and local, helping you make better-informed decisions for your Azure projects.",
+      "speakers": [
+        {
+          "name": "Paul Stolk",
+          "title": "Microsoft (Azure) Senior Software Developer | Microsoft Certified Trainer | AI Enthusiast",
+          "imageUrl": "https://www.azurethursday.com/images/speaker/paul-stolk.jpg",
+          "socials": [
+            {
+              "icon": "fa-linkedin",
+              "url": "https://www.linkedin.com/in/paul-stolk-62ab442b/"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+

@@ -8,7 +8,7 @@
       "startTime": "18:45",
       "endTime": "19:30",
       "title": "Azure Policy-as-Code at Ahold Delhaize",
-      "description": "At our organization, we believe that code should be the single source of truth — and that idea shapes the way we handle cloud governance. We use Azure Policies to audit and enforce our standards across different levels, and we manage everything through code to keep things consistent, transparent, and easy to improve. In this session, I’ll walk you through how we’ve set things up:<p />•  A quick intro to Azure Policies and how they fit into our governance model<p />•  How we structure and manage Policy Definitions, Initiatives, Assignments, and even Exemptions in code<p />•  A look into the process side -- why we do it this way, and what benefits (and challenges) we’ve discovered along the way. Whether you’re already deep into Azure Policies or just starting to explore policy-as-code, I will give you practical insights into how to make governance more scalable, consistent, and engineer-friendly.",
+      "description": "At our organization, we believe that code should be the single source of truth — and that idea shapes the way we handle cloud governance. We use Azure Policies to audit and enforce our standards across different levels, and we manage everything through code to keep things consistent, transparent, and easy to improve. In this session, I’ll walk you through how we’ve set things up. Whether you’re already deep into Azure Policies or just starting to explore policy-as-code, I will give you practical insights into how to make governance more scalable, consistent, and engineer-friendly.",
       "speakers": [
         {
           "name": "Mikhalina Akulova",

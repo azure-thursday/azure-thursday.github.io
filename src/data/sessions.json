@@ -1,23 +1,23 @@
 {
   "sessions": [
     {
-      "slug": "ai-avatar-azure",
-      "meetup": "Meetup October 2025",
+      "slug": "azure-policy-as-code",
+      "meetup": "Meetup November 2025",
       "timeZone": "UTC+01:00 Europe/Amsterdam",
-      "date": "2 October 2025",
+      "date": "6 November 2025",
       "startTime": "18:45",
       "endTime": "19:30",
-      "title": "Building an AI Avatar in Azure: From Cloud to Reality",
-      "description": "Join us for a behind-the-scenes look at the development of an AI Avatar hosted in Microsoft Azure. We’ll explore the software side—covering the cloud architecture, data ingestion, AI services, and integration—while also sharing how we brought the concept into the physical world with the construction of a lifesize avatar stand. This talk combines technical insights with hands-on creativity, showcasing how digital intelligence meets tangible design.",
+      "title": "Azure Policy-as-Code at Ahold Delhaize",
+      "description": "At our organization, we believe that code should be the single source of truth — and that idea shapes the way we handle cloud governance. We use Azure Policies to audit and enforce our standards across different levels, and we manage everything through code to keep things consistent, transparent, and easy to improve. In this session, I’ll walk you through how we’ve set things up:•  A quick intro to Azure Policies and how they fit into our governance model•  How we structure and manage Policy Definitions, Initiatives, Assignments, and even Exemptions in code•  A look into the process side -- why we do it this way, and what benefits (and challenges) we’ve discovered along the way. Whether you’re already deep into Azure Policies or just starting to explore policy-as-code, I will give you practical insights into how to make governance more scalable, consistent, and engineer-friendly.",
       "speakers": [
         {
-          "name": "David Serfaty",
-          "title": "Data Scientist & Engineer @ Heroes",
-          "imageUrl": "https://www.azurethursday.com/images/speaker/david-serfaty.jpg",
+          "name": "Mikhalina Akulova",
+          "title": "Cloud Architect @ Ahold Delhaize",
+          "imageUrl": "https://www.azurethursday.com/images/speaker/1650446830995.jpeg",
           "socials": [
             {
               "icon": "fa-linkedin",
-              "url": "https://www.linkedin.com/in/davidserfatybencomo/"
+              "url": "https://www.linkedin.com/in/mikhalina-akulova/"
             }
           ]
         }
@@ -25,33 +25,22 @@
     },
     {
       "slug": "hybrid-azure",
-      "meetup": "Meetup October 2025",
+      "meetup": "Meetup November 2025",
       "timeZone": "UTC+01:00 Europe/Amsterdam",
-      "date": "2 October 2025",
+      "date": "6 November 2025",
       "startTime": "19:45",
       "endTime": "20:30",
-      "title": "Architecting for Sovereignty: Microsoft’s Latest Developments, Capabilities, and Hybrid Scenarios with Azure Local",
-      "description": "In this session, Microsoft will share its latest vision and developments around digital sovereignty. Learn how Azure Local and sovereign cloud capabilities empower organizations to maintain control over their data, meet compliance requirements, and design hybrid architectures that align with national and organizational autonomy goals.",
+      "title": "Empowering Cloud Security with Confidential Computing",
+      "description": "These days, we live in a world facing an ever-growing number of cyber threats and data breaches. Ensuring the protection of sensitive information in virtual environments has never been more critical. In this session, I’ll explore the world of cloud security with a focus on Confidential Virtual Machines (VMs). You’ll discover how confidential VMs strengthen protection through hardware-based encryption and secure enclaves. I’ll also share real-world examples, practical tips, and lessons learned from the field. Join me as we unlock the potential of confidential VMs and empower your organization to securely and confidently manage IaaS workloads with greater resilience and peace of mind.",
       "speakers": [
         {
-          "name": "Giorgio Joziasse",
-          "title": "Account Technology Strategist",
-          "imageUrl": "https://www.azurethursday.com/images/speaker/giorgio-joziasse.jpg",
+          "name": "Wim Matthyssen",
+          "title": "Microsoft MVP Azure | MCT | Board Member of MC2MC | Azure Technical Advisor",
+          "imageUrl": "https://www.azurethursday.com/images/speaker/wim-matthyssen.jpeg",
           "socials": [
             {
               "icon": "fa-linkedin",
-              "url": "https://www.linkedin.com/in/gjoziasse/"
-            }
-          ]
-        },
-        {
-          "name": "Yannick de Koeijer",
-          "title": "Cloud Solutions Architect",
-          "imageUrl": "https://www.azurethursday.com/images/speaker/yannick-de-koeijer.jpg",
-          "socials": [
-            {
-              "icon": "fa-linkedin",
-              "url": "https://www.linkedin.com/in/ydekoeijer/"
+              "url": "https://www.linkedin.com/in/wim-matthyssen-9053737/"
             }
           ]
         }

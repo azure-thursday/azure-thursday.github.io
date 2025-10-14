@@ -1,0 +1,62 @@
+{
+  "sessions": [
+    {
+      "slug": "ai-avatar-azure",
+      "meetup": "Meetup October 2025",
+      "timeZone": "UTC+01:00 Europe/Amsterdam",
+      "date": "2 October 2025",
+      "startTime": "18:45",
+      "endTime": "19:30",
+      "title": "Building an AI Avatar in Azure: From Cloud to Reality",
+      "description": "Join us for a behind-the-scenes look at the development of an AI Avatar hosted in Microsoft Azure. We’ll explore the software side—covering the cloud architecture, data ingestion, AI services, and integration—while also sharing how we brought the concept into the physical world with the construction of a lifesize avatar stand. This talk combines technical insights with hands-on creativity, showcasing how digital intelligence meets tangible design.",
+      "speakers": [
+        {
+          "name": "David Serfaty",
+          "title": "Data Scientist & Engineer @ Heroes",
+          "imageUrl": "https://www.azurethursday.com/images/speaker/david-serfaty.jpg",
+          "socials": [
+            {
+              "icon": "fa-linkedin",
+              "url": "https://www.linkedin.com/in/davidserfatybencomo/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "hybrid-azure",
+      "meetup": "Meetup October 2025",
+      "timeZone": "UTC+01:00 Europe/Amsterdam",
+      "date": "2 October 2025",
+      "startTime": "19:45",
+      "endTime": "20:30",
+      "title": "Architecting for Sovereignty: Microsoft’s Latest Developments, Capabilities, and Hybrid Scenarios with Azure Local",
+      "description": "In this session, Microsoft will share its latest vision and developments around digital sovereignty. Learn how Azure Local and sovereign cloud capabilities empower organizations to maintain control over their data, meet compliance requirements, and design hybrid architectures that align with national and organizational autonomy goals.",
+      "speakers": [
+        {
+          "name": "Giorgio Joziasse",
+          "title": "Account Technology Strategist",
+          "imageUrl": "https://www.azurethursday.com/images/speaker/giorgio-joziasse.jpg",
+          "socials": [
+            {
+              "icon": "fa-linkedin",
+              "url": "https://www.linkedin.com/in/gjoziasse/"
+            }
+          ]
+        },
+        {
+          "name": "Yannick de Koeijer",
+          "title": "Cloud Solutions Architect",
+          "imageUrl": "https://www.azurethursday.com/images/speaker/yannick-de-koeijer.jpg",
+          "socials": [
+            {
+              "icon": "fa-linkedin",
+              "url": "https://www.linkedin.com/in/ydekoeijer/"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+

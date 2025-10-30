@@ -30,17 +30,17 @@
       "date": "6 November 2025",
       "startTime": "19:45",
       "endTime": "20:30",
-      "title": "Empowering Cloud Security with Confidential Computing",
-      "description": "These days, we live in a world facing an ever-growing number of cyber threats and data breaches. Ensuring the protection of sensitive information in virtual environments has never been more critical. In this session, I’ll explore the world of cloud security with a focus on Confidential Virtual Machines (VMs). You’ll discover how confidential VMs strengthen protection through hardware-based encryption and secure enclaves. I’ll also share real-world examples, practical tips, and lessons learned from the field. Join me as we unlock the potential of confidential VMs and empower your organization to securely and confidently manage IaaS workloads with greater resilience and peace of mind.",
+      "title": "Failure is not an option: durable execution + Dapr = 🚀",
+      "description": "Applications break all the time, there could be a network issue, a cloud provider outage, or just a glitch in the matrix. But as a developer, you really need your applications to be resilient without the need to recover databases and restart services manually. In this session, I'll demonstrate how Dapr Workflow provides durable execution, which enables you to write reliable workflows as code. I'll go into specific workflow features, such as scheduling, sequential and parallel execution, and waiting for external events. I'll show many code samples (in C#) for each of these features and will run the applications using the Dapr CLI to demonstrate their resiliency.",
       "speakers": [
         {
-          "name": "Wim Matthyssen",
-          "title": "Microsoft MVP Azure | MCT | Board Member of MC2MC | Azure Technical Advisor",
-          "imageUrl": "https://www.azurethursday.com/images/speaker/wim-matthyssen.jpeg",
+          "name": "Marc Duiker",
+          "title": "I ♥ Event-driven, Dev Communities, & Creative Coding",
+          "imageUrl": "https://sessionize.com/image/6498-400o400o2-WsADEDfKr18q3jGFxJnkbW.png",
           "socials": [
             {
               "icon": "fa-linkedin",
-              "url": "https://www.linkedin.com/in/wim-matthyssen-9053737/"
+              "url": "https://www.linkedin.com/in/mduiker/"
             }
           ]
         }

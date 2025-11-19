@@ -22,6 +22,23 @@
           ]
         }
       ]
+    },
+    {
+      "slug": "pub-quiz",
+      "meetup": "Meetup December 2025",
+      "timeZone": "UTC+01:00 Europe/Amsterdam",
+      "date": "4 December 2025",
+      "startTime": "20:15",
+      "endTime": "21:00",
+      "title": "Pub Quiz",
+      "description": "Join our legendary year-end pub quiz and prove what you know!.",
+      "speakers": [
+        {
+          "name": "Quizmaster",
+          "title": "",
+          "imageUrl": "https://www.azurethursday.com/images/speaker/pub-quiz.jpg"
+        }
+      ]
     }
   ]
 }

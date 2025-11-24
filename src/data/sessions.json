@@ -24,6 +24,29 @@
       ]
     },
     {
+      "slug": "bring-real-world-ai-scenarios-to-life",
+      "meetup": "Meetup December 2025",
+      "timeZone": "UTC+01:00 Europe/Amsterdam",
+      "date": "4 December 2025",
+      "startTime": "19:45",
+      "endTime": "20:15",
+      "title": "Bring real-world AI scenarios to life in .NET with the Microsoft Agent Framework and Azure AI Foundry",
+      "description": "The Microsoft Agent Framework provides a flexible, open-source foundation for building AI agents and multi-agent workflows in both .NET and Python. We explore its core concepts and demonstrate how easily it connects with Azure AI Foundry to access a wide range of Azure-hosted AI models. This technical overview includes practical code examples in C# and shows how to quickly get started applying the Agent Framework to bring real-world AI scenarios to life in your own apps.",
+      "speakers": [
+        {
+          "name": "John Bruin",
+          "title": "Software developer @ Sopra Steria",
+          "imageUrl": "https://www.azurethursday.com/images/speaker/john-bruin.jpg",
+          "socials": [
+            {
+              "icon": "fa-linkedin",
+              "url": "https://www.linkedin.com/in/johnbruin/"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "slug": "pub-quiz",
       "meetup": "Meetup December 2025",
       "timeZone": "UTC+01:00 Europe/Amsterdam",
@@ -42,4 +65,3 @@
     }
   ]
 }
-

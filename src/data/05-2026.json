@@ -1,0 +1,27 @@
+{
+    "sessions": [
+        {
+            "slug": "your-azure-is-wrong-and-i-can-prove-it",
+            "meetup": "Meetup May 2026",
+            "timeZone": "UTC+01:00 Europe/Amsterdam",
+            "date": "7 May 2026",
+            "startTime": "18:45",
+            "endTime": "19:30",
+            "title": "Your Azure Is Wrong And I Can Prove It",
+            "description": "Many Azure environments are functioning, but that doesn’t mean they are designed to scale, stay secure, or meet enterprise requirements. Short-term decisions like using Resource Groups as environments, relying on a single subscription, manual scaling, and adding governance only when problems appear often lead to fragile platforms that break under growth. In this session, we uncover the most common Azure architectural anti-patterns and explain how the Microsoft Cloud Adoption Framework (CAF) provides a practical path from “it works” to Enterprise Ready. The focus is on the Ready, Govern, and Manage phases, where platform foundations are defined and long-term success is determined.",
+            "speakers": [
+                {
+                    "name": "Wesley Camargo",
+                    "title": "Cloud Solutions Architect | Cloud/DevOps Technical Lead",
+                    "imageUrl": "/images/speaker/wesley-camargo.jpg",
+                    "socials": [
+                        {
+                            "icon": "fa-linkedin",
+                            "url": "https://www.linkedin.com/in/wescamargo"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

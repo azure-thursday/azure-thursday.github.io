@@ -1,65 +1,25 @@
 {
   "sessions": [
     {
-      "slug": "stay-independent-in-azure",
-      "meetup": "Meetup December 2025",
+      "slug": "your-azure-is-wrong-and-i-can-prove-it",
+      "meetup": "Meetup May 2026",
       "timeZone": "UTC+01:00 Europe/Amsterdam",
-      "date": "4 December 2025",
+      "date": "7 May 2026",
       "startTime": "18:45",
       "endTime": "19:30",
-      "title": "Bring it on! How Wigo4it stays independent and agnostic in the Azure cloud",
-      "description": "As a developer, you want freedom to build. In a world where cloud providers are increasingly trying to exert influence, Wigo4it consciously chooses autonomy. We share our approach to remaining independent while using the Azure cloud, and how we design, build, and think in a cloud-agnostic way. It’s not a flawless success story, there are challenges and trade-offs, but it offers an honest look behind the scenes. What works, what doesn't, and where we’re still making progress. You’ll walk away with insights you can start applying right away.",
+      "title": "Your Azure Is Wrong And I Can Prove It",
+      "description": "Many Azure environments are functioning, but that doesn’t mean they are designed to scale, stay secure, or meet enterprise requirements. Short-term decisions like using Resource Groups as environments, relying on a single subscription, manual scaling, and adding governance only when problems appear often lead to fragile platforms that break under growth. In this session, we uncover the most common Azure architectural anti-patterns and explain how the Microsoft Cloud Adoption Framework (CAF) provides a practical path from “it works” to Enterprise Ready. The focus is on the Ready, Govern, and Manage phases, where platform foundations are defined and long-term success is determined.",
       "speakers": [
         {
-          "name": "Beatriz del Saz",
-          "title": "Devops engineer @ Wigo4IT",
-          "imageUrl": "https://www.azurethursday.com/images/speaker/beatriz-del-saz.jpg",
+          "name": "Wesley Camargo",
+          "title": "Cloud Solutions Architect | Cloud/DevOps Technical Lead",
+          "imageUrl": "/images/speaker/wesley-camargo.jpg",
           "socials": [
             {
               "icon": "fa-linkedin",
-              "url": "https://www.linkedin.com/in/beatriz-del-saz/"
+              "url": "https://www.linkedin.com/in/wescamargo"
             }
           ]
-        }
-      ]
-    },
-    {
-      "slug": "bring-real-world-ai-scenarios-to-life",
-      "meetup": "Meetup December 2025",
-      "timeZone": "UTC+01:00 Europe/Amsterdam",
-      "date": "4 December 2025",
-      "startTime": "19:45",
-      "endTime": "20:15",
-      "title": "Bring real-world AI scenarios to life in .NET with the Microsoft Agent Framework and Azure AI Foundry",
-      "description": "The Microsoft Agent Framework provides a flexible, open-source foundation for building AI agents and multi-agent workflows in both .NET and Python. We explore its core concepts and demonstrate how easily it connects with Azure AI Foundry to access a wide range of Azure-hosted AI models. This technical overview includes practical code examples in C# and shows how to quickly get started applying the Agent Framework to bring real-world AI scenarios to life in your own apps.",
-      "speakers": [
-        {
-          "name": "John Bruin",
-          "title": "Software developer @ Sopra Steria",
-          "imageUrl": "https://www.azurethursday.com/images/speaker/john-bruin.jpg",
-          "socials": [
-            {
-              "icon": "fa-linkedin",
-              "url": "https://www.linkedin.com/in/johnbruin/"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "slug": "pub-quiz",
-      "meetup": "Meetup December 2025",
-      "timeZone": "UTC+01:00 Europe/Amsterdam",
-      "date": "4 December 2025",
-      "startTime": "20:15",
-      "endTime": "21:00",
-      "title": "Pub Quiz",
-      "description": "Join our legendary year-end pub quiz and prove what you know!.",
-      "speakers": [
-        {
-          "name": "Quizmaster",
-          "title": "",
-          "imageUrl": "https://www.azurethursday.com/images/speaker/pub-quiz.jpg"
         }
       ]
     }

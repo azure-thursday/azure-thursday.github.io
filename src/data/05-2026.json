@@ -22,6 +22,29 @@
                     ]
                 }
             ]
+        },
+        {
+            "slug": "long-running-battle-azure-devops-github",
+            "meetup": "Meetup May 2026",
+            "timeZone": "UTC+01:00 Europe/Amsterdam",
+            "date": "7 May 2026",
+            "startTime": "19:45",
+            "endTime": "20:30",
+            "title": "The long running battle between Azure DevOps and GitHub: finally peace?",
+            "description": "Are you currently working with Azure DevOps, but also have an eye on GitHub for its AI features? Do you need the functionalities Azure Boards offers and would you also like to use with AI agents? Or has your organization heavily invested in Azure Pipelines, which you do not want to rebuild using GitHub Actions? And when you would move your repositories, will you still have your pull request history? You do not have to go all-in with GitHub and leave Azure DevOps behind. Why choose, when you can combine them! You'll learn how to connect Azure DevOps to GitHub, what features this will open up for you and what your workflow can look like. This session will help you decide on how to move forward with your team or your whole organization!",
+            "speakers": [
+                {
+                    "name": "Jacco Rademaker",
+                    "title": "Speaker | Solution Architect | DevOps Engineer | .NET Developer",
+                    "imageUrl": "/images/speaker/jacco-rademaker.jpg",
+                    "socials": [
+                        {
+                            "icon": "fa-linkedin",
+                            "url": "https://www.linkedin.com/in/jaccorademaker"
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }

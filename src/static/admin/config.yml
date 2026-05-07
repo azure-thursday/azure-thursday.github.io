@@ -1,18 +1,18 @@
 # ──────────────────────────────────────────────────────────────────────────────
 # Sveltia CMS configuration for Azure Thursday
-# Docs: https://github.com/sveltia/sveltia-cms
+# Docs: https://sveltiacms.app/en/docs/backends/github
 #
-# AUTH SETUP (one-time, ~2 minutes)
-# ───────────────────────────────────
-#   1. Go to: GitHub → Settings → Developer settings → OAuth Apps → New OAuth App
-#        Application name:  Azure Thursday CMS
-#        Homepage URL:      https://yourdomain.com  (or https://azure-thursday.github.io)
-#        Callback URL:      https://yourdomain.com/admin/
+# AUTH — TWO OPTIONS
+# ───────────────────
+# OPTION A · Personal Access Token (works right now, zero extra setup)
+#   Editors click "Sign in with Token" on the login screen and paste a
+#   GitHub personal access token (repo scope). Nothing to configure here.
 #
-#   2. Click "Register application", then copy the Client ID shown.
-#
-#   3. Paste the Client ID as the value of app_id below.
-#      (No client secret or proxy server needed — PKCE handles it.)
+# OPTION B · OAuth via Sveltia CMS Authenticator (more polished login UX)
+#   1. Deploy https://github.com/sveltia/sveltia-cms-auth to Cloudflare Workers
+#      (free tier — takes ~5 minutes, one-click deploy available in that repo)
+#   2. Set base_url below to your deployed worker URL, e.g.:
+#        base_url: https://sveltia-cms-auth.your-account.workers.dev
 #
 # LOCAL DEVELOPMENT
 # ──────────────────
@@ -27,8 +27,7 @@ backend:
   name: github
   repo: azure-thursday/azure-thursday.github.io
   branch: main
-  auth_type: pkce
-  app_id: Ov23li1s75xfur0ONTZa
+  # base_url: https://YOUR_CLOUDFLARE_WORKER_URL  # uncomment for Option B
 
 # local_backend: true
 

@@ -470,6 +470,7 @@ h3 {
 
 .session.modal-content {
   background-color: var(--az-darkblue-light);
+  color: #FFF;
 }
 
 .session.modal-content > .modal-footer, .modal-header {

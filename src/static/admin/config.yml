@@ -2,19 +2,17 @@
 # Sveltia CMS configuration for Azure Thursday
 # Docs: https://github.com/sveltia/sveltia-cms
 #
-# Sveltia CMS uses GitHub's PKCE OAuth flow — no proxy server needed.
-#
 # AUTH SETUP (one-time, ~2 minutes)
 # ───────────────────────────────────
 #   1. Go to: GitHub → Settings → Developer settings → OAuth Apps → New OAuth App
 #        Application name:  Azure Thursday CMS
-#        Homepage URL:      https://yourdomain.com  (or https://azure-thursday.github.io if no custom domain)
+#        Homepage URL:      https://yourdomain.com  (or https://azure-thursday.github.io)
 #        Callback URL:      https://yourdomain.com/admin/
 #
 #   2. Click "Register application", then copy the Client ID shown.
 #
 #   3. Paste the Client ID as the value of app_id below.
-#      (No client secret needed — that's the point of PKCE.)
+#      (No client secret or proxy server needed — PKCE handles it.)
 #
 # LOCAL DEVELOPMENT
 # ──────────────────
@@ -22,6 +20,7 @@
 #   npx @sveltia/cms-local-backend   (in one terminal)
 #   hugo server --source src         (in another)
 # Then open http://localhost:1313/admin/
+# Uncomment local_backend below while developing locally.
 # ──────────────────────────────────────────────────────────────────────────────
 
 backend:
@@ -29,48 +28,12 @@ backend:
   repo: azure-thursday/azure-thursday.github.io
   branch: main
   auth_type: pkce
-  app_id: Ov23li1s75xfur0ONTZa   # paste your Client ID here
+  app_id: Ov23li1s75xfur0ONTZa
 
-local_backend: true
+# local_backend: true
 
 media_folder: src/static/images/speaker
 public_folder: /images/speaker
-
-# ── Reusable speaker fields ───────────────────────────────────────────────────
-_speaker_fields: &speaker_fields
-  - { label: Name,       name: name,     widget: string }
-  - { label: Job title,  name: title,    widget: string }
-  - { label: Photo,      name: imageUrl, widget: image, required: false }
-  - label: Socials
-    name: socials
-    widget: list
-    required: false
-    fields:
-      - label: Icon
-        name: icon
-        widget: select
-        options:
-          - { label: LinkedIn,  value: fa-linkedin }
-          - { label: Twitter/X, value: fa-twitter }
-          - { label: GitHub,    value: fa-github }
-          - { label: YouTube,   value: fa-youtube }
-          - { label: Bluesky,   value: fa-bluesky }
-      - { label: URL, name: url, widget: string }
-
-# ── Reusable session fields ───────────────────────────────────────────────────
-_session_fields: &session_fields
-  - { label: Slug,       name: slug,      widget: string, hint: "URL-safe identifier, e.g. my-session-title" }
-  - { label: Meetup,     name: meetup,    widget: string, hint: "e.g. Meetup May 2026" }
-  - { label: Date,       name: date,      widget: string, hint: "e.g. 7 May 2026" }
-  - { label: Start time, name: startTime, widget: string, hint: "e.g. 18:45" }
-  - { label: End time,   name: endTime,   widget: string, hint: "e.g. 19:30" }
-  - { label: Time zone,  name: timeZone,  widget: string, hint: "e.g. UTC+01:00 Europe/Amsterdam" }
-  - { label: Title,      name: title,     widget: string }
-  - { label: Description, name: description, widget: text }
-  - label: Speakers
-    name: speakers
-    widget: list
-    fields: *speaker_fields
 
 collections:
 
@@ -82,8 +45,8 @@ collections:
         name: event
         file: src/data/event.json
         fields:
-          - { label: Next event date,    name: nextEventDate,      widget: string, hint: "Format: DD/MM/YYYY" }
-          - { label: Meetup register URL, name: meetupRegisterUrl, widget: string }
+          - { label: Next event date,     name: nextEventDate,      widget: string, hint: "Format: DD/MM/YYYY" }
+          - { label: Meetup register URL, name: meetupRegisterUrl,  widget: string }
           - label: Header image
             name: headerImageUrl
             widget: image
@@ -102,7 +65,37 @@ collections:
             name: sessions
             widget: list
             summary: "{{fields.title}}"
-            fields: *session_fields
+            fields:
+              - { label: Slug,        name: slug,        widget: string, hint: "URL-safe ID e.g. my-session-title" }
+              - { label: Meetup,      name: meetup,      widget: string, hint: "e.g. Meetup May 2026" }
+              - { label: Date,        name: date,        widget: string, hint: "e.g. 7 May 2026" }
+              - { label: Start time,  name: startTime,   widget: string, hint: "e.g. 18:45" }
+              - { label: End time,    name: endTime,     widget: string, hint: "e.g. 19:30" }
+              - { label: Time zone,   name: timeZone,    widget: string, hint: "e.g. UTC+01:00 Europe/Amsterdam" }
+              - { label: Title,       name: title,       widget: string }
+              - { label: Description, name: description, widget: text }
+              - label: Speakers
+                name: speakers
+                widget: list
+                fields:
+                  - { label: Name,      name: name,     widget: string }
+                  - { label: Job title, name: title,    widget: string }
+                  - { label: Photo,     name: imageUrl, widget: image, required: false }
+                  - label: Socials
+                    name: socials
+                    widget: list
+                    required: false
+                    fields:
+                      - label: Icon
+                        name: icon
+                        widget: select
+                        options:
+                          - { label: LinkedIn,  value: fa-linkedin }
+                          - { label: Twitter/X, value: fa-twitter }
+                          - { label: GitHub,    value: fa-github }
+                          - { label: YouTube,   value: fa-youtube }
+                          - { label: Bluesky,   value: fa-bluesky }
+                      - { label: URL, name: url, widget: string }
 
   # ── 3. Past Events Index ──────────────────────────────────────────────────────
   - name: past-events-index
@@ -118,24 +111,495 @@ collections:
             summary: "{{fields.key}}"
             hint: "Ordered newest-first. Each key must match a MM-YYYY.json file in src/data."
             fields:
-              - { label: "Key (MM-YYYY)", name: key,            widget: string, hint: "e.g. 11-2025" }
-              - { label: Header image,    name: headerImageUrl, widget: image, required: false,
-                  media_folder: /src/static/images/header, public_folder: /images/header }
-              - { label: Meetup URL,      name: meetupUrl,      widget: string, required: false }
+              - { label: "Key (MM-YYYY)", name: key,            widget: string,  hint: "e.g. 11-2025" }
+              - { label: Meetup URL,      name: meetupUrl,      widget: string,  required: false }
+              - label: Header image
+                name: headerImageUrl
+                widget: image
+                required: false
+                media_folder: /src/static/images/header
+                public_folder: /images/header
 
   # ── 4. Past Event Sessions ────────────────────────────────────────────────────
   - name: past-event-sessions
     label: "📦 Past Event Sessions"
     files:
-      - { label: "October 2023",   name: "10-2023", file: "src/data/10-2023.json", fields: [{ label: Sessions, name: sessions, widget: list, summary: "{{fields.title}}", fields: *session_fields }] }
-      - { label: "December 2023",  name: "12-2023", file: "src/data/12-2023.json", fields: [{ label: Sessions, name: sessions, widget: list, summary: "{{fields.title}}", fields: *session_fields }] }
-      - { label: "March 2024",     name: "03-2024", file: "src/data/03-2024.json", fields: [{ label: Sessions, name: sessions, widget: list, summary: "{{fields.title}}", fields: *session_fields }] }
-      - { label: "June 2024",      name: "06-2024", file: "src/data/06-2024.json", fields: [{ label: Sessions, name: sessions, widget: list, summary: "{{fields.title}}", fields: *session_fields }] }
-      - { label: "September 2024", name: "09-2024", file: "src/data/09-2024.json", fields: [{ label: Sessions, name: sessions, widget: list, summary: "{{fields.title}}", fields: *session_fields }] }
-      - { label: "October 2024",   name: "10-2024", file: "src/data/10-2024.json", fields: [{ label: Sessions, name: sessions, widget: list, summary: "{{fields.title}}", fields: *session_fields }] }
-      - { label: "December 2024",  name: "12-2024", file: "src/data/12-2024.json", fields: [{ label: Sessions, name: sessions, widget: list, summary: "{{fields.title}}", fields: *session_fields }] }
-      - { label: "June 2025",      name: "06-2025", file: "src/data/06-2025.json", fields: [{ label: Sessions, name: sessions, widget: list, summary: "{{fields.title}}", fields: *session_fields }] }
-      - { label: "July 2025",      name: "07-2025", file: "src/data/07-2025.json", fields: [{ label: Sessions, name: sessions, widget: list, summary: "{{fields.title}}", fields: *session_fields }] }
-      - { label: "September 2025", name: "09-2025", file: "src/data/09-2025.json", fields: [{ label: Sessions, name: sessions, widget: list, summary: "{{fields.title}}", fields: *session_fields }] }
-      - { label: "October 2025",   name: "10-2025", file: "src/data/10-2025.json", fields: [{ label: Sessions, name: sessions, widget: list, summary: "{{fields.title}}", fields: *session_fields }] }
-      - { label: "November 2025",  name: "11-2025", file: "src/data/11-2025.json", fields: [{ label: Sessions, name: sessions, widget: list, summary: "{{fields.title}}", fields: *session_fields }] }
+      - label: "October 2023"
+        name: "10-2023"
+        file: "src/data/10-2023.json"
+        fields:
+          - label: Sessions
+            name: sessions
+            widget: list
+            summary: "{{fields.title}}"
+            fields:
+              - { label: Slug,        name: slug,        widget: string }
+              - { label: Meetup,      name: meetup,      widget: string }
+              - { label: Date,        name: date,        widget: string }
+              - { label: Start time,  name: startTime,   widget: string }
+              - { label: End time,    name: endTime,     widget: string }
+              - { label: Time zone,   name: timeZone,    widget: string }
+              - { label: Title,       name: title,       widget: string }
+              - { label: Description, name: description, widget: text }
+              - label: Speakers
+                name: speakers
+                widget: list
+                fields:
+                  - { label: Name,      name: name,     widget: string }
+                  - { label: Job title, name: title,    widget: string }
+                  - { label: Photo,     name: imageUrl, widget: image, required: false }
+                  - label: Socials
+                    name: socials
+                    widget: list
+                    required: false
+                    fields:
+                      - label: Icon
+                        name: icon
+                        widget: select
+                        options:
+                          - { label: LinkedIn,  value: fa-linkedin }
+                          - { label: Twitter/X, value: fa-twitter }
+                          - { label: GitHub,    value: fa-github }
+                          - { label: YouTube,   value: fa-youtube }
+                          - { label: Bluesky,   value: fa-bluesky }
+                      - { label: URL, name: url, widget: string }
+
+      - label: "December 2023"
+        name: "12-2023"
+        file: "src/data/12-2023.json"
+        fields:
+          - label: Sessions
+            name: sessions
+            widget: list
+            summary: "{{fields.title}}"
+            fields:
+              - { label: Slug,        name: slug,        widget: string }
+              - { label: Meetup,      name: meetup,      widget: string }
+              - { label: Date,        name: date,        widget: string }
+              - { label: Start time,  name: startTime,   widget: string }
+              - { label: End time,    name: endTime,     widget: string }
+              - { label: Time zone,   name: timeZone,    widget: string }
+              - { label: Title,       name: title,       widget: string }
+              - { label: Description, name: description, widget: text }
+              - label: Speakers
+                name: speakers
+                widget: list
+                fields:
+                  - { label: Name,      name: name,     widget: string }
+                  - { label: Job title, name: title,    widget: string }
+                  - { label: Photo,     name: imageUrl, widget: image, required: false }
+                  - label: Socials
+                    name: socials
+                    widget: list
+                    required: false
+                    fields:
+                      - label: Icon
+                        name: icon
+                        widget: select
+                        options:
+                          - { label: LinkedIn,  value: fa-linkedin }
+                          - { label: Twitter/X, value: fa-twitter }
+                          - { label: GitHub,    value: fa-github }
+                          - { label: YouTube,   value: fa-youtube }
+                          - { label: Bluesky,   value: fa-bluesky }
+                      - { label: URL, name: url, widget: string }
+
+      - label: "March 2024"
+        name: "03-2024"
+        file: "src/data/03-2024.json"
+        fields:
+          - label: Sessions
+            name: sessions
+            widget: list
+            summary: "{{fields.title}}"
+            fields:
+              - { label: Slug,        name: slug,        widget: string }
+              - { label: Meetup,      name: meetup,      widget: string }
+              - { label: Date,        name: date,        widget: string }
+              - { label: Start time,  name: startTime,   widget: string }
+              - { label: End time,    name: endTime,     widget: string }
+              - { label: Time zone,   name: timeZone,    widget: string }
+              - { label: Title,       name: title,       widget: string }
+              - { label: Description, name: description, widget: text }
+              - label: Speakers
+                name: speakers
+                widget: list
+                fields:
+                  - { label: Name,      name: name,     widget: string }
+                  - { label: Job title, name: title,    widget: string }
+                  - { label: Photo,     name: imageUrl, widget: image, required: false }
+                  - label: Socials
+                    name: socials
+                    widget: list
+                    required: false
+                    fields:
+                      - label: Icon
+                        name: icon
+                        widget: select
+                        options:
+                          - { label: LinkedIn,  value: fa-linkedin }
+                          - { label: Twitter/X, value: fa-twitter }
+                          - { label: GitHub,    value: fa-github }
+                          - { label: YouTube,   value: fa-youtube }
+                          - { label: Bluesky,   value: fa-bluesky }
+                      - { label: URL, name: url, widget: string }
+
+      - label: "June 2024"
+        name: "06-2024"
+        file: "src/data/06-2024.json"
+        fields:
+          - label: Sessions
+            name: sessions
+            widget: list
+            summary: "{{fields.title}}"
+            fields:
+              - { label: Slug,        name: slug,        widget: string }
+              - { label: Meetup,      name: meetup,      widget: string }
+              - { label: Date,        name: date,        widget: string }
+              - { label: Start time,  name: startTime,   widget: string }
+              - { label: End time,    name: endTime,     widget: string }
+              - { label: Time zone,   name: timeZone,    widget: string }
+              - { label: Title,       name: title,       widget: string }
+              - { label: Description, name: description, widget: text }
+              - label: Speakers
+                name: speakers
+                widget: list
+                fields:
+                  - { label: Name,      name: name,     widget: string }
+                  - { label: Job title, name: title,    widget: string }
+                  - { label: Photo,     name: imageUrl, widget: image, required: false }
+                  - label: Socials
+                    name: socials
+                    widget: list
+                    required: false
+                    fields:
+                      - label: Icon
+                        name: icon
+                        widget: select
+                        options:
+                          - { label: LinkedIn,  value: fa-linkedin }
+                          - { label: Twitter/X, value: fa-twitter }
+                          - { label: GitHub,    value: fa-github }
+                          - { label: YouTube,   value: fa-youtube }
+                          - { label: Bluesky,   value: fa-bluesky }
+                      - { label: URL, name: url, widget: string }
+
+      - label: "September 2024"
+        name: "09-2024"
+        file: "src/data/09-2024.json"
+        fields:
+          - label: Sessions
+            name: sessions
+            widget: list
+            summary: "{{fields.title}}"
+            fields:
+              - { label: Slug,        name: slug,        widget: string }
+              - { label: Meetup,      name: meetup,      widget: string }
+              - { label: Date,        name: date,        widget: string }
+              - { label: Start time,  name: startTime,   widget: string }
+              - { label: End time,    name: endTime,     widget: string }
+              - { label: Time zone,   name: timeZone,    widget: string }
+              - { label: Title,       name: title,       widget: string }
+              - { label: Description, name: description, widget: text }
+              - label: Speakers
+                name: speakers
+                widget: list
+                fields:
+                  - { label: Name,      name: name,     widget: string }
+                  - { label: Job title, name: title,    widget: string }
+                  - { label: Photo,     name: imageUrl, widget: image, required: false }
+                  - label: Socials
+                    name: socials
+                    widget: list
+                    required: false
+                    fields:
+                      - label: Icon
+                        name: icon
+                        widget: select
+                        options:
+                          - { label: LinkedIn,  value: fa-linkedin }
+                          - { label: Twitter/X, value: fa-twitter }
+                          - { label: GitHub,    value: fa-github }
+                          - { label: YouTube,   value: fa-youtube }
+                          - { label: Bluesky,   value: fa-bluesky }
+                      - { label: URL, name: url, widget: string }
+
+      - label: "October 2024"
+        name: "10-2024"
+        file: "src/data/10-2024.json"
+        fields:
+          - label: Sessions
+            name: sessions
+            widget: list
+            summary: "{{fields.title}}"
+            fields:
+              - { label: Slug,        name: slug,        widget: string }
+              - { label: Meetup,      name: meetup,      widget: string }
+              - { label: Date,        name: date,        widget: string }
+              - { label: Start time,  name: startTime,   widget: string }
+              - { label: End time,    name: endTime,     widget: string }
+              - { label: Time zone,   name: timeZone,    widget: string }
+              - { label: Title,       name: title,       widget: string }
+              - { label: Description, name: description, widget: text }
+              - label: Speakers
+                name: speakers
+                widget: list
+                fields:
+                  - { label: Name,      name: name,     widget: string }
+                  - { label: Job title, name: title,    widget: string }
+                  - { label: Photo,     name: imageUrl, widget: image, required: false }
+                  - label: Socials
+                    name: socials
+                    widget: list
+                    required: false
+                    fields:
+                      - label: Icon
+                        name: icon
+                        widget: select
+                        options:
+                          - { label: LinkedIn,  value: fa-linkedin }
+                          - { label: Twitter/X, value: fa-twitter }
+                          - { label: GitHub,    value: fa-github }
+                          - { label: YouTube,   value: fa-youtube }
+                          - { label: Bluesky,   value: fa-bluesky }
+                      - { label: URL, name: url, widget: string }
+
+      - label: "December 2024"
+        name: "12-2024"
+        file: "src/data/12-2024.json"
+        fields:
+          - label: Sessions
+            name: sessions
+            widget: list
+            summary: "{{fields.title}}"
+            fields:
+              - { label: Slug,        name: slug,        widget: string }
+              - { label: Meetup,      name: meetup,      widget: string }
+              - { label: Date,        name: date,        widget: string }
+              - { label: Start time,  name: startTime,   widget: string }
+              - { label: End time,    name: endTime,     widget: string }
+              - { label: Time zone,   name: timeZone,    widget: string }
+              - { label: Title,       name: title,       widget: string }
+              - { label: Description, name: description, widget: text }
+              - label: Speakers
+                name: speakers
+                widget: list
+                fields:
+                  - { label: Name,      name: name,     widget: string }
+                  - { label: Job title, name: title,    widget: string }
+                  - { label: Photo,     name: imageUrl, widget: image, required: false }
+                  - label: Socials
+                    name: socials
+                    widget: list
+                    required: false
+                    fields:
+                      - label: Icon
+                        name: icon
+                        widget: select
+                        options:
+                          - { label: LinkedIn,  value: fa-linkedin }
+                          - { label: Twitter/X, value: fa-twitter }
+                          - { label: GitHub,    value: fa-github }
+                          - { label: YouTube,   value: fa-youtube }
+                          - { label: Bluesky,   value: fa-bluesky }
+                      - { label: URL, name: url, widget: string }
+
+      - label: "June 2025"
+        name: "06-2025"
+        file: "src/data/06-2025.json"
+        fields:
+          - label: Sessions
+            name: sessions
+            widget: list
+            summary: "{{fields.title}}"
+            fields:
+              - { label: Slug,        name: slug,        widget: string }
+              - { label: Meetup,      name: meetup,      widget: string }
+              - { label: Date,        name: date,        widget: string }
+              - { label: Start time,  name: startTime,   widget: string }
+              - { label: End time,    name: endTime,     widget: string }
+              - { label: Time zone,   name: timeZone,    widget: string }
+              - { label: Title,       name: title,       widget: string }
+              - { label: Description, name: description, widget: text }
+              - label: Speakers
+                name: speakers
+                widget: list
+                fields:
+                  - { label: Name,      name: name,     widget: string }
+                  - { label: Job title, name: title,    widget: string }
+                  - { label: Photo,     name: imageUrl, widget: image, required: false }
+                  - label: Socials
+                    name: socials
+                    widget: list
+                    required: false
+                    fields:
+                      - label: Icon
+                        name: icon
+                        widget: select
+                        options:
+                          - { label: LinkedIn,  value: fa-linkedin }
+                          - { label: Twitter/X, value: fa-twitter }
+                          - { label: GitHub,    value: fa-github }
+                          - { label: YouTube,   value: fa-youtube }
+                          - { label: Bluesky,   value: fa-bluesky }
+                      - { label: URL, name: url, widget: string }
+
+      - label: "July 2025"
+        name: "07-2025"
+        file: "src/data/07-2025.json"
+        fields:
+          - label: Sessions
+            name: sessions
+            widget: list
+            summary: "{{fields.title}}"
+            fields:
+              - { label: Slug,        name: slug,        widget: string }
+              - { label: Meetup,      name: meetup,      widget: string }
+              - { label: Date,        name: date,        widget: string }
+              - { label: Start time,  name: startTime,   widget: string }
+              - { label: End time,    name: endTime,     widget: string }
+              - { label: Time zone,   name: timeZone,    widget: string }
+              - { label: Title,       name: title,       widget: string }
+              - { label: Description, name: description, widget: text }
+              - label: Speakers
+                name: speakers
+                widget: list
+                fields:
+                  - { label: Name,      name: name,     widget: string }
+                  - { label: Job title, name: title,    widget: string }
+                  - { label: Photo,     name: imageUrl, widget: image, required: false }
+                  - label: Socials
+                    name: socials
+                    widget: list
+                    required: false
+                    fields:
+                      - label: Icon
+                        name: icon
+                        widget: select
+                        options:
+                          - { label: LinkedIn,  value: fa-linkedin }
+                          - { label: Twitter/X, value: fa-twitter }
+                          - { label: GitHub,    value: fa-github }
+                          - { label: YouTube,   value: fa-youtube }
+                          - { label: Bluesky,   value: fa-bluesky }
+                      - { label: URL, name: url, widget: string }
+
+      - label: "September 2025"
+        name: "09-2025"
+        file: "src/data/09-2025.json"
+        fields:
+          - label: Sessions
+            name: sessions
+            widget: list
+            summary: "{{fields.title}}"
+            fields:
+              - { label: Slug,        name: slug,        widget: string }
+              - { label: Meetup,      name: meetup,      widget: string }
+              - { label: Date,        name: date,        widget: string }
+              - { label: Start time,  name: startTime,   widget: string }
+              - { label: End time,    name: endTime,     widget: string }
+              - { label: Time zone,   name: timeZone,    widget: string }
+              - { label: Title,       name: title,       widget: string }
+              - { label: Description, name: description, widget: text }
+              - label: Speakers
+                name: speakers
+                widget: list
+                fields:
+                  - { label: Name,      name: name,     widget: string }
+                  - { label: Job title, name: title,    widget: string }
+                  - { label: Photo,     name: imageUrl, widget: image, required: false }
+                  - label: Socials
+                    name: socials
+                    widget: list
+                    required: false
+                    fields:
+                      - label: Icon
+                        name: icon
+                        widget: select
+                        options:
+                          - { label: LinkedIn,  value: fa-linkedin }
+                          - { label: Twitter/X, value: fa-twitter }
+                          - { label: GitHub,    value: fa-github }
+                          - { label: YouTube,   value: fa-youtube }
+                          - { label: Bluesky,   value: fa-bluesky }
+                      - { label: URL, name: url, widget: string }
+
+      - label: "October 2025"
+        name: "10-2025"
+        file: "src/data/10-2025.json"
+        fields:
+          - label: Sessions
+            name: sessions
+            widget: list
+            summary: "{{fields.title}}"
+            fields:
+              - { label: Slug,        name: slug,        widget: string }
+              - { label: Meetup,      name: meetup,      widget: string }
+              - { label: Date,        name: date,        widget: string }
+              - { label: Start time,  name: startTime,   widget: string }
+              - { label: End time,    name: endTime,     widget: string }
+              - { label: Time zone,   name: timeZone,    widget: string }
+              - { label: Title,       name: title,       widget: string }
+              - { label: Description, name: description, widget: text }
+              - label: Speakers
+                name: speakers
+                widget: list
+                fields:
+                  - { label: Name,      name: name,     widget: string }
+                  - { label: Job title, name: title,    widget: string }
+                  - { label: Photo,     name: imageUrl, widget: image, required: false }
+                  - label: Socials
+                    name: socials
+                    widget: list
+                    required: false
+                    fields:
+                      - label: Icon
+                        name: icon
+                        widget: select
+                        options:
+                          - { label: LinkedIn,  value: fa-linkedin }
+                          - { label: Twitter/X, value: fa-twitter }
+                          - { label: GitHub,    value: fa-github }
+                          - { label: YouTube,   value: fa-youtube }
+                          - { label: Bluesky,   value: fa-bluesky }
+                      - { label: URL, name: url, widget: string }
+
+      - label: "November 2025"
+        name: "11-2025"
+        file: "src/data/11-2025.json"
+        fields:
+          - label: Sessions
+            name: sessions
+            widget: list
+            summary: "{{fields.title}}"
+            fields:
+              - { label: Slug,        name: slug,        widget: string }
+              - { label: Meetup,      name: meetup,      widget: string }
+              - { label: Date,        name: date,        widget: string }
+              - { label: Start time,  name: startTime,   widget: string }
+              - { label: End time,    name: endTime,     widget: string }
+              - { label: Time zone,   name: timeZone,    widget: string }
+              - { label: Title,       name: title,       widget: string }
+              - { label: Description, name: description, widget: text }
+              - label: Speakers
+                name: speakers
+                widget: list
+                fields:
+                  - { label: Name,      name: name,     widget: string }
+                  - { label: Job title, name: title,    widget: string }
+                  - { label: Photo,     name: imageUrl, widget: image, required: false }
+                  - label: Socials
+                    name: socials
+                    widget: list
+                    required: false
+                    fields:
+                      - label: Icon
+                        name: icon
+                        widget: select
+                        options:
+                          - { label: LinkedIn,  value: fa-linkedin }
+                          - { label: Twitter/X, value: fa-twitter }
+                          - { label: GitHub,    value: fa-github }
+                          - { label: YouTube,   value: fa-youtube }
+                          - { label: Bluesky,   value: fa-bluesky }
+                      - { label: URL, name: url, widget: string }

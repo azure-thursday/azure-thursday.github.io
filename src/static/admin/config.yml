@@ -1,27 +1,26 @@
 # ──────────────────────────────────────────────────────────────────────────────
-# Decap CMS configuration for Azure Thursday
-# Docs: https://decapcms.org/docs/
+# Sveltia CMS configuration for Azure Thursday
+# Docs: https://github.com/sveltia/sveltia-cms
 #
-# AUTH SETUP (required before going live)
-# ────────────────────────────────────────
-# Decap CMS needs a GitHub OAuth proxy to authenticate editors.
-# Recommended option (free): deploy the proxy on Netlify or Cloudflare Workers.
+# Sveltia CMS uses GitHub's PKCE OAuth flow — no proxy server needed.
 #
-#   1. Register a GitHub OAuth App:
-#      GitHub → Settings → Developer settings → OAuth Apps → New OAuth App
-#        Homepage URL:       https://azure-thursday.github.io
-#        Callback URL:       https://azure-thursday.github.io/admin/
+# AUTH SETUP (one-time, ~2 minutes)
+# ───────────────────────────────────
+#   1. Go to: GitHub → Settings → Developer settings → OAuth Apps → New OAuth App
+#        Application name:  Azure Thursday CMS
+#        Homepage URL:      https://azure-thursday.github.io
+#        Callback URL:      https://azure-thursday.github.io/admin/
 #
-#   2. Deploy an OAuth proxy, e.g.:
-#      https://github.com/vencax/netlify-cms-github-oauth-provider
+#   2. Click "Register application", then copy the Client ID shown.
 #
-#   3. Set base_url below to your deployed proxy URL.
+#   3. Paste the Client ID as the value of app_id below.
+#      (No client secret needed — that's the point of PKCE.)
 #
 # LOCAL DEVELOPMENT
-# ─────────────────
+# ──────────────────
 # Run the local backend alongside Hugo:
-#   npx decap-server          (in one terminal)
-#   hugo server --source src  (in another)
+#   npx @sveltia/cms-local-backend   (in one terminal)
+#   hugo server --source src         (in another)
 # Then open http://localhost:1313/admin/
 # ──────────────────────────────────────────────────────────────────────────────
 
@@ -29,9 +28,10 @@ backend:
   name: github
   repo: azure-thursday/azure-thursday.github.io
   branch: main
-  base_url: https://YOUR_OAUTH_PROXY_URL   # replace with your proxy URL
+  auth_type: pkce
+  app_id: YOUR_GITHUB_OAUTH_APP_CLIENT_ID   # paste your Client ID here
 
-local_backend: true   # enables proxy when running npx decap-server locally
+local_backend: true
 
 media_folder: src/static/images/speaker
 public_folder: /images/speaker

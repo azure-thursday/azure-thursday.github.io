@@ -29,7 +29,7 @@ backend:
   repo: azure-thursday/azure-thursday.github.io
   branch: main
   auth_type: pkce
-  app_id: YOUR_GITHUB_OAUTH_APP_CLIENT_ID   # paste your Client ID here
+  app_id: Ov23li1s75xfur0ONTZa   # paste your Client ID here
 
 local_backend: true
 

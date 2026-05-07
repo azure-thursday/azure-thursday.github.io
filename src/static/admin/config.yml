@@ -8,8 +8,8 @@
 # ───────────────────────────────────
 #   1. Go to: GitHub → Settings → Developer settings → OAuth Apps → New OAuth App
 #        Application name:  Azure Thursday CMS
-#        Homepage URL:      https://azure-thursday.github.io
-#        Callback URL:      https://azure-thursday.github.io/admin/
+#        Homepage URL:      https://yourdomain.com  (or https://azure-thursday.github.io if no custom domain)
+#        Callback URL:      https://yourdomain.com/admin/
 #
 #   2. Click "Register application", then copy the Client ID shown.
 #

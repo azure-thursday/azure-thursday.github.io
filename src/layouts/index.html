@@ -33,7 +33,7 @@
             <div class="sessions-header">
                 <div class="sessions-title">Sessions</div>
             </div>
-            {{ range $hugo.Data.sessions.sessions }}
+            {{ range hugo.Data.sessions.sessions }}
             {{ partial "session.html" . }}
             {{ end }}
         </div>

@@ -1,0 +1,51 @@
+{
+    "sessions": [
+        {
+            "slug": "avnm-governing-scaling-virtual-networks",
+            "meetup": "Meetup September 2026",
+            "timeZone": "UTC+01:00 Europe/Amsterdam",
+            "date": "03 September 2026",
+            "startTime": "18:45",
+            "endTime": "19:30",
+            "title": "AVNM: Governing and Scaling Virtual Networks the Right Way",
+            "description": "Managing a handful of Azure virtual networks is straightforward. Managing dozens across multiple subscriptions, teams, and regions, without losing control of your security posture or drowning in manual peering configurations, is a different problem entirely. Azure Virtual Network Manager was built for exactly that, yet many teams either don't know it exists or find the docs confusing. In this session, we go deep. You'll get a clear picture of AVNM's architecture: network groups, connectivity configurations, and security admin rules. But also, how they compose into a governance model that actually scales.",
+            "speakers": [
+                {
+                    "name": "Vladimir Stefanovic",
+                    "title": "Founder & Principal Azure Consultant @ IronByte",
+                    "imageUrl": "/images/speaker/vladimir-stefanovic.jpg",
+                    "socials": [
+                        {
+                            "icon": "fa-linkedin",
+                            "url": "https://www.linkedin.com/in/vladimirstefanovic1982/"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "slug": "landing-zone-lifecycle-management",
+            "meetup": "Meetup September 2026",
+            "timeZone": "UTC+01:00 Europe/Amsterdam",
+            "date": "03 September 2026",
+            "startTime": "19:45",
+            "endTime": "20:30",
+            "title": "Landing Zone Lifecycle Management",
+            "description": "We’re good at creating and onboarding Landing Zones. The gap is what happens afterwards. A Landing Zone can remain active long after its original purpose has disappeared, or it can become a candidate for deletion without enough evidence to know whether deleting it is actually safe. That leaves us with two bad choices: keep paying for something nobody owns, or delete something we may later need to recover. The goal isn't to delete more subscriptions. It's to make the entire Landing Zone lifecycle visible, governed, and ultimately safe to retire.",
+            "speakers": [
+                {
+                    "name": "Irwin Strachan",
+                    "title": "Azure Consultant @ Rubicon",
+                    "imageUrl": "/images/speaker/irwin-strachan.jpeg",
+                    "socials": [
+                        {
+                            "icon": "fa-linkedin",
+                            "url": "https://www.linkedin.com/in/irwinstrachan/"
+                        }
+                    ]
+                }
+            ],
+            "hideReadMore": false
+        }
+    ]
+}

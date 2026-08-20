@@ -470,6 +470,7 @@ h3 {
 
 .session.modal-content {
   background-color: var(--az-darkblue-light);
+  color: #FFF;
 }
 
 .session.modal-content > .modal-footer, .modal-header {
@@ -517,7 +518,17 @@ h3 {
 
 .past-event-header {
   width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  margin-bottom: 1.5em;
+}
 
+.past-event-header-thumb {
+  width: 100%;
+  height: 60px;
+  object-fit: cover;
+  margin-top: 0.5em;
+  border-radius: 4px;
 }
 
 .past-event-title {

@@ -1,0 +1,16 @@
+{
+    "events": [
+        {"key": "11-2025", "headerImageUrl": "/images/header/11-2025.png", "meetupUrl": ""},
+        {"key": "10-2025", "headerImageUrl": "/images/header/10-2025.jpg", "meetupUrl": ""},
+        {"key": "09-2025", "headerImageUrl": "/images/header/09-2025.png", "meetupUrl": ""},
+        {"key": "07-2025", "headerImageUrl": "/images/header/07-2025.png", "meetupUrl": ""},
+        {"key": "06-2025", "headerImageUrl": "", "meetupUrl": ""},
+        {"key": "12-2024", "headerImageUrl": "/images/header/12-2024.png", "meetupUrl": ""},
+        {"key": "10-2024", "headerImageUrl": "/images/header/10-2024.png", "meetupUrl": ""},
+        {"key": "09-2024", "headerImageUrl": "/images/header/09-2024.png", "meetupUrl": ""},
+        {"key": "06-2024", "headerImageUrl": "/images/header/06-2024.png", "meetupUrl": ""},
+        {"key": "03-2024", "headerImageUrl": "/images/header/03-2024.png", "meetupUrl": ""},
+        {"key": "12-2023", "headerImageUrl": "/images/header/12-2023.png", "meetupUrl": ""},
+        {"key": "10-2023", "headerImageUrl": "/images/header/10-2023.png", "meetupUrl": ""}
+    ]
+}

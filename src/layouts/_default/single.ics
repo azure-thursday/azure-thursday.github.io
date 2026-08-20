@@ -3,14 +3,14 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 VERSION:2.0
 BEGIN:VEVENT
-DTSTAMP:{{ index .Site.Data.event "nextEventUTCStartTime" }}
+DTSTAMP:{{ index hugo.Data.event "nextEventUTCStartTime" }}
 STATUS:CONFIRMED
 UID:event@azurethursday.com
-DTSTART:{{ index .Site.Data.event "nextEventUTCStartTime" }}
-DTEND:{{ index .Site.Data.event "nextEventUTCEndTime" }}
-SUMMARY:Azure Thursday - {{ index .Site.Data.event "nextEventDate" }}
-DESCRIPTION:Azure Thursday - {{ index .Site.Data.event "nextEventDate" }}
-LOCATION:{{ index .Site.Data.event "eventLocation" }}
+DTSTART:{{ index hugo.Data.event "nextEventUTCStartTime" }}
+DTEND:{{ index hugo.Data.event "nextEventUTCEndTime" }}
+SUMMARY:Azure Thursday - {{ index hugo.Data.event "nextEventDate" }}
+DESCRIPTION:Azure Thursday - {{ index hugo.Data.event "nextEventDate" }}
+LOCATION:{{ index hugo.Data.event "eventLocation" }}
 X-ALT-DESC;FMTTYPE=text/html:
 END:VEVENT
 END:VCALENDAR

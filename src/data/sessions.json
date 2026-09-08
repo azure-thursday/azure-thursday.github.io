@@ -13,7 +13,7 @@
         {
           "name": "Vladimir Stefanovic",
           "title": "Founder & Principal Azure Consultant @ IronByte",
-          "imageUrl": "/images/speaker/vladimir-stefanovic.jpg",
+          "imageUrl": "https://www.azurethursday.com/images/speaker/vladimir-stefanovic.jpg",
           "socials": [
             {
               "icon": "fa-linkedin",
@@ -36,7 +36,7 @@
         {
           "name": "Irwin Strachan",
           "title": "Azure Consultant @ Rubicon",
-          "imageUrl": "/images/speaker/irwin-strachan.jpeg",
+          "imageUrl": "https://www.azurethursday.com/images/speaker/irwin-strachan.jpeg",
           "socials": [
             {
               "icon": "fa-linkedin",

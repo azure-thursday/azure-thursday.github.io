@@ -2,9 +2,9 @@
     "sessions": [
         {
             "slug": "avnm-governing-scaling-virtual-networks",
-            "meetup": "Meetup September 2026",
+            "meetup": "Meetup October 2026",
             "timeZone": "UTC+01:00 Europe/Amsterdam",
-            "date": "03 September 2026",
+            "date": "01 October 2026",
             "startTime": "18:45",
             "endTime": "19:30",
             "title": "AVNM: Governing and Scaling Virtual Networks the Right Way",
@@ -25,9 +25,9 @@
         },
         {
             "slug": "landing-zone-lifecycle-management",
-            "meetup": "Meetup September 2026",
+            "meetup": "Meetup October 2026",
             "timeZone": "UTC+01:00 Europe/Amsterdam",
-            "date": "03 September 2026",
+            "date": "01 October 2026",
             "startTime": "19:45",
             "endTime": "20:30",
             "title": "Landing Zone Lifecycle Management",

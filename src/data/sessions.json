@@ -24,14 +24,14 @@
       ]
     },
     {
-      "slug": "tba",
+      "slug": "azure-virtual-desktop-session-host-configuration",
       "meetup": "Meetup November 2026",
       "timeZone": "UTC+01:00 Europe/Amsterdam",
       "date": "05 November 2026",
       "startTime": "19:45",
       "endTime": "20:30",
-      "title": "TBA",
-      "description": "TBA",
+      "title": "Azure Virtual Desktop Session Host Configuration",
+      "description": "In this session, we’ll explore how Azure Virtual Desktop Session Host Configuration changes the way we deploy and manage session hosts. Instead of treating every VM as something that needs to be manually maintained, we’ll define the desired configuration once and let Azure handle the provisioning and lifecycle. We’ll look at what’s inside a Session Host Configuration, including the image, VM size, networking, identity, security and disk configuration. We’ll also explore how ephemeral OS disks can help build truly stateless session hosts.",
       "speakers": [
         {
           "name": "Brian Veldman",

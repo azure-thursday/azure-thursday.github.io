@@ -1,0 +1,8 @@
+{{- $event := dict -}}
+{{- range first 1 (partial "upcoming-events.html" .) -}}
+  {{- $event = dict "nextEventDate" (time.Format "02/01/2006" .Params.eventDate) "meetupRegisterUrl" (.Params.meetupRegisterUrl | default "") "headerImageUrl" (.Params.headerImageUrl | default "") "headerImageAlt" (.Params.headerImageAlt | default .Title) "eventLocation" (.Params.location | default "") -}}
+  {{- if .Params.startsAt -}}
+    {{- $event = merge $event (dict "nextEventUTCStartTime" ((time.AsTime .Params.startsAt).UTC.Format "20060102T150405Z") "nextEventUTCEndTime" ((time.AsTime .Params.endsAt).UTC.Format "20060102T150405Z")) -}}
+  {{- end -}}
+{{- end -}}
+{{- $event | jsonify -}}

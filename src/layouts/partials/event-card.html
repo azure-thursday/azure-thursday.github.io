@@ -1,0 +1,17 @@
+<article class="event-card">
+  <time datetime="{{ .Params.eventDate }}">{{ time.Format "Thursday, 2 January 2006" .Params.eventDate }}</time>
+  <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+  {{ with .Params.headerImageUrl }}<img src="{{ . }}" alt="{{ $.Params.headerImageAlt | default $.Title }}" loading="lazy" />{{ end }}
+  {{ with .Params.location }}<p>{{ . }}</p>{{ end }}
+  {{ with .Params.summary }}
+    <p>{{ . }}</p>
+  {{ else }}
+    {{ with .Params.sessions }}
+      <ul>{{ range . }}<li>{{ .title }}</li>{{ end }}</ul>
+    {{ else }}
+      <p>Sessions and speakers to be announced.</p>
+    {{ end }}
+  {{ end }}
+  <a href="{{ .RelPermalink }}" class="btn btn-primary strong">Event details</a>
+  {{ with .Params.meetupRegisterUrl }}<a href="{{ . }}" target="_blank" rel="noopener noreferrer" class="btn btn-primary strong">Register</a>{{ end }}
+</article>

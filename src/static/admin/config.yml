@@ -36,65 +36,78 @@ public_folder: /images/speaker
 
 collections:
 
-  # ── 1. Current Event ─────────────────────────────────────────────────────────
-  - name: current-event
-    label: "📅 Current Event"
-    files:
-      - label: Event details
-        name: event
-        file: src/data/event.json
-        fields:
-          - { label: Next event date,     name: nextEventDate,      widget: string, hint: "Format: DD/MM/YYYY" }
-          - { label: Meetup register URL, name: meetupRegisterUrl,  widget: string }
-          - label: Header image
-            name: headerImageUrl
-            widget: image
-            media_folder: /src/static/images/header
-            public_folder: /images/header
-
-  # ── 2. Current Sessions ───────────────────────────────────────────────────────
-  - name: current-sessions
-    label: "🎤 Current Sessions"
-    files:
+  - name: events
+    label: "📅 Events"
+    folder: src/content/events
+    create: true
+    format: json-frontmatter
+    extension: md
+    slug: "{{fields.eventDate}}-{{slug}}"
+    summary: "{{fields.eventDate}} - {{title}}"
+    sortable_fields: [eventDate, title]
+    filter: { field: layout, value: event }
+    fields:
+      - { label: Title, name: title, widget: string }
+      - label: Event date
+        name: eventDate
+        widget: datetime
+        date_format: YYYY-MM-DD
+        time_format: false
+        format: YYYY-MM-DD
+        hint: "The earliest published event is highlighted through its event day in Europe/Amsterdam. Do not use Hugo's reserved date field for the event date."
+      - { label: Draft, name: draft, widget: boolean, default: true, hint: "Turn off to advertise this event." }
+      - { name: layout, widget: hidden, default: event }
+      - { name: outputs, widget: hidden, default: [HTML, Calendar] }
+      - { label: Summary, name: summary, widget: text, required: false }
+      - { label: Meetup register URL, name: meetupRegisterUrl, widget: string, required: false }
+      - { label: Location, name: location, widget: string, required: false }
+      - { label: Starts at, name: startsAt, widget: string, required: false, hint: "Optional: 2026-11-05T18:00:00+01:00. Set both start and end, including UTC offset. Otherwise the calendar uses an all-day placeholder." }
+      - { label: Ends at, name: endsAt, widget: string, required: false, hint: "Optional: 2026-11-05T21:00:00+01:00. Use +02:00 during Dutch summer time." }
+      - label: Header image
+        name: headerImageUrl
+        widget: image
+        required: false
+        media_folder: /src/static/images/header
+        public_folder: /images/header
+      - { label: Header image description, name: headerImageAlt, widget: string, required: false }
+      - { label: Event details, name: body, widget: markdown, required: false }
       - label: Sessions
         name: sessions
-        file: src/data/sessions.json
+        widget: list
+        required: false
+        summary: "{{fields.title}}"
         fields:
-          - label: Sessions
-            name: sessions
+          - { label: Slug, name: slug, widget: string, hint: "Unique within this event, e.g. my-session-title" }
+          - { label: Meetup, name: meetup, widget: string, hint: "e.g. Meetup November 2026" }
+          - { label: Date, name: date, widget: string, hint: "e.g. 5 November 2026" }
+          - { label: Start time, name: startTime, widget: string, hint: "e.g. 18:45" }
+          - { label: End time, name: endTime, widget: string, hint: "e.g. 19:30" }
+          - { label: Time zone, name: timeZone, widget: string, hint: "e.g. UTC+01:00 Europe/Amsterdam" }
+          - { label: Title, name: title, widget: string }
+          - { label: Description, name: description, widget: text }
+          - { label: Hide read more, name: hideReadMore, widget: boolean, default: false, required: false }
+          - label: Speakers
+            name: speakers
             widget: list
-            summary: "{{fields.title}}"
             fields:
-              - { label: Slug,        name: slug,        widget: string, hint: "URL-safe ID e.g. my-session-title" }
-              - { label: Meetup,      name: meetup,      widget: string, hint: "e.g. Meetup May 2026" }
-              - { label: Date,        name: date,        widget: string, hint: "e.g. 7 May 2026" }
-              - { label: Start time,  name: startTime,   widget: string, hint: "e.g. 18:45" }
-              - { label: End time,    name: endTime,     widget: string, hint: "e.g. 19:30" }
-              - { label: Time zone,   name: timeZone,    widget: string, hint: "e.g. UTC+01:00 Europe/Amsterdam" }
-              - { label: Title,       name: title,       widget: string }
-              - { label: Description, name: description, widget: text }
-              - label: Speakers
-                name: speakers
+              - { label: Name, name: name, widget: string }
+              - { label: Job title, name: title, widget: string }
+              - { label: Photo, name: imageUrl, widget: image, required: false }
+              - label: Socials
+                name: socials
                 widget: list
+                required: false
                 fields:
-                  - { label: Name,      name: name,     widget: string }
-                  - { label: Job title, name: title,    widget: string }
-                  - { label: Photo,     name: imageUrl, widget: image, required: false }
-                  - label: Socials
-                    name: socials
-                    widget: list
-                    required: false
-                    fields:
-                      - label: Icon
-                        name: icon
-                        widget: select
-                        options:
-                          - { label: LinkedIn,  value: fa-linkedin }
-                          - { label: Twitter/X, value: fa-twitter }
-                          - { label: GitHub,    value: fa-github }
-                          - { label: YouTube,   value: fa-youtube }
-                          - { label: Bluesky,   value: fa-bluesky }
-                      - { label: URL, name: url, widget: string }
+                  - label: Icon
+                    name: icon
+                    widget: select
+                    options:
+                      - { label: LinkedIn, value: fa-linkedin }
+                      - { label: Twitter/X, value: fa-twitter }
+                      - { label: GitHub, value: fa-github }
+                      - { label: YouTube, value: fa-youtube }
+                      - { label: Bluesky, value: fa-bluesky }
+                  - { label: URL, name: url, widget: string }
 
   # ── 3. Past Events Index ──────────────────────────────────────────────────────
   - name: past-events-index
@@ -126,7 +139,7 @@ collections:
       - label: "October 2023"
         name: "10-2023"
         file: "src/data/10-2023.json"
-        fields:
+        fields: &past-event-fields
           - label: Sessions
             name: sessions
             widget: list
@@ -602,3 +615,13 @@ collections:
                           - { label: YouTube,   value: fa-youtube }
                           - { label: Bluesky,   value: fa-bluesky }
                       - { label: URL, name: url, widget: string }
+
+      - label: "May 2026"
+        name: "05-2026"
+        file: "src/data/05-2026.json"
+        fields: *past-event-fields
+
+      - label: "October 2026"
+        name: "10-2026"
+        file: "src/data/10-2026.json"
+        fields: *past-event-fields

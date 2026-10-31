@@ -1,0 +1,51 @@
+{
+  "sessions": [
+    {
+      "slug": "azure-policy-as-code",
+      "meetup": "Meetup November 2025",
+      "timeZone": "UTC+01:00 Europe/Amsterdam",
+      "date": "6 November 2025",
+      "startTime": "18:45",
+      "endTime": "19:30",
+      "title": "Azure Policy-as-Code at Ahold Delhaize",
+      "description": "At our organization, we believe that code should be the single source of truth — and that idea shapes the way we handle cloud governance. We use Azure Policies to audit and enforce our standards across different levels, and we manage everything through code to keep things consistent, transparent, and easy to improve. In this session, I’ll walk you through how we’ve set things up. Whether you’re already deep into Azure Policies or just starting to explore policy-as-code, I will give you practical insights into how to make governance more scalable, consistent, and engineer-friendly.",
+      "speakers": [
+        {
+          "name": "Mikhalina Akulova",
+          "title": "Cloud Architect @ Ahold Delhaize",
+          "imageUrl": "https://www.azurethursday.com/images/speaker/1650446830995.jpeg",
+          "socials": [
+            {
+              "icon": "fa-linkedin",
+              "url": "https://www.linkedin.com/in/mikhalina-akulova/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "hybrid-azure",
+      "meetup": "Meetup November 2025",
+      "timeZone": "UTC+01:00 Europe/Amsterdam",
+      "date": "6 November 2025",
+      "startTime": "19:45",
+      "endTime": "20:30",
+      "title": "Failure is not an option: durable execution + Dapr = 🚀",
+      "description": "Applications break all the time, there could be a network issue, a cloud provider outage, or just a glitch in the matrix. But as a developer, you really need your applications to be resilient without the need to recover databases and restart services manually. In this session, I'll demonstrate how Dapr Workflow provides durable execution, which enables you to write reliable workflows as code. I'll go into specific workflow features, such as scheduling, sequential and parallel execution, and waiting for external events. I'll show many code samples (in C#) for each of these features and will run the applications using the Dapr CLI to demonstrate their resiliency.",
+      "speakers": [
+        {
+          "name": "Marc Duiker",
+          "title": "I ♥ Event-driven, Dev Communities, & Creative Coding",
+          "imageUrl": "https://sessionize.com/image/6498-400o400o2-WsADEDfKr18q3jGFxJnkbW.png",
+          "socials": [
+            {
+              "icon": "fa-linkedin",
+              "url": "https://www.linkedin.com/in/mduiker/"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+

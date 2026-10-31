@@ -12,7 +12,7 @@
         {{ with .hideReadMore }}
 
         {{ else }}
-            <div class="session-button"><button class="btn btn-primary strong mr-3 mb-3" data-bs-toggle="modal" data-bs-target="#modal-{{ .slug }}" >
+            <div class="session-button"><button class="btn btn-primary strong me-3 mb-3" data-bs-toggle="modal" data-bs-target="#modal-{{ .slug }}" >
                 Read more >
             </button></div>
         {{ end }}
@@ -25,11 +25,11 @@
     </div>
 </div>
 
-<div class="modal" id="modal-{{ .slug }}" tabindex="-1" role="dialog">
-    <div class="modal-dialog modal-lg" role="document">
+<div class="modal" id="modal-{{ .slug }}" tabindex="-1" aria-labelledby="modalLabel-{{ .slug }}" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
       <div class="modal-content session">
         <div class="modal-header">
-          <h5 class="modal-title">{{ .title }}</h5>
+          <h5 class="modal-title" id="modalLabel-{{ .slug }}">{{ .title }}</h5>
         </div>
         <div class="modal-body">
             <div class="container">

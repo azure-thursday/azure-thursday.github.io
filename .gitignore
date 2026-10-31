@@ -3,3 +3,4 @@ public
 .hugo_build.lock
 .vs
 .vscode
+.DS_Store

@@ -6,10 +6,30 @@
 </div>
 <br/><br/>
 <div class="container-fluid">
-        <div class="past-event">
-            {{ range $.Site.Data.pastevents.events }}
-            {{ partial "past-event.html" . }}
-            {{ end }}
-        </div>
-    </div>
+    {{ range hugo.Data.pasteventsindex.events }}
+        {{ $meta := . }}
+        {{ $eventData := index hugo.Data .key }}
+        {{ if $eventData }}
+            {{ $sessions := $eventData.sessions }}
+            {{ $firstSession := index $sessions 0 }}
+            <div class="past-event">
+                <div class="past-event-title">{{ $firstSession.meetup }}</div>
+                <div class="row past-event-container">
+                    <div class="col-md-2">
+                        <div class="past-event-date">{{ $firstSession.date }}</div>
+{{ with $meta.meetupUrl }}
+                        <div class="past-event-meetup"><a href="{{ . }}" target="_blank"><i class="fab fa-meetup"></i> Meetup page</a></div>
+                        {{ end }}
+                    </div>
+                    <div class="col">
+                        {{ range $sessions }}
+                        {{ partial "event-session.html" . }}
+                        {{ end }}
+                    </div>
+                </div>
+            </div>
+            <hr/>
+        {{ end }}
+    {{ end }}
+</div>
 {{ end }}

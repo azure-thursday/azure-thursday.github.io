@@ -6,7 +6,7 @@
 <br/><br/>
 <div class="container">
     <div class="past-sessions">
-        {{ range $.Site.Data.pastsessions.sessions }}
+        {{ range hugo.Data.pastsessions.sessions }}
         {{ partial "past-session.html" . }}
         {{ end }}
     </div>

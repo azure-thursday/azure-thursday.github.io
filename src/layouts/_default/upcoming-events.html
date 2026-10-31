@@ -1,0 +1,14 @@
+{{ define "main" }}
+<section class="container-fluid events-section">
+  <h1>{{ .Title }}</h1>
+  {{ .Content }}
+  <p><a href="{{ (.OutputFormats.Get "Calendar").RelPermalink }}" class="btn btn-primary strong">Subscribe to event calendar</a></p>
+  <div class="event-grid">
+    {{ range partial "upcoming-events.html" . }}
+      {{ partial "event-card.html" . }}
+    {{ else }}
+      <p>Our next event is being planned. Check back soon for dates and registration.</p>
+    {{ end }}
+  </div>
+</section>
+{{ end }}

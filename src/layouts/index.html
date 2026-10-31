@@ -1,43 +1,73 @@
 {{ define "main" }}
+    {{ $events := partial "upcoming-events.html" . }}
+    {{ $next := false }}
+    {{ if $events }}{{ $next = index $events 0 }}{{ end }}
     <div class="container-fluid">
         <div class="main-header">
             <div class="main-header-item">
                 <div class="main-header-item-title">Azure Thursday</div>
                 <div class="main-header-item-body">This is a group for all developers, consultants, architects and IT professionals who want to dive into for them unknown topics related to Azure. Azure Thursday are happening every first Thursday of the month and the format will be different every evening. From hand-on workshops to technical talks.</div>
                 <div class="main-header-item-button">
-                    <a href="{{ index hugo.Data.event "meetupRegisterUrl" }}" target="_blank" class="btn btn-primary strong me-3 mb-3" title="Register for Azure Thursday" aria-label="Register for Azure Thursday">
+                  {{ with $next }}
+                    <p class="strong">Next event: <time datetime="{{ .Params.eventDate }}">{{ time.Format "2 January 2006" .Params.eventDate }}</time></p>
+                    {{ with .Params.meetupRegisterUrl }}
+                    <a href="{{ . }}" target="_blank" rel="noopener noreferrer" class="btn btn-primary strong me-3 mb-3" title="Register for Azure Thursday" aria-label="Register for Azure Thursday">
                         <i aria-hidden="true" class="fas fa-user-plus"></i>
                         Register
                     </a>
+                    {{ end }}
+                    <a href="{{ .RelPermalink }}" class="btn btn-primary strong me-3 mb-3">Event details</a>
+                  {{ else }}
+                    <p>Our next event is being planned. Check back soon!</p>
+                  {{ end }}
             </div>
             </div>
-            <div class="main-header-item">
-                <img src="{{ index hugo.Data.event "headerImageUrl" }}" alt="{{ index hugo.Data.event "headerImageAlt" }}" />
-            </div>
+            {{ with $next }}
+              {{ with .Params.headerImageUrl }}
+                <div class="main-header-item">
+                    <img src="{{ . }}" alt="{{ $next.Params.headerImageAlt | default $next.Title }}" />
+                </div>
+              {{ end }}
+            {{ end }}
         </div>
 
     </div>
 
-    <!-- <div class="container">
-        {{ .Content }}
-    </div> -->
-    <div class="container-fluid">
-        <div class="sessions-header">
-            <div class="sessions-title">Our sponsors</div>
-        </div>
-        </div>
-    {{ partial "sponsors.html" . }}
-
+    {{ with $next }}
     <div class="container-fluid">
         <div class="sessions">
             <div class="sessions-header">
-                <div class="sessions-title">Sessions</div>
+                <h2 class="sessions-title">Sessions</h2>
             </div>
-            {{ range hugo.Data.sessions.sessions }}
-            {{ partial "session.html" . }}
+            {{ range .Params.sessions }}
+            {{ partial "session.html" (merge . (dict "calendarUrl" ($next.OutputFormats.Get "Calendar").RelPermalink)) }}
+            {{ else }}
+            <p>Sessions and speakers will be announced closer to the event.</p>
             {{ end }}
         </div>
     </div>
+    {{ end }}
+
+    <section class="container-fluid events-section homepage-upcoming-events" aria-labelledby="upcoming-events-title">
+        <div class="sessions-header upcoming-events-header">
+            <h2 class="sessions-title" id="upcoming-events-title">Upcoming events</h2>
+            <a href="{{ "events/" | relURL }}" class="btn btn-primary strong">All upcoming events <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+        </div>
+        {{ range first 3 (after 1 $events) }}
+          {{ partial "upcoming-event-preview.html" . }}
+        {{ else }}
+          <p>More event dates will be announced soon.</p>
+        {{ end }}
+    </section>
+
+    <section aria-labelledby="sponsors-title">
+        <div class="container-fluid">
+            <div class="sessions-header">
+                <h2 class="sessions-title" id="sponsors-title">Our sponsors</h2>
+            </div>
+        </div>
+        {{ partial "sponsors.html" . }}
+    </section>
 
     {{ partial "organizers.html" . }}
 {{ end }}

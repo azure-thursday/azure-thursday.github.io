@@ -1,0 +1,29 @@
+{{- $lines := slice "BEGIN:VCALENDAR" "VERSION:2.0" "PRODID:-//Azure Thursday//Events//EN" "CALSCALE:GREGORIAN" "METHOD:PUBLISH" "X-WR-CALNAME:Azure Thursday" -}}
+{{- range . -}}
+  {{- $lines = $lines | append "BEGIN:VEVENT" (printf "UID:%s@azurethursday.com" (path.Base .RelPermalink)) (printf "DTSTAMP:%s" (time.Now.UTC.Format "20060102T150405Z")) -}}
+  {{- if .Params.startsAt -}}
+    {{- $lines = $lines | append (printf "DTSTART:%s" ((time.AsTime .Params.startsAt).UTC.Format "20060102T150405Z")) (printf "DTEND:%s" ((time.AsTime .Params.endsAt).UTC.Format "20060102T150405Z")) -}}
+  {{- else -}}
+    {{- $date := time.AsTime .Params.eventDate -}}
+    {{- $lines = $lines | append (printf "DTSTART;VALUE=DATE:%s" ($date.Format "20060102")) (printf "DTEND;VALUE=DATE:%s" (($date.AddDate 0 0 1).Format "20060102")) -}}
+  {{- end -}}
+  {{- $lines = $lines | append (printf "SUMMARY:%s" (partial "calendar-text.html" .Title)) (printf "URL:%s" .Permalink) (printf "DESCRIPTION:%s" (partial "calendar-text.html" (.Params.summary | default .Title))) -}}
+  {{- with .Params.location -}}
+    {{- $lines = $lines | append (printf "LOCATION:%s" (partial "calendar-text.html" .)) -}}
+  {{- end -}}
+  {{- $lines = $lines | append "END:VEVENT" -}}
+{{- end -}}
+{{- $lines = $lines | append "END:VCALENDAR" -}}
+{{- $output := "" -}}
+{{- range $lines -}}
+  {{- $line := "" -}}
+  {{- range split . "" -}}
+    {{- if gt (len (printf "%s%s" $line .)) 75 -}}
+      {{- $output = printf "%s%s\r\n" $output $line -}}
+      {{- $line = " " -}}
+    {{- end -}}
+    {{- $line = printf "%s%s" $line . -}}
+  {{- end -}}
+  {{- $output = printf "%s%s\r\n" $output $line -}}
+{{- end -}}
+{{- return $output -}}

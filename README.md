@@ -68,11 +68,15 @@ after 60 days of inactivity in public repositories; monitor Actions and use
 **Run workflow** if needed. Calendar clients control how frequently subscriptions
 refresh.
 
-The old `src/data/event.json` and `src/data/sessions.json` have been replaced by
-the event pages. Hugo still generates `/json/event.json`, `/json/sessions.json`
-and `/sessions/next.ics` from the same highlighted event for existing consumers.
-With no upcoming event these return `{}`, `{"sessions":[]}` and an empty calendar
-respectively, and the homepage shows a planning message.
+Hugo generates `/json/event.json`, `/json/sessions.json` and `/sessions/next.ics`
+from the highlighted event. During deployment, the workflow overwrites the two
+JSON feeds with the manually maintained `src/data/event.json` and
+`src/data/sessions.json` files after the build. Update both data files when
+changing the event advertised to existing JSON consumers; they do not roll over
+automatically. Event pages still control the homepage and calendars, independently
+of these JSON overrides. Local Hugo builds do not apply the deployment overrides.
+With no upcoming event the homepage shows a planning message and the generated
+calendar is empty.
 
 ### Validating changes
 

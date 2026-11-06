@@ -78,6 +78,44 @@ of these JSON overrides. Local Hugo builds do not apply the deployment overrides
 With no upcoming event the homepage shows a planning message and the generated
 calendar is empty.
 
+### Generating event banners
+
+The Pages deployment workflow POSTs one request per published upcoming event
+to the banner Function after Hugo builds and before uploading the artifact.
+It uses Hugo's event selection, including the current event through its day in
+Europe/Amsterdam, and never uses the two manually maintained JSON feeds.
+
+Configure this repository Actions secret:
+
+- `BANNER_FUNCTION_URL`: the full HTTPS POST endpoint, e.g.
+  `https://YOUR-FUNCTION.azurewebsites.net/api/banners/v1`.
+
+The Function endpoint is anonymous; requests do not include an authentication
+header or require a Function key.
+
+The request is `{"schemaVersion":1,"event":{...},"sessions":[...]}`. Event fields
+include `id` (the event filename without `.md`), `title`, ISO `eventDate`,
+`timeZone: "Europe/Amsterdam"` and any supplied registration URL, location,
+timestamps and summary. Session and speaker fields retain their source names;
+relative speaker photo URLs become absolute URLs using the Pages base URL.
+The Function must return HTTP 200 with `Content-Type: image/png` and raw PNG
+bytes, not JSON, base64 or a storage URL. Each request has a 120-second timeout
+and responses are limited to 20 MiB. Redirects and failed or invalid responses
+fail deployment; existing banners are not silently used as a fallback.
+
+Generated images are saved in the deployment artifact at
+`/images/header/mm-yyyy.png`, such as `/images/header/12-2026.png`. Set the event's
+`headerImageUrl` to that path to display the banner. If supplied, the path must
+match the monthly filename. There can only be one upcoming event per month:
+collisions fail before any requests are sent rather than overwriting a banner.
+No images are committed back to GitHub, and local Hugo builds continue to use
+the checked-in artwork. With no upcoming events no Function requests are made.
+
+Speaker photos must already be accessible at their HTTPS URLs when generation
+runs; photos first introduced in the pending deployment are not yet available
+on the live site. Publish those photos beforehand or extend the Function
+contract to support uploaded image data.
+
 ### Validating changes
 
 Build with `hugo --source src`. To test event selection at a specific instant:
@@ -90,4 +128,10 @@ Run the event regression tests with Python 3 and Hugo on `PATH`:
 
 ```
 python -m unittest discover -s tests -p "test_events.py"
+```
+
+Run the event and banner-generation tests together:
+
+```
+python -m unittest discover -s tests -p "test_*.py"
 ```

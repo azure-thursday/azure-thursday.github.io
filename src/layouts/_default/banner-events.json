@@ -1,0 +1,5 @@
+{{- $events := slice -}}
+{{- range partial "upcoming-events.html" . -}}
+  {{- $events = $events | append (dict "id" .File.ContentBaseName "eventDate" .Params.eventDate "source" .File.Path) -}}
+{{- end -}}
+{{- dict "events" $events | jsonify -}}

@@ -7,6 +7,7 @@ import shutil
 import subprocess
 import tempfile
 import unittest
+from scripts.generate_banners import prepare_requests
 
 
 class EventTests(unittest.TestCase):
@@ -116,6 +117,35 @@ class EventTests(unittest.TestCase):
             self.assertEqual(calendar.count("BEGIN:VEVENT"), 3)
             self.assertNotIn("Unannounced draft", calendar)
             self.assertNotIn("Expired event", calendar)
+
+    def test_banner_manifest_uses_upcoming_event_selection(self):
+        for case in ("before", "drafts", "during", "minified"):
+            events = json.loads(self.read(case, "json/banner-events.json"))["events"]
+            self.assertEqual(
+                [event["eventDate"] for event in events],
+                ["2026-11-05", "2026-12-03", "2027-01-07"],
+            )
+            self.assertEqual(
+                Path(events[0]["source"]), Path("events") / "2026-11-05.md"
+            )
+            self.assertEqual(events[0]["id"], "2026-11-05")
+            requests = prepare_requests(
+                self.source, {"events": events}, "https://www.azurethursday.com"
+            )
+            self.assertEqual(
+                [filename for filename, _ in requests],
+                ["11-2026.png", "12-2026.png", "01-2027.png"],
+            )
+            self.assertEqual(requests[0][1]["sessions"][0]["startTime"], "18:45")
+        for case in ("after", "utc-boundary"):
+            events = json.loads(self.read(case, "json/banner-events.json"))["events"]
+            self.assertEqual(
+                [event["eventDate"] for event in events],
+                ["2026-12-03", "2027-01-07"],
+            )
+        self.assertEqual(
+            json.loads(self.read("empty", "json/banner-events.json")), {"events": []}
+        )
 
     def test_current_sponsors(self):
         home = self.read("before", "index.html")

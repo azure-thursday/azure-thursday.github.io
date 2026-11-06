@@ -48,7 +48,7 @@ jobs:
         with:
           submodules: recursive
       - name: Test event selection and outputs
-        run: python3 -m unittest discover -s tests -p "test_events.py"
+        run: python3 -m unittest discover -s tests -p "test_*.py"
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
@@ -69,6 +69,13 @@ jobs:
           mkdir -p src/public/json
           cp src/data/event.json src/public/json/event.json
           cp src/data/sessions.json src/public/json/sessions.json
+      - name: Generate banners for upcoming events
+        env:
+          BANNER_FUNCTION_URL: ${{ secrets.BANNER_FUNCTION_URL }}
+          BANNER_SITE_BASE_URL: ${{ steps.pages.outputs.base_url }}/
+        run: |
+          python3 scripts/generate_banners.py
+          rm src/public/json/banner-events.json
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

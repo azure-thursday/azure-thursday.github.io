@@ -4,23 +4,23 @@
 #
 # AUTH — TWO OPTIONS
 # ───────────────────
-# OPTION A · Personal Access Token (works right now, zero extra setup)
-#   Editors click "Sign in with Token" on the login screen and paste a
-#   GitHub personal access token (repo scope). Nothing to configure here.
+# OPTION A · Personal Access Token (current setup, no hosted auth service)
+#   Choose "Sign In Using Access Token" and follow the token creation link.
+#   Prefer a fine-grained token limited to this repository with Contents:
+#   read and write. See README.md ("Sveltia CMS: sign-in") for the full steps.
 #
 # OPTION B · OAuth via Sveltia CMS Authenticator (more polished login UX)
-#   1. Deploy https://github.com/sveltia/sveltia-cms-auth to Cloudflare Workers
-#      (free tier — takes ~5 minutes, one-click deploy available in that repo)
-#   2. Set base_url below to your deployed worker URL, e.g.:
+#   Follow README.md ("GitHub OAuth (optional)") to deploy the Worker,
+#   register a GitHub OAuth app, and configure the Worker secrets and domain list.
+#   Set base_url below to the deployed worker URL, e.g.:
 #        base_url: https://sveltia-cms-auth.your-account.workers.dev
+#   Without an authenticator, "Sign In with GitHub" will not work.
 #
 # LOCAL DEVELOPMENT
 # ──────────────────
-# Run the local backend alongside Hugo:
-#   npx @sveltia/cms-local-backend   (in one terminal)
-#   hugo server --source src         (in another)
-# Then open http://localhost:1313/admin/
-# Uncomment local_backend below while developing locally.
+# Run hugo server --source src and open the local /admin/ page.
+# Use "Work with Local Repository" and select the repository root.
+# GitHub sign-in and token sign-in edit the remote main branch, even locally.
 # ──────────────────────────────────────────────────────────────────────────────
 
 backend:
@@ -28,8 +28,6 @@ backend:
   repo: azure-thursday/azure-thursday.github.io
   branch: main
   # base_url: https://YOUR_CLOUDFLARE_WORKER_URL  # uncomment for Option B
-
-# local_backend: true
 
 media_folder: src/static/images/speaker
 public_folder: /images/speaker

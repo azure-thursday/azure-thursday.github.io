@@ -29,8 +29,10 @@ hugo serve
 
 Open `/admin/` on the site and select **Events** in Sveltia CMS. Create an event,
 set its event date, then turn off **Draft** when it is ready to advertise.
-Registration, artwork, venue and sessions can be added later. Authentication
-options are described in [the CMS configuration](src/static/admin/config.yml).
+Registration, venue and sessions can be added later. Before publishing, set a
+unique PNG `headerImageUrl`, such as `/images/header/2026-12-03.png`; deployment
+generates the artwork at that path. Authentication options are described in
+[the CMS configuration](src/static/admin/config.yml).
 
 Each event is stored in [src/content/events](src/content/events) as a Markdown
 page with JSON front matter. Use `eventDate: "YYYY-MM-DD"`, **not** Hugo's reserved
@@ -88,7 +90,7 @@ Europe/Amsterdam, and never uses the two manually maintained JSON feeds.
 Configure this repository Actions secret:
 
 - `BANNER_FUNCTION_URL`: the full HTTPS POST endpoint, e.g.
-  `https://YOUR-FUNCTION.azurewebsites.net/api/banners/v1`.
+  `https://azurethursdaybanner.azurewebsites.net/api/banners/v1`.
 
 The Function endpoint is anonymous; requests do not include an authentication
 header or require a Function key.
@@ -98,16 +100,23 @@ include `id` (the event filename without `.md`), `title`, ISO `eventDate`,
 `timeZone: "Europe/Amsterdam"` and any supplied registration URL, location,
 timestamps and summary. Session and speaker fields retain their source names;
 relative speaker photo URLs become absolute URLs using the Pages base URL.
+There may be at most three sessions per event and two speakers per session;
+invalid counts, empty titles and unsupported event time zones fail before
+any requests are sent. Empty sessions and speaker arrays remain supported.
 The Function must return HTTP 200 with `Content-Type: image/png` and raw PNG
 bytes, not JSON, base64 or a storage URL. Each request has a 120-second timeout
 and responses are limited to 20 MiB. Redirects and failed or invalid responses
 fail deployment; existing banners are not silently used as a fallback.
+Non-200 responses log the full problem body, including its error `code` and
+`correlationId`, to help diagnose generation and speaker-photo failures.
 
-Generated images are saved in the deployment artifact at
-`/images/header/mm-yyyy.png`, such as `/images/header/12-2026.png`. Set the event's
-`headerImageUrl` to that path to display the banner. If supplied, the path must
-match the monthly filename. There can only be one upcoming event per month:
-collisions fail before any requests are sent rather than overwriting a banner.
+Generated images are saved at each event's required `headerImageUrl` inside
+the deployment artifact. Use a root-relative PNG path, such as
+`/images/header/2026-12-03.png`. Paths must not contain traversal segments,
+queries or fragments, and must be distinct for every upcoming event.
+Multiple events in the same month are supported. Existing monthly filenames
+remain valid as long as no other upcoming event uses the same path.
+Missing paths and collisions fail before any requests are sent.
 No images are committed back to GitHub, and local Hugo builds continue to use
 the checked-in artwork. With no upcoming events no Function requests are made.
 

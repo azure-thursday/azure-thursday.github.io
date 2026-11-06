@@ -60,7 +60,10 @@ class EventTests(unittest.TestCase):
 
     @classmethod
     def fixture(cls, slug, **params):
-        values = dict(layout="event", outputs=["HTML", "Calendar"], draft=False)
+        values = dict(
+            layout="event", outputs=["HTML", "Calendar"], draft=False,
+            headerImageUrl=f"/images/header/{slug}.png",
+        )
         values.update(params)
         (cls.source / "content" / "events" / (slug + ".md")).write_text(
             json.dumps(values, ensure_ascii=False), encoding="utf-8"
@@ -133,8 +136,12 @@ class EventTests(unittest.TestCase):
                 self.source, {"events": events}, "https://www.azurethursday.com"
             )
             self.assertEqual(
-                [filename for filename, _ in requests],
-                ["11-2026.png", "12-2026.png", "01-2027.png"],
+                [path.as_posix() for path, _ in requests],
+                [
+                    "images/header/11-2026.png",
+                    "images/header/2026-12-03.png",
+                    "images/header/2027-01-07.png",
+                ],
             )
             self.assertEqual(requests[0][1]["sessions"][0]["startTime"], "18:45")
         for case in ("after", "utc-boundary"):
@@ -146,6 +153,28 @@ class EventTests(unittest.TestCase):
         self.assertEqual(
             json.loads(self.read("empty", "json/banner-events.json")), {"events": []}
         )
+
+    def test_multiple_events_in_same_month_keep_independent_banner_paths(self):
+        page = self.source / "content" / "events" / "2026-12-10.md"
+        try:
+            self.fixture("2026-12-10", title="Second December event", eventDate="2026-12-10")
+            output = self.root / "same-month"
+            self.build(output, "2026-11-06T00:00:00+01:00")
+            manifest = json.loads((output / "json" / "banner-events.json").read_text())
+            requests = prepare_requests(self.source, manifest, "https://www.azurethursday.com")
+            self.assertEqual(
+                [path.as_posix() for path, _ in requests],
+                [
+                    "images/header/2026-12-03.png",
+                    "images/header/2026-12-10.png",
+                    "images/header/2027-01-07.png",
+                ],
+            )
+            listing = (output / "events" / "index.html").read_text()
+            self.assertIn("/images/header/2026-12-03.png", listing)
+            self.assertIn("/images/header/2026-12-10.png", listing)
+        finally:
+            page.unlink(missing_ok=True)
 
     def test_current_sponsors(self):
         home = self.read("before", "index.html")

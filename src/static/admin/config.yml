@@ -64,7 +64,8 @@ collections:
       - label: Header image
         name: headerImageUrl
         widget: image
-        required: false
+        required: true
+        hint: "Required PNG output path, unique per event (e.g. /images/header/2026-12-03.png). Deployment regenerates this banner."
         media_folder: /src/static/images/header
         public_folder: /images/header
       - { label: Header image description, name: headerImageAlt, widget: string, required: false }
@@ -73,6 +74,7 @@ collections:
         name: sessions
         widget: list
         required: false
+        max: 3
         summary: "{{fields.title}}"
         fields:
           - { label: Slug, name: slug, widget: string, hint: "Unique within this event, e.g. my-session-title" }
@@ -87,6 +89,8 @@ collections:
           - label: Speakers
             name: speakers
             widget: list
+            required: false
+            max: 2
             fields:
               - { label: Name, name: name, widget: string }
               - { label: Job title, name: title, widget: string }

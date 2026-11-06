@@ -1,16 +1,2 @@
-BEGIN:VCALENDAR
-CALSCALE:GREGORIAN
-METHOD:PUBLISH
-VERSION:2.0
-BEGIN:VEVENT
-DTSTAMP:{{ index hugo.Data.event "nextEventUTCStartTime" }}
-STATUS:CONFIRMED
-UID:event@azurethursday.com
-DTSTART:{{ index hugo.Data.event "nextEventUTCStartTime" }}
-DTEND:{{ index hugo.Data.event "nextEventUTCEndTime" }}
-SUMMARY:Azure Thursday - {{ index hugo.Data.event "nextEventDate" }}
-DESCRIPTION:Azure Thursday - {{ index hugo.Data.event "nextEventDate" }}
-LOCATION:{{ index hugo.Data.event "eventLocation" }}
-X-ALT-DESC;FMTTYPE=text/html:
-END:VEVENT
-END:VCALENDAR
+{{- $events := partial "upcoming-events.html" . -}}
+{{- partial "calendar.html" (first 1 $events) -}}

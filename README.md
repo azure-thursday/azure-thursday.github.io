@@ -1,6 +1,9 @@
 # azure-thursday.github.io
 Azure Thursday Website
 
+The site stays static: Hugo builds the pages and GitHub Pages hosts them.
+Sveltia CMS edits content in GitHub; no application server or database is needed.
+
 ## Getting started
 ### Prerequisites
 - Download and install Go: https://go.dev/dl/
@@ -21,70 +24,6 @@ hugo
 ```
 hugo serve
 ```
-
-## Sveltia CMS: sign-in
-
-### Access token (current setup)
-
-No OAuth service or configuration change is needed for token sign-in:
-
-1. Open `/admin/` and choose **Sign In Using Access Token**.
-2. Use the **GitHub user settings page** link in the dialog to create a
-   fine-grained personal access token.
-3. Select **azure-thursday** as the resource owner and limit repository access
-   to **azure-thursday.github.io**. Choose an expiration, such as 30 days.
-4. Grant **Repository permissions > Contents: Read and write**.
-   Metadata read access is added automatically. Our current direct-to-main
-   workflow does not need Pull requests or Workflows permissions.
-   If editorial review is enabled later, add **Pull requests: Read and write**.
-5. Generate the token and paste it only into Sveltia's **Personal Access Token**
-   field. Do not share it in chat, commit it, or put it in the CMS configuration.
-6. Sign in and open an event to confirm repository access. Publishing an intended
-   edit commits it to remote `main` and triggers the Hugo deployment workflow.
-
-The token cannot grant more access than your GitHub account already has. If the
-organization requires token approval, an owner must approve it before it can
-write repository content. Sveltia stores the token in the browser's local
-storage; use a trusted browser, and revoke the token in GitHub when no longer
-needed or if it is exposed. Create a replacement when it expires.
-
-### GitHub OAuth (optional)
-
-The **Sign In with GitHub** button needs an OAuth authenticator. GitHub Pages
-cannot run that service itself. Until it is configured, use **Sign In Using
-Access Token**, or **Work with Local Repository** when editing locally.
-
-Use the official [Sveltia CMS Authenticator](https://github.com/sveltia/sveltia-cms-auth)
-on Cloudflare Workers:
-
-1. [Deploy the authenticator to Cloudflare](https://deploy.workers.cloudflare.com/?url=https://github.com/sveltia/sveltia-cms-auth).
-   Record its HTTPS Worker URL.
-2. [Create a GitHub OAuth app](https://github.com/settings/applications/new).
-   Use `Azure Thursday Content Manager` as the name, the site's public URL as
-   the homepage, and **the Worker URL followed by `/callback`** as the
-   authorization callback URL. Do not use the site's `/admin/` URL as the callback.
-3. In the Worker's **Settings > Variables and Secrets**, configure:
-   - `GITHUB_CLIENT_ID`: the OAuth app's client ID.
-   - `GITHUB_CLIENT_SECRET`: the generated client secret, stored as an encrypted
-     secret. Never put it in this repository or share it in chat.
-   - `ALLOWED_DOMAINS`: `www.azurethursday.com,azurethursday.com,azure-thursday.github.io`.
-     For local OAuth testing, also add `127.0.0.1,localhost`. These are hostnames,
-     without schemes, paths or ports. Avoid wildcard access.
-   Leave `GITHUB_ALLOW_WORKFLOW_SCOPE` unset; content editing does not need it.
-   Save and deploy the Worker configuration.
-4. Set `backend.base_url` in [the CMS configuration](src/static/admin/config.yml)
-   to the Worker's HTTPS origin, without `/callback` or `/auth`. Commit and deploy
-   this site change.
-5. Open `/admin/`, choose **Sign In with GitHub**, and authorize the app. If the
-   GitHub organization restricts OAuth apps, an organization owner must approve
-   its access. Editors still need permission to write to this repository.
-6. Verify an event loads in the editor, then publish an intended content change
-   and confirm the GitHub commit and successful Hugo deployment.
-
-OAuth authenticates GitHub access; it does not change the content architecture.
-Both GitHub login methods target the remote `main` branch, even from a local
-Hugo preview. **Work with Local Repository** instead edits the folder you select;
-those changes must be committed and pushed separately.
 
 ## Planning events
 
@@ -129,11 +68,15 @@ after 60 days of inactivity in public repositories; monitor Actions and use
 **Run workflow** if needed. Calendar clients control how frequently subscriptions
 refresh.
 
-The old `src/data/event.json` and `src/data/sessions.json` have been replaced by
-the event pages. Hugo still generates `/json/event.json`, `/json/sessions.json`
-and `/sessions/next.ics` from the same highlighted event for existing consumers.
-With no upcoming event these return `{}`, `{"sessions":[]}` and an empty calendar
-respectively, and the homepage shows a planning message.
+Hugo generates `/json/event.json`, `/json/sessions.json` and `/sessions/next.ics`
+from the highlighted event. During deployment, the workflow overwrites the two
+JSON feeds with the manually maintained `src/data/event.json` and
+`src/data/sessions.json` files after the build. Update both data files when
+changing the event advertised to existing JSON consumers; they do not roll over
+automatically. Event pages still control the homepage and calendars, independently
+of these JSON overrides. Local Hugo builds do not apply the deployment overrides.
+With no upcoming event the homepage shows a planning message and the generated
+calendar is empty.
 
 ### Validating changes
 

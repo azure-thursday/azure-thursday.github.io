@@ -1,0 +1,22 @@
+{{ define "main" }}
+<section class="container-fluid events-section">
+  <p><a href="{{ "events/" | relURL }}">All upcoming events</a></p>
+  <h1>{{ .Title }}</h1>
+  <p><time datetime="{{ .Params.eventDate }}">{{ time.Format "Thursday, 2 January 2006" .Params.eventDate }}</time>{{ with .Params.location }} &middot; {{ . }}{{ end }}</p>
+  {{ with .Params.summary }}<p>{{ . }}</p>{{ end }}
+  {{ with .Params.headerImageUrl }}<img class="event-artwork" src="{{ . }}" alt="{{ $.Params.headerImageAlt | default $.Title }}" />{{ end }}
+  <p>
+    {{ with .Params.meetupRegisterUrl }}<a href="{{ . }}" target="_blank" rel="noopener noreferrer" class="btn btn-primary strong">Register</a>{{ end }}
+    <a href="{{ (.OutputFormats.Get "Calendar").RelPermalink }}" class="btn btn-primary strong">Add to agenda</a>
+  </p>
+  {{ .Content }}
+  <div class="sessions">
+    <h2>Sessions</h2>
+    {{ range .Params.sessions }}
+      {{ partial "session.html" (merge . (dict "calendarUrl" ($.OutputFormats.Get "Calendar").RelPermalink)) }}
+    {{ else }}
+      <p>Sessions and speakers will be announced closer to the event.</p>
+    {{ end }}
+  </div>
+</section>
+{{ end }}

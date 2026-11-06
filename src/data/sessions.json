@@ -1,51 +1,56 @@
 {
-  "sessions": [
-    {
-      "slug": "avm-is-great",
-      "meetup": "Meetup November 2026",
-      "timeZone": "UTC+01:00 Europe/Amsterdam",
-      "date": "05 November 2026",
-      "startTime": "18:45",
-      "endTime": "19:30",
-      "title": "AVM Is Great. Here's Why We Wrap It Anyway",
-      "description": "Azure Verified Modules are genuinely good. Microsoft-backed and community-maintained, best practices baked in, consistent interfaces. What's not to like? Turns out: quite a bit. When you're managing Azure environments at scale, the cracks start showing fast. Most modules are still pre-1.0, so breaking changes are fair game. The provider is mid-migration from AzureRM to AzApi. And the opinionated defaults? Sometimes they're just not your opinions. Multiply that across dozens of environments and suddenly 'community-maintained' starts to feel like a liability. So we wrapped it. Every AVM module we use sits behind our own wrapper: pinned versions, standardised naming, locked defaults. Boring? A little. Production-stable? Very.",
-      "speakers": [
+    "sessions": [
         {
-          "name": "Take Bakker",
-          "title": "Solution Architect @ Proact IT NL",
-          "imageUrl": "https://www.azurethursday.com/images/speaker/take-bakker.jpg",
-          "socials": [
-            {
-              "icon": "fa-linkedin",
-              "url": "https://www.linkedin.com/in/take-bakker/"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "slug": "azure-virtual-desktop-session-host-configuration",
-      "meetup": "Meetup November 2026",
-      "timeZone": "UTC+01:00 Europe/Amsterdam",
-      "date": "05 November 2026",
-      "startTime": "19:45",
-      "endTime": "20:30",
-      "title": "Azure Virtual Desktop Session Host Configuration",
-      "description": "In this session, we’ll explore how Azure Virtual Desktop Session Host Configuration changes the way we deploy and manage session hosts. Instead of treating every VM as something that needs to be manually maintained, we’ll define the desired configuration once and let Azure handle the provisioning and lifecycle. We’ll look at what’s inside a Session Host Configuration, including the image, VM size, networking, identity, security and disk configuration. We’ll also explore how ephemeral OS disks can help build truly stateless session hosts.",
-      "speakers": [
+            "slug": "azure-ai-search-workshop",
+            "meetup": "Meetup December 2026",
+            "timeZone": "UTC+01:00 Europe/Amsterdam",
+            "date": "03 December 2026",
+            "startTime": "18:45",
+            "endTime": "20:15",
+            "title": "Building Intelligent Search with Azure AI Search",
+            "description": "In this developer-focused, hands-on workshop, you’ll build an intelligent search solution using Azure AI Search, powered by a dataset from The Office (US).\nWe’ll move from raw data to AI-enriched discovery in a practical, end-to-end scenario. Starting with data exploration, you’ll design and implement a robust ingestion pipeline, define and optimize search indexes, and understand how schema decisions affect relevance and ranking.\nFrom there, you’ll enhance your solution with cognitive skills, extracting entities, key phrases, and insights to transform unstructured data into searchable gold.\nFinally, we’ll extend the solution using Foundry IQ to add contextual intelligence and deeper reasoning on top of traditional search.\nBy the end of the session, you’ll understand how to architect, build, and evolve an AI-powered search experience using Azure AI Search.",
+            "speakers": [
+                {
+                    "name": "Roelant Dieben",
+                    "title": "Cloud & AI Architect @ Sopra Steria",
+                    "imageUrl": "https://www.azurethursday.com/images/roelant-dieben.jpg",
+                    "socials": [
+                        {
+                            "icon": "fa-linkedin",
+                            "url": "https://www.linkedin.com/in/roelantdieben/"
+                        }
+                    ]
+                },
+                {
+                    "name": "Stuart van der Lee",
+                    "title": "Lead AI Engineer @ Sopra Steria",
+                    "imageUrl": "https://www.azurethursday.com/images/stuart-van-der-lee.jpg",
+                    "socials": [
+                        {
+                            "icon": "fa-linkedin",
+                            "url": "https://www.linkedin.com/in/stuartvdlee/"
+                        }
+                    ]
+                }
+            ]
+        },
         {
-          "name": "Brian Veldman",
-          "title": "Microsoft Azure & Security MVP | Cloud Solution Architect @ Fellowmind",
-          "imageUrl": "https://www.azurethursday.com/images/speaker/brian-veldman.png",
-          "socials": [
-            {
-              "icon": "fa-linkedin",
-              "url": "https://www.linkedin.com/in/brian-veldman/"
-            }
-          ]
+            "slug": "festive-pubquiz",
+            "meetup": "Meetup December 2026",
+            "timeZone": "UTC+01:00 Europe/Amsterdam",
+            "date": "03 December 2026",
+            "startTime": "20:30",
+            "endTime": "21:00",
+            "title": "Pubquiz",
+            "description": "Are you ready for a festive pubquiz? Join us for a fun and interactive session where you can test your knowledge on all things Azure mixed with general knowledge, music and more.  This pubquiz is a great opportunity to learn, connect, and have some fun. Grab a drink, get your thinking cap on, and let’s get quizzing!",
+            "speakers": [
+                {
+                    "name": "The Quizmaster",
+                    "title": "Azure architect by day, quizmaster by night",
+                    "imageUrl": "/images/speaker/pubquiz.png"
+                }
+            ],
+            "hideReadMore": false
         }
-      ],
-      "hideReadMore": false
-    }
-  ]
+    ]
 }

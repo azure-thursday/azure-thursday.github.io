@@ -2,6 +2,118 @@
   outline: 1px solid #f00 !important;
 } */
 
+.events-section {
+  margin-top: 3em;
+  margin-bottom: 3em;
+}
+
+.upcoming-events-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1em;
+  margin-bottom: 1.5em;
+}
+
+.upcoming-events-header .sessions-title {
+  margin-bottom: 0;
+}
+
+.upcoming-events-header .fas {
+  margin-left: 0.5em;
+}
+
+.upcoming-event-preview {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 1.5em;
+  padding: 1.5em;
+  margin-bottom: 1em;
+  background: rgba(12,12,16,0.4);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 8px;
+}
+
+.upcoming-event-date {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 6em;
+  padding: 0.75em;
+  background: rgba(255,255,255,0.06);
+  border-radius: 6px;
+}
+
+.upcoming-event-day {
+  font-size: 2.4em;
+  line-height: 1.1;
+}
+
+.upcoming-event-year {
+  font-size: 0.85em;
+}
+
+.upcoming-event-info a {
+  color: inherit;
+  text-underline-offset: 0.2em;
+}
+
+.upcoming-event-location {
+  margin-top: 0.75em;
+  margin-bottom: 0.75em;
+}
+
+@media (max-width: 767px) {
+  .upcoming-event-preview {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1em;
+    padding: 1em;
+  }
+
+  .upcoming-event-date, .upcoming-event-details {
+    justify-self: start;
+  }
+}
+
+.event-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1.5em;
+}
+
+@media (min-width: 768px) {
+  .event-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.event-card {
+  padding: 1.5em;
+  background: rgba(12,12,16,0.4);
+  border-radius: 8px;
+}
+
+.event-card a:not(.btn), .events-section > p > a:not(.btn) {
+  color: #FFF;
+}
+
+.event-card img, .event-artwork {
+  width: 100%;
+  height: auto;
+  margin-bottom: 1em;
+}
+
+.event-artwork {
+  max-width: 900px;
+}
+
+.event-card .btn {
+  margin-top: 0.5em;
+}
+
 body {
   background: var(--az-darkblue-light);
   background: linear-gradient(180deg, var(--az-darkblue-light) 0%, var(--az-darkblue-dark) 100%);

@@ -3,7 +3,8 @@
 <head>
  <meta charset="utf-8">
  <meta name="viewport" content="width=device-width, initial-scale=1">
- <title>Azure Thursday {{ .Page.Title }} - Next event {{ index hugo.Data.event "nextEventDate" }}</title>
+ {{ $events := partial "upcoming-events.html" . }}
+ <title>Azure Thursday {{ .Page.Title }}{{ with $events }} - Next event {{ time.Format "02/01/2006" (index . 0).Params.eventDate }}{{ end }}</title>
  {{ partial "head.html" . }}
 </head>
 

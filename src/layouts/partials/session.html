@@ -52,7 +52,7 @@
             
         </div>
         <div class="modal-footer">
-          <a href="/sessions/next.ics" type="button" class="btn btn-primary strong"><i class="fas fa-calendar-plus"></i>&nbsp;&nbsp;Add to agenda</a>
+          <a href="{{ .calendarUrl | default "/sessions/next.ics" }}" type="button" class="btn btn-primary strong"><i class="fas fa-calendar-plus"></i>&nbsp;&nbsp;Add to agenda</a>
         </div>
       </div>
     </div>

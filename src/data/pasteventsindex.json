@@ -1,5 +1,7 @@
 {
     "events": [
+        {"key": "10-2026", "headerImageUrl": "/images/header/10-2026.png", "meetupUrl": ""},
+        {"key": "05-2026", "headerImageUrl": "/images/header/05-2026.png", "meetupUrl": ""},
         {"key": "11-2025", "headerImageUrl": "/images/header/11-2025.png", "meetupUrl": ""},
         {"key": "10-2025", "headerImageUrl": "/images/header/10-2025.jpg", "meetupUrl": ""},
         {"key": "09-2025", "headerImageUrl": "/images/header/09-2025.png", "meetupUrl": ""},

@@ -1,0 +1,26 @@
+{{- $events := slice -}}
+{{- range where site.RegularPages "Section" "events" -}}
+  {{- if eq .Params.layout "event" -}}
+    {{- $date := .Params.eventDate -}}
+    {{- if not (and $date (findRE `^\d{4}-\d{2}-\d{2}$` $date)) -}}
+      {{- errorf "Event %s requires eventDate in YYYY-MM-DD format" .File.Path -}}
+    {{- else -}}
+      {{- $dayStart := time.AsTime $date "Europe/Amsterdam" -}}
+      {{- $dayEnd := $dayStart.AddDate 0 0 1 -}}
+      {{- if or (and .Params.startsAt (not .Params.endsAt)) (and .Params.endsAt (not .Params.startsAt)) -}}
+        {{- errorf "Event %s requires both startsAt and endsAt, or neither" .File.Path -}}
+      {{- end -}}
+      {{- if .Params.startsAt -}}
+        {{- $start := time.AsTime .Params.startsAt -}}
+        {{- $end := time.AsTime .Params.endsAt -}}
+        {{- if or (not (findRE `T\d{2}:\d{2}:\d{2}(Z|[+-]\d{2}:\d{2})$` .Params.startsAt)) (not (findRE `T\d{2}:\d{2}:\d{2}(Z|[+-]\d{2}:\d{2})$` .Params.endsAt)) (not ($end.After $start)) ($start.Before $dayStart) (not ($start.Before $dayEnd)) -}}
+          {{- errorf "Event %s requires offset-aware startsAt/endsAt, end after start, and start on eventDate in Europe/Amsterdam" .File.Path -}}
+        {{- end -}}
+      {{- end -}}
+      {{- if and (not .Draft) ($dayEnd.After time.Now) -}}
+        {{- $events = $events | append . -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- return (sort $events "Params.eventDate" "asc") -}}

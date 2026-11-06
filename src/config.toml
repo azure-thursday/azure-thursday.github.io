@@ -2,5 +2,13 @@
 baseURL = 'http://127.0.0.1:51320'
 locale = 'en-us'
 title = 'Azure Thursday'
+timeZone = 'Europe/Amsterdam'
+
+[outputFormats.Calendar]
+  mediaType = 'text/calendar'
+  baseName = 'index'
+  isPlainText = true
+  rel = 'alternate'
+
 [markup.goldmark.renderer]
   unsafe = true # Allow HTML in md files

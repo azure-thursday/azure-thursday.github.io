@@ -1,0 +1,5 @@
+{{- $sessions := slice -}}
+{{- range first 1 (partial "upcoming-events.html" .) -}}
+  {{- with .Params.sessions }}{{ $sessions = . }}{{ end -}}
+{{- end -}}
+{{- dict "sessions" $sessions | jsonify -}}
